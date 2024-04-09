@@ -1,0 +1,256 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "quiz_form_rN4pCk": {
+      "type": "quiz-form",
+      "blocks": {
+        "quiz_1_r98zPH": {
+          "type": "quiz-1",
+          "settings": {
+            "text_title1": "Q1",
+            "text_title2": "How would you describe your skin ?",
+            "text_title3": "This would help us plan a regime most suited for your acne concerns."
+          }
+        },
+        "question_1_XGxjdA": {
+          "type": "question-1",
+          "settings": {
+            "image1": "shopify://shop_images/Normal-skin500x500_1_small_3ebd26a8-da68-4f0a-983a-1afa7ea6a33f.png",
+            "text1": "Normal Skin",
+            "text2": "Skin is balanced:",
+            "preUrl": "",
+            "text3": "Small pores, rare breakouts.",
+            "dataImage1": "shopify://shop_images/Normal-skin500x500_1_small_3ebd26a8-da68-4f0a-983a-1afa7ea6a33f.png",
+            "dataHeading1": "Normal SKin",
+            "datacontent1": "Small pores, rare breakouts."
+          }
+        },
+        "question_1_egEqkW": {
+          "type": "question-1",
+          "settings": {
+            "image1": "shopify://shop_images/Oily-skin500x500_1_small_c5836d3f-4ff8-42ab-b298-9edfb7ca7c07.png",
+            "text1": "Oily Skin",
+            "text2": "Skin has an oily shine:",
+            "preUrl": "",
+            "text3": "Visible pores, frequent breakouts.",
+            "dataImage1": "shopify://shop_images/Oily-skin500x500_1_small_c5836d3f-4ff8-42ab-b298-9edfb7ca7c07.png",
+            "dataHeading1": "Oily Skin",
+            "datacontent1": "Visible pores, frequent breakouts."
+          }
+        },
+        "question_1_xz34dy": {
+          "type": "question-1",
+          "settings": {
+            "image1": "shopify://shop_images/Dryskin_small_624cf58c-9a1a-4f32-80c8-01415b5ed125.png",
+            "text1": "Dry Skin",
+            "text2": "Skin feels dry/tight:",
+            "preUrl": "",
+            "text3": "Needs deep moisturisation to stay hydrated.",
+            "dataImage1": "shopify://shop_images/Dryskin_small_624cf58c-9a1a-4f32-80c8-01415b5ed125.png",
+            "dataHeading1": "Dry Skin",
+            "datacontent1": "Needs deep moisturisation to stay hydrated."
+          }
+        },
+        "question_1_EbrbwU": {
+          "type": "question-1",
+          "settings": {
+            "image1": "shopify://shop_images/Sensitive-skin500x500_small_e2ee0f20-87e2-4ea6-84e3-a3f1c5c04e73.png",
+            "text1": "Sensitive Skin",
+            "text2": "Skin is often itchy & turns red.",
+            "preUrl": "",
+            "text3": "It may burn/tingle when you apply products.",
+            "dataImage1": "shopify://shop_images/Sensitive-skin500x500_small_e2ee0f20-87e2-4ea6-84e3-a3f1c5c04e73.png",
+            "dataHeading1": "Sensitive Skin",
+            "datacontent1": "It may burn/tingle when you apply products."
+          }
+        },
+        "question_1_WmmHMF": {
+          "type": "question-1",
+          "settings": {
+            "image1": "shopify://shop_images/Comb-skin500x500_1_small_42e7f7ac-0b66-483c-b95b-a080d8f373b4.png",
+            "text1": " Combination Skin",
+            "text2": "Mix of dry & oily skin:",
+            "preUrl": "",
+            "text3": "Your t-zone(forehead, nose & chin) is oily while your cheeks are dry.",
+            "dataImage1": "shopify://shop_images/Comb-skin500x500_1_small_42e7f7ac-0b66-483c-b95b-a080d8f373b4.png",
+            "dataHeading1": " Combination Skin",
+            "datacontent1": "Your t-zone(forehead, nose & chin) is oily while your cheeks are dry."
+          }
+        },
+        "quiz_2_tpQxLF": {
+          "type": "quiz-2",
+          "settings": {
+            "text_title1": "Q2",
+            "text_title2": "What kind of weather conditions do you live in, for the most of the year?",
+            "text_title3": "Help us plan a few acne care tips suitable for weather conditions you live in"
+          }
+        },
+        "question_2_gaTcwL": {
+          "type": "question-2",
+          "settings": {
+            "image1": "shopify://shop_images/Cold_200x200_2_4_small_a22f92a7-358e-4639-99dc-2b5ce6e5b332.png",
+            "text1": "Hot",
+            "text2": "",
+            "text3": "Warm & sunny with a hint of rain.",
+            "dataImage2": "shopify://shop_images/Cold_200x200_2_4_small_a22f92a7-358e-4639-99dc-2b5ce6e5b332.png",
+            "dataHeading2": "Hot",
+            "datacontent2": "Warm &amp; sunny with a hint of rain."
+          }
+        },
+        "question_2_qpGLXj": {
+          "type": "question-2",
+          "settings": {
+            "image1": "shopify://shop_images/Cold_200x200_3_4_small_2effda3a-f65a-4ed5-88f5-f1987767b451.png",
+            "text1": "Hot & Humid",
+            "text2": "",
+            "text3": "Warm & sunny but makes you sweat.",
+            "dataHeading2": "Hot & Humid",
+            "datacontent2": "Warm &amp; sunny but makes you sweat."
+          }
+        },
+        "question_2_cNgj8M": {
+          "type": "question-2",
+          "settings": {
+            "image1": "shopify://shop_images/Cold_200x200_7_small_4af96bb9-ad83-4152-9aec-ef8e34f6d1d7.png",
+            "text1": "Cold",
+            "text2": "",
+            "text3": "Cool & chilly with the occasional rainfall.",
+            "dataImage2": "shopify://shop_images/Cold_200x200_7_small_4af96bb9-ad83-4152-9aec-ef8e34f6d1d7.png",
+            "dataHeading2": "Cold",
+            "datacontent2": "Cool &amp; chilly with the occasional rainfall."
+          }
+        },
+        "question_2_3a4xym": {
+          "type": "question-2",
+          "settings": {
+            "image1": "shopify://shop_images/Cold_200x200_1_4_small_bfa2d8ec-6929-4add-9077-f46df523ee51.png",
+            "text1": "Cold & Humid",
+            "text2": "",
+            "text3": "Cool & chilly, frequent rainfall but you still work up a sweat.",
+            "dataImage2": "shopify://shop_images/Cold_200x200_1_4_small_bfa2d8ec-6929-4add-9077-f46df523ee51.png",
+            "dataHeading2": "Cold & Humid",
+            "datacontent2": "Cool &amp; chilly, frequent rainfall but you still work up a sweat."
+          }
+        },
+        "quiz_3_dMH8Rw": {
+          "type": "quiz-3",
+          "settings": {
+            "text_title1": "Q3",
+            "text_title2": "How would you describe your skin ?",
+            "text_title3": "This would help us plan a regime most suited for your acne concerns."
+          }
+        },
+        "question_3_Q7twUF": {
+          "type": "question-3",
+          "settings": {
+            "image1": "shopify://shop_images/Normal-skin500x500_1_small_3ebd26a8-da68-4f0a-983a-1afa7ea6a33f.png",
+            "text1": "Normal Skin",
+            "text2": "",
+            "text3": "Small pores, rare breakouts.",
+            "dataImage3": "shopify://shop_images/Normal-skin500x500_1_small_3ebd26a8-da68-4f0a-983a-1afa7ea6a33f.png",
+            "dataHeading3": "Normal Skin",
+            "datacontent3": "Small pores, rare breakouts."
+          }
+        },
+        "question_3_MzwUjq": {
+          "type": "question-3",
+          "settings": {
+            "image1": "shopify://shop_images/Dryskin_small_624cf58c-9a1a-4f32-80c8-01415b5ed125.png",
+            "text1": "Dry Skin",
+            "text2": "",
+            "text3": "Small pores, rare breakouts.",
+            "dataImage3": "shopify://shop_images/Dryskin_small_624cf58c-9a1a-4f32-80c8-01415b5ed125.png",
+            "dataHeading3": "Dry Skin",
+            "datacontent3": "Small pores, rare breakouts."
+          }
+        },
+        "question_3_ABFbwd": {
+          "type": "question-3",
+          "settings": {
+            "text1": "",
+            "text2": "",
+            "text3": "Welcome!",
+            "dataHeading3": "",
+            "datacontent3": ""
+          }
+        },
+        "question_3_3pPkax": {
+          "type": "question-3",
+          "settings": {
+            "text1": "",
+            "text2": "",
+            "text3": "Welcome!",
+            "dataHeading3": "",
+            "datacontent3": ""
+          }
+        },
+        "quiz_4_k3CHR9": {
+          "type": "quiz-4",
+          "settings": {
+            "text_title1": "Quick links",
+            "text_title2": "Quick links",
+            "text_title3": "Quick links"
+          }
+        },
+        "question_4_JT4KcL": {
+          "type": "question-4",
+          "settings": {
+            "text1": "",
+            "text2": "",
+            "text3": "Welcome!",
+            "dataHeading3": "",
+            "datacontent3": "",
+            "dataUrl": "shopify://pages/contact",
+            "dataIndex": "1"
+          }
+        },
+        "question_4_QTBTre": {
+          "type": "question-4",
+          "settings": {
+            "text1": "",
+            "text2": "",
+            "text3": "Welcome!",
+            "dataHeading3": "",
+            "datacontent3": "",
+            "dataUrl": "shopify://pages/about-us",
+            "dataIndex": "2"
+          }
+        }
+      },
+      "block_order": [
+        "quiz_1_r98zPH",
+        "question_1_XGxjdA",
+        "question_1_egEqkW",
+        "question_1_xz34dy",
+        "question_1_EbrbwU",
+        "question_1_WmmHMF",
+        "quiz_2_tpQxLF",
+        "question_2_gaTcwL",
+        "question_2_qpGLXj",
+        "question_2_cNgj8M",
+        "question_2_3a4xym",
+        "quiz_3_dMH8Rw",
+        "question_3_Q7twUF",
+        "question_3_MzwUjq",
+        "question_3_ABFbwd",
+        "question_3_3pPkax",
+        "quiz_4_k3CHR9",
+        "question_4_JT4KcL",
+        "question_4_QTBTre"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "quiz_form_rN4pCk"
+  ]
+}

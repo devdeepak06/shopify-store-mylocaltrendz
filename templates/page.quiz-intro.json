@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "quiz_intro_fMygNX": {
+      "type": "quiz-intro",
+      "settings": {
+        "title": "",
+        "mainTitle": "",
+        "description": "",
+        "description_2": "",
+        "startText": "",
+        "start_url": "",
+        "lateTex": "",
+        "laterButnUrl": "",
+        "backVideo1": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "quiz_intro_fMygNX"
+  ]
+}

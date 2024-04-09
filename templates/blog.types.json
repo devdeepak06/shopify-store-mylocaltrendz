@@ -1,0 +1,58 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "disabled": true,
+      "settings": {
+        "layout": "collage",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "blogs_type_mriegV": {
+      "type": "blogs-type",
+      "blocks": {
+        "blog_AMdiMc": {
+          "type": "blog",
+          "settings": {
+            "blog": "articles"
+          }
+        },
+        "blog_Q4KMP9": {
+          "type": "blog",
+          "settings": {
+            "blog": "case-study"
+          }
+        },
+        "blog_WXWK3B": {
+          "type": "blog",
+          "settings": {
+            "blog": "white-paper"
+          }
+        }
+      },
+      "block_order": [
+        "blog_AMdiMc",
+        "blog_Q4KMP9",
+        "blog_WXWK3B"
+      ],
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "blogs_type_mriegV"
+  ]
+}

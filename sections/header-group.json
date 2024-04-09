@@ -1,0 +1,83 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_JN79km": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Free Shipping on order 499",
+            "link": ""
+          }
+        },
+        "announcement_xd68Ht": {
+          "type": "announcement",
+          "settings": {
+            "text": "Use NEW15 to get 15% only for First Order",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_JN79km",
+        "announcement_xd68Ht"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 4,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "logo_width": 100,
+        "logo_position": "middle-left",
+        "menu_1": "",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "show_line_separator": true,
+        "enable_sticky_header": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "cstm_header_QpYG7d": {
+      "type": "cstm-header",
+      "settings": {
+        "logo_position": "middle-center",
+        "menu_1": "cstm-menu",
+        "menu": "main-menu",
+        "enable_transparent": true,
+        "transparent_color": "#ffffff",
+        "menu_type_desktop": "drawer",
+        "sticky_header_type": "always",
+        "show_line_separator": false,
+        "color_scheme": "",
+        "menu_color_scheme": "",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "cstm_header_QpYG7d"
+  ]
+}

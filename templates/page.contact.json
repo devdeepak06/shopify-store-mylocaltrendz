@@ -1,0 +1,38 @@
+{
+  "sections": {
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rental_availability_g8M8xd": {
+      "type": "rental-availability",
+      "disabled": true,
+      "settings": {
+        "heading": "Rental Availability",
+        "heading_size": "h2",
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "form",
+    "main",
+    "rental_availability_g8M8xd"
+  ]
+}

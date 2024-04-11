@@ -391,33 +391,38 @@
 
   /* media queries for mobile */
   @media (max-width:1022px){
-  .tabSider{
-  display:block;
-  }
-  .top_tab_inner{
-  font-size: 12px;
-  padding: 5px 10px;
-  margin: 0 10px;
-  min-height: 60px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  }
+    .tabSider{
+    display:block;
+    }
+    .top_tab_inner{
+    font-size: 12px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    /* min-height: 60px; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    }
 
-  .bottom_tab_inner .featured-collection--cta {
-  padding: 0 3rem;
+    .bottom_tab_inner .featured-collection--cta {
+    padding: 0 3rem;
+    }
+    .bottom_tab_inner .featured-collection--cta .button-text{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    line-height: calc(1 + .2 / var(--font-body-scale));
+    }
+    }
+  @media (max-width: 375px){
+  .top_tab_inner {
+      padding: 5px 10px;
+      margin: 0px 3px;
+      min-height: 35px;
+    }
   }
-  .bottom_tab_inner .featured-collection--cta .button-text{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  letter-spacing: .1rem;
-  line-height: calc(1 + .2 / var(--font-body-scale));
-  }
-  }
-  @media screen and (max-width: 1022px) {#desktop-tab {display: none;} .atc-new span strong {font-size: 11px;}}
-
   .bottom_tab_inner .slick-initialized .slick-list .slick-track{
   margin-bottom: 3px;
   margin-top: 3px;
@@ -448,10 +453,12 @@
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%) !important;
+  z-index: 1;
   }
-  .bottom_tab_inner ul:not(.slick-initialized) > .card_product_grid:first-of-type ~* {
-  display: none;
-  }
+    /* Below code used hide the content before slick initialized */
+    .bottom_tab_inner ul:not(.slick-initialized) > .card_product_grid:first-of-type ~* {
+    display: none;
+    }
 </style>
 
 <script>

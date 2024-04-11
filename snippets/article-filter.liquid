@@ -50,21 +50,6 @@
     </div>
   </div>
 </div>
-{% for block in section.blocks %}
-  {%- case block.type -%}
-    {%- when 'blog' -%}
-      {% assign blog = block.settings.blog %}
-      {% if blog.tags.size > 0 %}
-        {% for tag in blog.all_tags %}
-          {% if current_tags == all_tags %}
-            <strong>
-              {{ tag | link_to_tag: tag }} </strong
-            ><br>
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-  {% endcase %}
-{% endfor %}
 <style>
     body {
       min-height: 100%;

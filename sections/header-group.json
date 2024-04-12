@@ -57,7 +57,7 @@
       "type": "cstm-header",
       "settings": {
         "logo_position": "middle-center",
-        "menu_1": "cstm-menu",
+        "menu_1": "right-desktop-menu",
         "menu": "main-menu",
         "enable_transparent": true,
         "transparent_color": "#ffffff",

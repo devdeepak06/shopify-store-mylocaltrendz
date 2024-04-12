@@ -277,8 +277,8 @@
     {%- endif -%}
 {%if section.settings.enable_transparent%}
     {% render 'cstm-header-nav',
-      menu: section.settings.menu_2.link,
-      class: 'cstm-header-menu2'
+      menu: section.settings.menu_1.link
+      
       %}
 {% endif %}
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">

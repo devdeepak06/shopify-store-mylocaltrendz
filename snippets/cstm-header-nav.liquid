@@ -2,10 +2,9 @@
   Usage:
   {% render 'cstm-header-nav' %}
 {% endcomment %}
-{% assign menu = section.settings.menu_1.links %}
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
-    {%- for link in menu -%}
+    {%- for link in section.settings.menu.links -%}
       <li>
         {%- if link.links != blank -%}
           <header-menu>

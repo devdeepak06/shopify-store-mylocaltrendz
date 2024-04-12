@@ -201,7 +201,9 @@
       endif
     -%}
 {%if section.settings.enable_transparent%}
-    {% render 'cstm-header-nav'      %}
+    {% render 'cstm-header-nav',
+    menu: menu_1
+    %}
 {% endif %}
 
     {%- if section.settings.logo_position != 'middle-center' -%}

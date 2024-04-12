@@ -202,7 +202,6 @@
     -%}
 {%if section.settings.enable_transparent%}
     {% render 'cstm-header-nav',
-      menu_1: section.settings.menu,
       section.settings.menu.links: section.settings.menu_1.links,
       class: 'cstm-header-menu1',
       %}
@@ -279,7 +278,6 @@
     {%- endif -%}
 {%if section.settings.enable_transparent%}
     {% render 'cstm-header-nav',
-      menu_2: section.settings.menu,
       section.settings.menu.links: section.settings.menu_2.links,
       class: 'cstm-header-menu2',
       %}

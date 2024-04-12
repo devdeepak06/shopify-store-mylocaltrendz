@@ -1,8 +1,8 @@
 {
   "current": {
-    "logo": "shopify://shop_images/mylocallogo.png",
+    "logo": "shopify:\/\/shop_images\/mylocallogo.png",
     "logo_width": 50,
-    "favicon": "shopify://shop_images/mylocallogo.png",
+    "favicon": "shopify:\/\/shop_images\/mylocallogo.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "poppins_n4",
@@ -99,8 +99,8 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p></p>",
-    "brand_image": "shopify://shop_images/mylocallogo.png",
+    "brand_description": "<p><\/p>",
+    "brand_image": "shopify:\/\/shop_images\/mylocallogo.png",
     "brand_image_width": 120,
     "social_facebook_link": "",
     "social_instagram_link": "",
@@ -120,7 +120,7 @@
     "show_cart_note": false,
     "cart_drawer_collection": "fast-selling",
     "cart_color_scheme": "scheme-1",
-    "checkout_logo_image": "shopify://shop_images/mylocallogo.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/mylocallogo.png",
     "checkout_logo_position": "center",
     "checkout_body_background_color": "#d7d2d2",
     "checkout_input_background_color_mode": "white",
@@ -145,13 +145,13 @@
     ],
     "blocks": {
       "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {
         }
       },
       "6279071938380501511": {
-        "type": "shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "type": "shopify:\/\/apps\/powerful-form-builder\/blocks\/app-embed\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
         "disabled": false,
         "settings": {
         }
@@ -371,7 +371,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p></p>",
+      "brand_description": "<p><\/p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",

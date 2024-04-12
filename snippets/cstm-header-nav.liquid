@@ -1,6 +1,13 @@
-<nav class="header__inline-menu">
+{% comment %}
+  Usage:
+  {% render 'cstm-header-nav' %}
+{% endcomment %}
+{% assign class = class | default: blank %}
+{% assign menu_list = linklists[menu].links %}
+
+<nav class="header__inline-menu {{ class }}">
   <ul class="list-menu list-menu--inline" role="list">
-    {%- for link in section.settings.menu.links -%}
+    {%- for link in menu_list -%}
       <li>
         {%- if link.links != blank -%}
           <header-menu>
@@ -95,18 +102,21 @@
   </ul>
 </nav>
 <style>
+  .header__inline-menu .list-menu .list_item_text, .list-menu__item span, .link, .header__menu-item .customer a{
+      color: #fff;
+    }
     .header__inline-menu .list-menu .list_item_text, .list-menu__item span{
       font-size: 1.5rem;
       font-weight:600;
-      color: #00205C;
+      /* color: #00205C; */
       text-transform:uppercase;
     }
-    .cstm-header-menu .link, .customer a{
+    .cstm-header-menu1 .link, .customer a{
       font-weight: 600;
     }
     @media screen and (min-width: 990px){
       .link, .header__menu-item .customer a {
-          color: #00205C;
+          /* color: #00205C; */
       }
     }
     .images_nav{

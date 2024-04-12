@@ -200,9 +200,9 @@
         render 'header-search', input_id: 'Search-In-Modal-1'
       endif
     -%}
-{%if section.settings.enable_transparent%}
-    {% include 'cstm-header-nav',class: 'desktop-logo-image', %}
-{% endif %}
+    {%if section.settings.enable_transparent%}
+        {% render 'cstm-header-nav',class: 'cstm-header-menu1', %}
+    {% endif %}
 
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
@@ -274,7 +274,7 @@
       {%- endif -%}
     {%- endif -%}
     {%if section.settings.enable_transparent%}
-        {% include 'cstm-header-nav', class: 'desktop-logo-image',%}
+        {% render 'cstm-header-nav', class: 'cstm-header-menu2',%}
     {% endif %}
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
       <div class="desktop-localization-wrapper">

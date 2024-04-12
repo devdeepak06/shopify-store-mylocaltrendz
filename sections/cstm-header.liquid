@@ -274,9 +274,7 @@
       {%- endif -%}
     {%- endif -%}
 {%if section.settings.enable_transparent%}
-    {% render 'cstm-header-nav',
-      menu: menu_2
-      %}
+    {% render 'cstm-header-nav'%}
 {% endif %}
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
       <div class="desktop-localization-wrapper">

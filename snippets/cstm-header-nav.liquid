@@ -3,11 +3,12 @@
   {% render 'cstm-header-nav' %}
 {% endcomment %}
 {% assign class = class | default: blank %}
-{% assign menu = menu %}
+{% assign mymenu = menu %}
+{% assign cstm_menu = section.settings.mymenu.link %}
 
 <nav class="header__inline-menu {{ class }}">
   <ul class="list-menu list-menu--inline" role="list">
-    {%- for link in section.settings.{{ menu }}.links -%}
+    {%- for link in cstm_menu -%}
       <li>
         {%- if link.links != blank -%}
           <header-menu>

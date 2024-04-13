@@ -101,6 +101,10 @@
                   </a>
                 </div>
                 PDP Date: {{ product.metafields.custom.pdpdate }}
+                <input
+                  type="time"
+                  name="time"
+                >
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',

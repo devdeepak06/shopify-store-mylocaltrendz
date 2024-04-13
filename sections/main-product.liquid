@@ -101,10 +101,14 @@
                   </a>
                 </div>
                 <div>
-                  <label>Start</label>
-                  <input type="date" id="startDate" onchange="calculateDays()" min="" required><br>
-                  <label>End</label>
-                  <input type="date" id="endDate" onchange="calculateDays()" min="" required>
+                  <div>
+                    <label>Start</label>
+                    <input type="date" id="startDate" onchange="calculateDays()" min="" required>
+                  </div>
+                  <div>
+                    <label>End</label>
+                    <input type="date" id="endDate" onchange="calculateDays()" min="" required>
+                  </div>
                 </div>
                 <p>Number of days: <span id="result">0 days</span></p>
                 <script>

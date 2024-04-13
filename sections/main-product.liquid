@@ -111,26 +111,6 @@
                   </div>
                 </div>
                 <p>Number of days: <span id="result">0 days</span></p>
-                <style>
-                  /* Custom styles for input fields */
-                  label {
-                    font-weight: bold;
-                    margin-bottom: 5px;
-                    display: block;
-                  }
-                  input[type="date"] {
-                    padding: 8px;
-                    border-radius: 5px;
-                    border: 1px solid #ccc;
-                    font-size: 16px;
-                    width: 100%;
-                    box-sizing: border-box;
-                  }
-                  /* Custom style for container */
-                  .input-container {
-                    margin-bottom: 15px;
-                  }
-                </style>
                 <script>
                   // Set minimum date to current date
                   var today = new Date().toISOString().split('T')[0];
@@ -153,6 +133,26 @@
                     }
                   }
                 </script>
+                <style>
+                  /* Custom styles for input fields */
+                  label {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    display: block;
+                  }
+                  input[type="date"] {
+                    padding: 8px;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                    font-size: 16px;
+                    width: 100%;
+                    box-sizing: border-box;
+                  }
+                  /* Custom style for container */
+                  .input-container {
+                    margin-bottom: 15px;
+                  }
+                </style>
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',

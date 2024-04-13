@@ -101,13 +101,36 @@
                   </a>
                 </div>
                 <div>
-                  <label for="startproductDate">Start Date:</label>
-                  <input type="date" id="startproductDate" name="startproductDate">
+                  <label>Start</label>
+                  <input type="date" id="startDate" onchange="calculateDays()" min="" required><br>
+                  <label>End</label>
+                  <input type="date" id="endDate" onchange="calculateDays()" min="" required>
                 </div>
-                <div>
-                  <label for="endproductDate">End Date:</label>
-                  <input type="date" id="endproductDate" name="endproductDate">
-                </div>
+                <p>Number of days: <span id="result">0 days</span></p>
+                <script>
+                  // Set minimum date to current date
+                  var today = new Date().toISOString().split('T')[0];
+                  document.getElementById("startDate").setAttribute('min', today);
+                  document.getElementById("endDate").setAttribute('min', today);
+                  function calculateDays() {
+                    var startDate = new Date(document.getElementById("startDate").value);
+                    var endDate = new Date(document.getElementById("endDate").value);
+                    // Check if both dates are entered
+                    if (startDate && endDate) {
+                      // Calculate the difference in milliseconds
+                      var difference = endDate - startDate;
+                      // Convert difference from milliseconds to days
+                      var daysDifference = Math.floor(difference / (1000 * 60 * 60 * 24));
+                      if (daysDifference >= 0) {
+                        document.getElementById("result").innerText = daysDifference + " days";
+                      } else {
+                        alert("End date should be after or equal to start date.");
+                      }
+                    } else {
+                      document.getElementById("result").innerText = "0 days";
+                    }
+                  }
+                </script>
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',

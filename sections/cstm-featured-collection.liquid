@@ -1,3 +1,9 @@
+{%- if section.settings.enable_quick_add -%}
+  {{ 'quick-add.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
 <div class="featured-collection--container page-width section__{{ section.id }} cstcontainer tabSider">
   <div class="top_tab">
     {% for block in section.blocks %}

@@ -3,13 +3,17 @@
   <input type="button" value="Check" onclick="checkPincode()">
 </div>
 <script>
-  var pincode = [{{settings.pincode_validator}}];
+  var pincode = [
+    {{settings.pincode_validator | json}}
+  ]
   console.log(pincode);
   function checkPincode(){
     var zipCode = document.getElementById('checkPincode').value;
-    if(pincode.includes(parseInt(zipcode)){
+   if(pincode.indexOf(zipCode) != -1){
+     alert('Delivery available');
 
-    })
-
+    }else{
+      alert('Delivery not available');
+    }
   }
 </script>

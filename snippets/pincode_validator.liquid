@@ -11,11 +11,11 @@
   function checkPincode(){
     var zipCode = document.getElementById('checkPin').value;
   if(pincodes.includes(parseInt(zipCode))){
-    &('.checkStatus').html('<span style="color:green;">Delivery available</span>');
+    &('.checkStatus').html(`<span style="color:green;">Delivery available at ${zipCode}</span>`);
     console.log('Delivery available');
 
     }else{
-      $('.checkStatus').html('<span style="color:red;">Delivery not available</span>');
+      $('.checkStatus').html(`<span style="color:red;">Delivery not available  at ${zipCode}</span>`);
       console.log('Delivery not available');
     }
   }

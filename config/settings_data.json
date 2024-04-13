@@ -120,6 +120,7 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "pincode_validator": "111222,222333,444555",
     "checkout_logo_image": "shopify:\/\/shop_images\/mylocallogo.png",
     "checkout_logo_position": "center",
     "checkout_body_background_color": "#d7d2d2",

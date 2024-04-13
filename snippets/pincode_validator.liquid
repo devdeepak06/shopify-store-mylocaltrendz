@@ -9,7 +9,7 @@
       pattern="[1-9][0-9]{5}"
       onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
     >
-    <input type="button" value="Check" onclick="checkPincode()">
+    <input type="button" value="Check" id="checkPincodeButton">
     <p class="checkStatus"></p>
   </div>
   <p class="checkout_error"></p>
@@ -34,6 +34,15 @@
     return false;
   }
 }
+var checkPincodeButton = document.getElementById('checkPincodeButton');
+checkPincodeButton.addEventListener('click', function() {
+  if (validPincode) {
+    checkPincode();
+  }
+});
+document.getElementById('checkPin').addEventListener('keyup', function() {
+  pincodeValidation();
+});
 
   function checkPincode() {
   var pincodes = {{settings.pincode_validator | json}};

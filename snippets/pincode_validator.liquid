@@ -1,6 +1,7 @@
 <div class="pincodeDiv">
   <input id="checkPincode" type="text">
   <input type="button" value="Check" onclick="checkPincode()">
+  <p class="checkStatus"></p>
 </div>
 <script>
   var pincode = [
@@ -9,11 +10,13 @@
   console.log(pincode);
   function checkPincode(){
     var zipCode = document.getElementById('checkPincode').value;
-   if(pincode.includes(zipCode)){
-     alert('Delivery available');
+   if(pincode.includes(parseInt(zipCode))){
+    &('.checkStatus').html('<span style="color:green;">Delivery available</span>');
+     console.log('Delivery available');
 
     }else{
-      alert('Delivery not available');
+      $('.checkStatus').html('<span style="color:red;">Delivery not available</span>');
+      console.log('Delivery not available');
     }
   }
 </script>

@@ -24,9 +24,9 @@
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
-
-<style>
-  /* CSTM CSS */
+{% if section.settings.enable_transparent %}
+  <style>
+   /* Below CSS For Transparent Header */
     .header-drawer{
         margin-right: 1rem;
   }
@@ -58,8 +58,13 @@
     grid-template-areas: "left-icons heading icons";
 }
 }
-  /* CSTM CSS */
-  
+    .pageheader--transparent{
+      background: none;
+    }
+  /* CSTM CSS For Transparent Header */
+  </style>
+{% endif %}
+<style>  
   header-drawer {
     justify-self: start;
     margin-left: -1.2rem;

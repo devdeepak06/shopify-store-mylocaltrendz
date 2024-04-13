@@ -9,10 +9,10 @@
   var zipCode = document.getElementById('checkPin').value;
   if (pincodes.includes(parseInt(zipCode))) {
     document.querySelector('.checkStatus').innerHTML = `<span style="color:green;">Delivery available at ${zipCode}</span>`;
-    console.log('Delivery available');
+    // console.log('Delivery available');
   } else {
     document.querySelector('.checkStatus').innerHTML = `<span style="color:red;">Delivery not available at ${zipCode}</span>`;
-    console.log('Delivery not available');
+    // console.log('Delivery not available');
   }
 }
 </script>

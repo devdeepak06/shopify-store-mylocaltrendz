@@ -1,18 +1,18 @@
 <div class="pincodeDiv">
-  <input id="checkPincode" type="text">
+  <input id="checkPin" type="text">
   <input type="button" value="Check" onclick="checkPincode()">
   <p class="checkStatus"></p>
 </div>
 <script>
-  var pincode = [
+  var pincodes = [
     {{settings.pincode_validator | json}}
   ]
-  console.log(pincode);
+  console.log(pincodes);
   function checkPincode(){
-    var zipCode = document.getElementById('checkPincode').value;
-   if(pincode.includes(parseInt(zipCode))){
+    var zipCode = document.getElementById('checkPin').value;
+  if(pincodes.includes(parseInt(zipCode))){
     &('.checkStatus').html('<span style="color:green;">Delivery available</span>');
-     console.log('Delivery available');
+    console.log('Delivery available');
 
     }else{
       $('.checkStatus').html('<span style="color:red;">Delivery not available</span>');

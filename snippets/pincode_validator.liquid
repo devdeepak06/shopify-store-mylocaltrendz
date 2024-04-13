@@ -1,15 +1,17 @@
-<span class="eta-msg">Check Estimated Delivery Time</span>
-<div class="pincodeDiv">
-  <input
-    id="checkPin"
-    type="text"
-    placeholder="Enter Pincode*"
-    maxlength="6"
-    pattern="[1-9][0-9]{5}"
-    onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
-  >
-  <input type="button" value="Check" onclick="checkPincode()">
-  <p class="checkStatus"></p>
+<div>
+  <span class="eta-msg">Check Estimated Delivery Time</span>
+  <div class="pincodeDiv">
+    <input
+      id="checkPin"
+      type="text"
+      placeholder="Enter Pincode*"
+      maxlength="6"
+      pattern="[1-9][0-9]{5}"
+      onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
+    >
+    <input type="button" value="Check" onclick="checkPincode()">
+    <p class="checkStatus"></p>
+  </div>
 </div>
 <script>
   function checkPincode() {

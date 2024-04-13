@@ -9,7 +9,7 @@
   console.log(pincode);
   function checkPincode(){
     var zipCode = document.getElementById('checkPincode').value;
-   if(pincode.indexOf(zipCode) != -1){
+   if(pincode.includes(zipCode)){
      alert('Delivery available');
 
     }else{

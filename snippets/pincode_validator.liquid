@@ -8,10 +8,10 @@
   var pincodes = {{settings.pincode_validator | json}};
   var zipCode = document.getElementById('checkPin').value;
   if (pincodes.includes(parseInt(zipCode))) {
-    document.querySelector('.checkStatus').innerHTML = `<span style="color:green;">Delivery available at ${zipCode}</span>`;
+    document.querySelector('.checkStatus').innerHTML = `<span class="greenPincode">Delivery available at ${zipCode}</span>`;
     // console.log('Delivery available');
   } else {
-    document.querySelector('.checkStatus').innerHTML = `<span style="color:red;">Apologies, we do not currently service at ${zipCode}. We will be there soon!</span>`;
+    document.querySelector('.checkStatus').innerHTML = `<span class="redPincode">Apologies, we do not currently service at ${zipCode}. We will be there soon!</span>`;
     // console.log('Delivery not available');
   }
 }

@@ -1,4 +1,4 @@
-<div>
+<div class="field">
   <span class="eta-msg">Check Estimated Delivery Time</span>
   <div class="pincodeDiv">
     <input
@@ -10,9 +10,9 @@
       onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"
     >
     <input type="button" value="Check" onclick="checkPincode()">
-    <p class="checkout_error"></p>
     <p class="checkStatus"></p>
   </div>
+  <p class="checkout_error"></p>
 </div>
 <script>
   function pincodeValidation(event) {

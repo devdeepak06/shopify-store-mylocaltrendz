@@ -100,11 +100,15 @@
                     </h2>
                   </a>
                 </div>
-                PDP Date: {{ product.metafields.custom.pdpdate }}
-                <label for="startproductDate">Start Date:</label>
-                <input type="date" id="startproductDate" name="startproductDate">
-                <label for="endproductDate">End Date:</label>
-                <input type="date" id="endproductDate" name="endproductDate">
+
+                <div>
+                  <label for="startproductDate">Start Date:</label>
+                  <input type="date" id="startproductDate" name="startproductDate">
+                </div>
+                <div>
+                  <label for="endproductDate">End Date:</label>
+                  <input type="date" id="endproductDate" name="endproductDate">
+                </div>
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',

@@ -1,6 +1,18 @@
-function checkPincode() { var pincodes = {{ settings.pincode_validator | json }}; var zipCode =
-document.getElementById('checkPin').value; if (pincodes.includes(parseInt(zipCode))) {
-document.querySelector('.checkStatus').innerHTML = `<span style="color:green;">Delivery available at ${zipCode}</span>`;
-console.log('Delivery available'); } else { document.querySelector('.checkStatus').innerHTML = `<span style="color:red;"
-  >Delivery not available at ${zipCode}</span
->`; console.log('Delivery not available'); } }
+<div class="pincodeDiv">
+  <input id="checkPin" type="text">
+  <input type="button" value="Check" onclick="checkPincode()">
+  <p class="checkStatus"></p>
+</div>
+<script>
+  function checkPincode() {
+  var pincodes = {{settings.pincode_validator | json}};
+  var zipCode = document.getElementById('checkPin').value;
+  if (pincodes.includes(parseInt(zipCode))) {
+    document.querySelector('.checkStatus').innerHTML = `<span style="color:green;">Delivery available at ${zipCode}</span>`;
+    console.log('Delivery available');
+  } else {
+    document.querySelector('.checkStatus').innerHTML = `<span style="color:red;">Delivery not available at ${zipCode}</span>`;
+    console.log('Delivery not available');
+  }
+}
+</script>

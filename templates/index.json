@@ -6,7 +6,7 @@
         "slide_Tm6mGn": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Mt-banners-2Artboard-8-copy_1950x_2c5cd0b8-9340-403c-9c07-ee5aacaf9d12.webp",
+            "image": "shopify:\/\/shop_images\/Mt-banners-2Artboard-8-copy_1950x_2c5cd0b8-9340-403c-9c07-ee5aacaf9d12.webp",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -24,7 +24,7 @@
         "slide_j9yz3b": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Mt-bannersdfc-Artboard-1-copy_1.webp",
+            "image": "shopify:\/\/shop_images\/Mt-bannersdfc-Artboard-1-copy_1.webp",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -42,7 +42,7 @@
         "slide_TTPbwP": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Mt-bannersjnjkmlArtboard-7.webp",
+            "image": "shopify:\/\/shop_images\/Mt-bannersjnjkmlArtboard-7.webp",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",

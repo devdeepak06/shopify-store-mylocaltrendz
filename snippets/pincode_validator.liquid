@@ -1,4 +1,4 @@
-<div class="field">
+<div class="cstmfield">
   <span class="eta-msg">Check Estimated Delivery Time</span>
   <div class="pincodeDiv">
     <input
@@ -20,13 +20,13 @@
   let count = pinField.replace(/[, ]/g, "").length;
   var pin_regex = /^[1-9][0-9]{5}$/;
   if(pin_regex.test(pinField) && count == 6) {
-    document.querySelector('#checkPin').closest('.field').querySelector('.checkout_error').innerHTML = '';
+    document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').innerHTML = '';
     return true;
   }else if((!pin_regex.test(pinField) && count == 6) || (!pin_regex.test(pinField) && (count > 0 && count < 6))) {
-    document.querySelector('#checkPin').closest('.field').querySelector('.checkout_error').innerHTML = 'Invalid Pincode, please enter a valid Pincode';
+    document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').innerHTML = 'Invalid Pincode, please enter a valid Pincode';
     return false;
   }else if(count == 0) {
-    if(event == 'click' || event == 'submit') { document.querySelector('#checkPin').closest('.field').querySelector('.checkout_error').innerHTML = 'Please Enter Pincode'; }
+    if(event == 'click' || event == 'submit') { document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').innerHTML = 'Please Enter Pincode'; }
     return false;
   }
 }

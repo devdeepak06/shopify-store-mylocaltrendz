@@ -6,7 +6,7 @@
         "slide_Tm6mGn": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Mt-banners-2Artboard-8-copy_1950x_2c5cd0b8-9340-403c-9c07-ee5aacaf9d12.webp",
+            "image": "shopify:\/\/shop_images\/Mt-banners-2Artboard-8-copy_1950x_2c5cd0b8-9340-403c-9c07-ee5aacaf9d12.webp",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -24,7 +24,7 @@
         "slide_j9yz3b": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Mt-bannersdfc-Artboard-1-copy_1.webp",
+            "image": "shopify:\/\/shop_images\/Mt-bannersdfc-Artboard-1-copy_1.webp",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -42,7 +42,7 @@
         "slide_TTPbwP": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Mt-bannersjnjkmlArtboard-7.webp",
+            "image": "shopify:\/\/shop_images\/Mt-bannersjnjkmlArtboard-7.webp",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -106,22 +106,13 @@
       ],
       "settings": {
         "tab_title": "",
-        "product_count": 2,
-        "products_per_page": 8,
-        "columns_desktop": 2,
         "color_scheme": "",
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "enable_quick_add": true,
-        "enable_filtering": true,
-        "filter_type": "horizontal",
-        "enable_sorting": true,
-        "columns_mobile": "2",
-        "padding_top": 12,
-        "padding_bottom": 12
+        "enable_quick_add": true
       }
     }
   },

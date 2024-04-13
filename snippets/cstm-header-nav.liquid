@@ -102,7 +102,7 @@
   </ul>
 </nav>
 <style>
-  .header__inline-menu .list-menu .list_item_text, .list-menu__item span, .link, .header__menu-item .customer a{
+  .header__inline-menu .list-menu .list_item_text, .list-menu__item span, .header__icons .link, .header__menu-item .customer a{
       color: #fff;
     }
     .header__inline-menu .list-menu .list_item_text, .list-menu__item span{
@@ -156,3 +156,13 @@
     }
   }
 </style>
+{% if template.name != 'index' %}
+  <style>
+    .header__inline-menu .list-menu .list_item_text, .list-menu__item span, .header__icons .link, .header__menu-item .customer a{
+        color: #00205C;
+      }
+    .pageheader--transparent{
+      background: #fff;
+    }
+  </style>
+{% endif %}

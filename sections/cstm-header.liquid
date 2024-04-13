@@ -273,7 +273,7 @@
         </h1>
       {%- endif -%}
     {%- endif -%}
-    {%if section.settings.enable_transparent%}
+    {% if section.settings.enable_transparent %}
         {% render 'cstm-header-nav', menu: section.settings.menu_2, class: 'cstm-header-menu2'%}
     {% endif %}
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
@@ -778,97 +778,97 @@ items.forEach(item => {
     }
   </style>
   <script>
-  // Code for transparent header onmousehover
-   var header_cstm = document.querySelector(".pageheader--transparent");
-var sticky_cstm = header_cstm.offsetHeight;
-var listItems = document.querySelectorAll('.header__inline-menu .list-menu .list_item_text');
-var spanElements = document.querySelectorAll('.list-menu__item span');
-var listIcon = document.querySelectorAll('.link');
-var menuAnchorLink = document.querySelectorAll('.header__menu-item .customer a');
-  var headerSection = document.querySelector('.pageheader--transparent');
-  headerSection.addEventListener("mouseover", mouseOver);
-  headerSection.addEventListener("mouseout", mouseOut);
-
-  function mouseOver() {
-    headerSection.style.background = "white";
-    listItems.forEach(function(item) {
-      item.style.color = '#00205C';
-    });
-
-    spanElements.forEach(function(span) {
-      span.style.color = '#00205C';
-    });
-
-    listIcon.forEach(function(link) {
-      link.style.color = '#00205C';
-    });
-
-    menuAnchorLink.forEach(function(anchorLink) {
-      anchorLink.style.color = '#00205C';
-    });
-    // headerSection.classList.add('transparent-header');
-  }
-  
-  function mouseOut() {
-    headerSection.style.background = "none";
-    listItems.forEach(function(item) {
-      item.style.color = '#fff';
-    });
-
-    spanElements.forEach(function(span) {
-      span.style.color = '#fff';
-    });
-
-    listIcon.forEach(function(link) {
-      link.style.color = '#fff';
-    });
-
-    menuAnchorLink.forEach(function(anchorLink) {
-      anchorLink.style.color = '#fff';
-    });
-    // headerSection.classList.remove('transparent-header');
-  }
-  
-  // Code for change background on scrolling
- window.onscroll = function () {
-  myFunction();
-};
-function myFunction() {
-  if (window.pageYOffset === 0 || window.pageYOffset <= sticky_cstm) {
-    header_cstm.style.background = "none";
-    listItems.forEach(function(item) {
-      item.style.color = '#fff';
-    });
-
-    spanElements.forEach(function(span) {
-      span.style.color = '#fff';
-    });
-
-    listIcon.forEach(function(link) {
-      link.style.color = '#fff';
-    });
-
-    menuAnchorLink.forEach(function(anchorLink) {
-      anchorLink.style.color = '#fff';
-    });
-// console.log("pageYOffset " + pageYOffset + " sticky_cstm " + sticky_cstm);
-  } else {
-    header_cstm.style.background = "white";
-    listItems.forEach(function(item) {
-      item.style.color = '#00205C';
-    });
-
-    spanElements.forEach(function(span) {
-      span.style.color = '#00205C';
-    });
-
-    listIcon.forEach(function(link) {
-      link.style.color = '#00205C';
-    });
-
-    menuAnchorLink.forEach(function(anchorLink) {
-      anchorLink.style.color = '#00205C';
-    });
-  }
-}
+      // Code for transparent header onmousehover
+       var header_cstm = document.querySelector(".pageheader--transparent");
+    var sticky_cstm = header_cstm.offsetHeight;
+    var listItems = document.querySelectorAll('.header__inline-menu .list-menu .list_item_text');
+    var spanElements = document.querySelectorAll('.list-menu__item span');
+    var listIcon = document.querySelectorAll('.link');
+    var menuAnchorLink = document.querySelectorAll('.header__menu-item .customer a');
+      var headerSection = document.querySelector('.pageheader--transparent');
+      headerSection.addEventListener("mouseover", mouseOver);
+      headerSection.addEventListener("mouseout", mouseOut);
+    
+      function mouseOver() {
+        headerSection.style.background = "white";
+        listItems.forEach(function(item) {
+          item.style.color = '#00205C';
+        });
+    
+        spanElements.forEach(function(span) {
+          span.style.color = '#00205C';
+        });
+    
+        listIcon.forEach(function(link) {
+          link.style.color = '#00205C';
+        });
+    
+        menuAnchorLink.forEach(function(anchorLink) {
+          anchorLink.style.color = '#00205C';
+        });
+        // headerSection.classList.add('transparent-header');
+      }
+      
+      function mouseOut() {
+        headerSection.style.background = "none";
+        listItems.forEach(function(item) {
+          item.style.color = '#fff';
+        });
+    
+        spanElements.forEach(function(span) {
+          span.style.color = '#fff';
+        });
+    
+        listIcon.forEach(function(link) {
+          link.style.color = '#fff';
+        });
+    
+        menuAnchorLink.forEach(function(anchorLink) {
+          anchorLink.style.color = '#fff';
+        });
+        // headerSection.classList.remove('transparent-header');
+      }
+      
+      // Code for change background on scrolling
+     window.onscroll = function () {
+      myFunction();
+    };
+    function myFunction() {
+      if (window.pageYOffset === 0 || window.pageYOffset <= sticky_cstm) {
+        header_cstm.style.background = "none";
+        listItems.forEach(function(item) {
+          item.style.color = '#fff';
+        });
+    
+        spanElements.forEach(function(span) {
+          span.style.color = '#fff';
+        });
+    
+        listIcon.forEach(function(link) {
+          link.style.color = '#fff';
+        });
+    
+        menuAnchorLink.forEach(function(anchorLink) {
+          anchorLink.style.color = '#fff';
+        });
+    // console.log("pageYOffset " + pageYOffset + " sticky_cstm " + sticky_cstm);
+      } else {
+        header_cstm.style.background = "white";
+        listItems.forEach(function(item) {
+          item.style.color = '#00205C';
+        });
+    
+        spanElements.forEach(function(span) {
+          span.style.color = '#00205C';
+        });
+    
+        listIcon.forEach(function(link) {
+          link.style.color = '#00205C';
+        });
+    
+        menuAnchorLink.forEach(function(anchorLink) {
+          anchorLink.style.color = '#00205C';
+        });
+      }
+    }
 </script>

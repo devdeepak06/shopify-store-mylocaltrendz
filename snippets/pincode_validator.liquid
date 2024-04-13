@@ -36,15 +36,6 @@
 }
 var checkPincodeButton = document.getElementById('checkPincodeButton');
 checkPincodeButton.addEventListener('click', function() {
-  if (validPincode) {
-    checkPincode();
-  }
-});
-document.getElementById('checkPin').addEventListener('keyup', function() {
-  pincodeValidation();
-});
-
-  function checkPincode() {
   var pincodes = {{settings.pincode_validator | json}};
   var zipCode = document.getElementById('checkPin').value;
   if (pincodes.includes(parseInt(zipCode))) {
@@ -59,7 +50,11 @@ document.getElementById('checkPin').addEventListener('keyup', function() {
 </svg>Apologies, we do not currently service at ${zipCode}.</span>`;
     // console.log('Delivery not available');
   }
-}
+});
+
+document.getElementById('checkPin').addEventListener('keyup', function() {
+  pincodeValidation();
+});
 </script>
 <style>
         .pincodeDiv input[type="text"] {

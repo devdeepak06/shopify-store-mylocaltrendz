@@ -56,16 +56,11 @@ checkPincodeButton.addEventListener('click', function() {
 // document.getElementById('checkPin').addEventListener('keyup', function() {
 //   pincodeValidation();
 // });
-  document.getElementById('checkPin').addEventListener('input', function() {
-    var pinField = this.value;
-    if (pinField.trim() === '') {
-        // Clear the checkStatus message when pin code is removed
-        document.querySelector('.checkStatus').innerHTML = '';
-    }
-    // Validate pin code if it's not empty
-    else {
-        pincodeValidation();
-    }
+ document.getElementById('checkPin').addEventListener('input', function() {
+  var zipCode = this.value;
+  if (zipCode.trim() === '') {
+    document.querySelector('.checkStatus').innerHTML = '';
+  }
 });
 </script>
 <style>

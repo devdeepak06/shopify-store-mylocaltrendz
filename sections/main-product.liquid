@@ -199,7 +199,12 @@
                     <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                     </div>
                 {% endcomment %}
-                <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                <div
+                  class="no-js-hidden"
+                  id="prod_variant_description-{{ section.id }}"
+                  role="status"
+                  {{ block.shopify_attributes }}
+                >
                   {% render 'custom_variant' %}
                 </div>
 

@@ -974,16 +974,18 @@ class VariantSelects extends HTMLElement {
     }
   }
 
-  updateVariantDetails(){
-      // console.log("Variant has been changed");
-      // console.log(this.currentVariant);
-    //grabAll data
+  updateVariantDetails() {
+    // Parse JSON data from the HTML element
     const allMetafieldData = JSON.parse(document.querySelector('#variant_metafield_details').textContent);
-    console.log(allMetafieldData);
-    //replace content
+    console.log(allMetafieldData); // Log the parsed data (optional)
+
+    // Get the HTML element to update
     const VariantDetailsText = document.querySelector('#variant-details');
+    
+    // Update the HTML content based on the current variant's ID
     VariantDetailsText.innerHTML = allMetafieldData[this.currentVariant.id];
-  }
+}
+
   updateOptions() {
     this.options = Array.from(this.querySelectorAll('select, fieldset'), (element) => {
       if (element.tagName === 'SELECT') {

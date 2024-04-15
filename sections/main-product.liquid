@@ -191,10 +191,7 @@
                       {{ product.description }}
                     </div>
                   {% endcomment %}
-                  <div class="product__description rte quick-add-hidden">
-                    {% render 'custom_variant' %}
-                    {% render 'custom_variant' %}
-                  </div>
+                  {% render 'custom_variant' %}
                 {%- endif -%}
 
               {%- when 'sku' -%}

@@ -977,16 +977,16 @@ class VariantSelects extends HTMLElement {
   updateVariantDetails() {
     // Parse JSON data from the HTML element
     const allMetafieldData = JSON.parse(document.querySelector('#variant_metafield_details').textContent);
-    console.log(allMetafieldData);
+    // console.log(allMetafieldData);
 
     // Get the HTML element to update
     const VariantDetailsText = document.querySelector('#variant-details');
     // console.log(VariantDetailsText);
-    console.log(this.currentVariant.id);
+    // console.log(this.currentVariant.id);
     
     // Update the HTML content based on the current variant's ID
-    // VariantDetailsText.innerHTML = allMetafieldData[this.currentVariant.id];
-    VariantDetailsText.innerHTML = this.currentVariant.id;
+    VariantDetailsText.innerHTML = allMetafieldData[this.currentVariant.id];
+    // VariantDetailsText.innerHTML = this.currentVariant.id;
     
 }
 

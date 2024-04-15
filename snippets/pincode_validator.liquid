@@ -30,7 +30,7 @@
     document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').textContent = '';
     return true;
   } else {
-    document.getElementById('checkPin').addEventListener('input', function() {
+    document.getElementById('checkPin').closest('.cstmfield').querySelector('.checkout_error').addEventListener('input', function() {
   var zipCode = this.value;
   if (zipCode.trim() === '') {
     document.querySelector('.checkStatus').innerHTML = 'Please Enter a Valid Pincode';

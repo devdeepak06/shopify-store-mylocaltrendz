@@ -979,7 +979,6 @@ class VariantSelects extends HTMLElement {
       // console.log(this.currentVariant);
     //grabAll data
     const allMetafieldData = JSON.parse(document.querySelector('#variant_metafield_details').textContent);
-
     console.log(allMetafieldData);
     //replace content
     const VariantDetailsText = document.querySelector('#variant-details');

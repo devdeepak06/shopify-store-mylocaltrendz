@@ -1,4 +1,4 @@
-{%- assign selected_variant = product.selected_variant -%}
+{%- assign selected_variant = product.selected_or_first_available_variant -%}
 {%- if selected_variant -%}
   {%- capture options -%}
   {% for option in selected_variant.options -%}

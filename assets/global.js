@@ -971,12 +971,13 @@ class VariantSelects extends HTMLElement {
       this.renderProductInfo();
       this.updateShareUrl();
       this.updateVariantDetails();
-      console.log("Variant has been changed");
-      console.log(this.currentVariant);
-      
     }
   }
 
+  updateVariantDetails(){
+      console.log("Variant has been changed");
+      console.log(this.currentVariant);
+  }
   updateOptions() {
     this.options = Array.from(this.querySelectorAll('select, fieldset'), (element) => {
       if (element.tagName === 'SELECT') {

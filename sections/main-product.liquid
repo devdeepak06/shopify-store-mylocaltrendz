@@ -796,7 +796,7 @@
   {
   {% for variant in product.variants %}
   {% assign metafield_content = variant.metafields.custom.productvariant %}
-    "{{ variant.id }}" : "{{ metafield_content }}" {% unless forloop.last %},{% endunless %}
+    "{{ variant.id }}" : "{{ metafield_content | metafield_tag }}" {% unless forloop.last %},{% endunless %}
   {% endfor %}
   }
 </script>

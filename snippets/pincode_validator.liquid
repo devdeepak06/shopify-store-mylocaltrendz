@@ -15,6 +15,32 @@
   <p class="checkout_error"></p>
 </div>
 <script>
+  const pincode = {{settings.pincode_validator | json}}; // Replace 'YOUR_PINCODE' with the actual PINCODE
+
+// Construct the API URL with the pincode
+const apiUrl = `https://api.postalpincode.in/pincode/${pincode}`;
+
+// Make a GET request to the API
+fetch(apiUrl)
+  .then(response => {
+    // Check if response is successful
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    // Parse the JSON response
+    return response.json();
+  })
+  .then(data => {
+    // Handle the data
+    console.log(data);
+    // Access the information from the response, e.g., data[0].PostOffice[0].Name
+  })
+  .catch(error => {
+    // Handle errors
+    console.error('There was a problem with your fetch operation:', error);
+  });
+</script>
+<script>
   var validPincode = pincodeValidation(event);
   function pincodeValidation(event) {
   var pinField = document.querySelector('#checkPin').value;

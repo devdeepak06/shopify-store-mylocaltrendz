@@ -59,7 +59,7 @@ document.getElementById('checkPin').addEventListener('keyup', function() {
  document.getElementById('checkPin').addEventListener('input', function() {
   var zipCode = this.value;
   if (zipCode.trim() === '') {
-    document.querySelector('.checkStatus').innerHTML = '';
+    document.querySelector('.checkStatus').innerHTML = 'Please Enter a Valid Pincode';
   }
 });
 </script>

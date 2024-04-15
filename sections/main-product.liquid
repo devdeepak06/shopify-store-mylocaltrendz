@@ -243,7 +243,6 @@
                     {{ product.description }}
                   </div>
                 {%- endif -%}
-                <!-- {{ product.selected_or_first_available_variant.metafields.custom.productvariant }} -->
                 {% if product.selected_or_first_available_variant.metafields.custom.productvariant != blank %}
                   {% for variant in product.selected_or_first_available_variant.metafields.custom.productvariant %}
                     <div>{{ product.selected_or_first_available_variant.metafields.custom.productvariant }}</div>

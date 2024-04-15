@@ -981,7 +981,7 @@ class VariantSelects extends HTMLElement {
     const allMetafieldData = JSON.parse(document.querySelector('#variant_metafield_details').textcontent)
     //replace content
     const VariantDetailsText = document.querySelector('#variant-details');
-    VariantDetailsText.innerHTML = this.currentVariant.id;
+    VariantDetailsText.innerHTML = allMetafieldData[this.currentVariant.id];
   }
   updateOptions() {
     this.options = Array.from(this.querySelectorAll('select, fieldset'), (element) => {

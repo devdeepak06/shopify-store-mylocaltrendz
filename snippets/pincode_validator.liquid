@@ -41,7 +41,6 @@ fetch(apiUrl)
   });
 </script>
 <script>
-  var validPincode = pincodeValidation(event);
   function pincodeValidation(event) {
   var pinField = document.querySelector('#checkPin').value;
   let count = pinField.replace(/[, ]/g, "").length;
@@ -78,7 +77,7 @@ checkPincodeButton.addEventListener('click', function() {
   }
 });
 
-document.getElementById('checkPin').addEventListener('keyup', function() {
+document.querySelector('#checkPin').value;.addEventListener('keyup', function() {
   pincodeValidation();
 });
 </script>

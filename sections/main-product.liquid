@@ -191,7 +191,8 @@
                       {{ product.description }}
                     </div>
                   {% endcomment %}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                  <div class="product__description rte quick-add-hidden">
+                    {% render 'custom_variant' %}
                     {% render 'custom_variant' %}
                   </div>
                 {%- endif -%}

@@ -786,11 +786,11 @@
     </script>
   </div>
 </section>
-<script id="variant_metafield_details" type="application/json">
+<script class="metafield-json" id="variant_metafield_details" type="application/json">
   {
   {% for variant in product.variants %}
   {% assign metafield_content = variant.metafields.custom.productvariant %}
-    "{{ variant.id }}" : "{{ metafield_content }}" {% unless forloop.last %},{% endunless %}
+    "{{ variant.id }}" : "{{ metafield_content | json }}" {% unless forloop.last %},{% endunless %}
   {% endfor %}
   }
 </script>

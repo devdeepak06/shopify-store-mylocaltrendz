@@ -983,7 +983,9 @@ class VariantSelects extends HTMLElement {
     const VariantDetailsText = document.querySelector('#variant-details');
     
     // Update the HTML content based on the current variant's ID
-    VariantDetailsText.innerHTML = allMetafieldData[this.currentVariant.id];
+    // VariantDetailsText.innerHTML = allMetafieldData[this.currentVariant.id];
+    VariantDetailsText.innerHTML = this.currentVariant.id;
+    
 }
 
   updateOptions() {

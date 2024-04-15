@@ -21,6 +21,12 @@
           "settings": {
           }
         },
+        "custom_liquid_8LCGCi": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.selected_variant %}\n{{ product.selected_variant.metafields.custom.productvariant }}\n{% endif %}"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -69,6 +75,7 @@
         "vendor",
         "title",
         "description",
+        "custom_liquid_8LCGCi",
         "price",
         "variant_picker",
         "quantity_selector",

@@ -53,9 +53,9 @@ checkPincodeButton.addEventListener('click', function() {
   }
 });
 
-// document.getElementById('checkPin').addEventListener('keyup', function() {
-//   pincodeValidation();
-// });
+document.getElementById('checkPin').addEventListener('keyup', function() {
+  pincodeValidation();
+});
  document.getElementById('checkPin').addEventListener('input', function() {
   var zipCode = this.value;
   if (zipCode.trim() === '') {

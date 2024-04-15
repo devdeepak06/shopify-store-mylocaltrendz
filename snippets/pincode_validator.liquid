@@ -61,8 +61,8 @@ fetch(apiUrl)
   }
 }
 var checkPincodeButton = document.getElementById('checkPincodeButton');
-checkPincodeButton.addEventListener('click', function() {
   var pincodes = {{settings.pincode_validator | json}};
+checkPincodeButton.addEventListener('click', function() {
   var zipCode = document.getElementById('checkPin').value;
   if (pincodes.includes(parseInt(zipCode)) && pincodes.length == 6) {
     document.querySelector('.checkStatus').innerHTML = `

@@ -15,31 +15,6 @@
   <p class="checkout_error"></p>
 </div>
 <script>
-  var validPincode = pincodeValidation(event);
-  function pincodeValidation(event) {
-  var pinField = document.querySelector('#checkPin').value;
-  let count = pinField.replace(/[, ]/g, "").length;
-  var pin_regex = /^[1-9][0-9]{5}$/;
-  
-  if (count === 0) {
-    if (event === 'click' || event === 'submit') {
-      document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').textContent = 'Please Enter Pincode';
-    }
-    return false;
-  } else if (pin_regex.test(pinField) && count === 6) {
-    document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').textContent = '';
-    return true;
-  } else {
-    document.getElementById('checkPin').closest('.cstmfield').querySelector('.checkout_error').addEventListener('input', function() {
-  var zipCode = this.value;
-  if (zipCode.trim() === '') {
-    document.querySelector('.checkStatus').innerHTML = 'Please Enter a Valid Pincode';
-  }
-});
-    // document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').textContent = 'Invalid Pincode, please enter a valid Pincode';
-    return false;
-  }
-}
 var checkPincodeButton = document.getElementById('checkPincodeButton');
 checkPincodeButton.addEventListener('click', function() {
   var pincodes = {{settings.pincode_validator | json}};
@@ -58,7 +33,31 @@ checkPincodeButton.addEventListener('click', function() {
     // console.log('Delivery not available');
   }
 });
-
+ var validPincode = pincodeValidation(event);
+  function pincodeValidation(event) {
+  var pinField = document.querySelector('#checkPin').value;
+  let count = pinField.replace(/[, ]/g, "").length;
+  var pin_regex = /^[1-9][0-9]{5}$/;
+  
+  if (count === 0) {
+    if (event === 'click' || event === 'submit') {
+      document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').textContent = 'Please Enter Pincode';
+    }
+    return false;
+  } else if (pin_regex.test(pinField) && count === 6) {
+    document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').textContent = '';
+    return true;
+  } else {
+    document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').addEventListener('input', function() {
+  var zipCode = this.value;
+  if (zipCode.trim() === '') {
+    document.querySelector('.checkStatus').innerHTML = 'Please Enter a Valid Pincode';
+  }
+});
+    // document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').textContent = 'Invalid Pincode, please enter a valid Pincode';
+    return false;
+  }
+}
 document.getElementById('checkPin').addEventListener('keyup', function() {
   pincodeValidation();
 });

@@ -21,12 +21,6 @@
           "settings": {
           }
         },
-        "custom_liquid_8LCGCi": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% if product.selected_variant %}\n{{ product.selected_variant.metafields.custom.productvariant | metafield_tag }}\n{% endif %}"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -69,20 +63,37 @@
           "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
+        },
+        "custom_liquid_8LCGCi": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% if product.selected_variant %}\n{{ product.selected_variant.metafields.custom.productvariant | metafield_tag }}\n{% endif %}"
+          }
+        },
+        "collapsible_tab_xgDFKq": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Details",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "vendor",
         "title",
         "description",
-        "custom_liquid_8LCGCi",
         "price",
         "variant_picker",
         "quantity_selector",
         "inventory_NgViDh",
         "buy_buttons",
         "share",
-        "judge_me_reviews_preview_badge_TxkwcC"
+        "judge_me_reviews_preview_badge_TxkwcC",
+        "custom_liquid_8LCGCi",
+        "collapsible_tab_xgDFKq"
       ],
       "settings": {
         "enable_sticky_info": true,

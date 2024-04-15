@@ -243,12 +243,12 @@
                     {{ product.description }}
                   </div>
                 {%- endif -%}
-                {{ product.selected_or_first_available_variant.metafields.custom.productvariant }}
-                {% if variant.metafields.custom.productvariant != blank %}
-                  {% for variant in variant.metafields.custom.productvariant %}
-                    <div>{{ variant.value }}</div>
+                <!-- {{ product.selected_or_first_available_variant.metafields.custom.productvariant }} -->
+                {% if product.selected_or_first_available_variant.metafields.custom.productvariant != blank %}
+                  {% for variant in product.selected_or_first_available_variant.metafields.custom.productvariant %}
+                    <div>{{ product.selected_or_first_available_variant.metafields.custom.productvariant }}</div>
                   {% endfor %}
-                  <div>{{ product.variant.metafields.custom.productvariant.value }}</div>
+                  <div>{{ product.selected_or_first_available_variant.metafields.custom.productvariant }}</div>
                 {% endif %}
 
               {%- when 'sku' -%}

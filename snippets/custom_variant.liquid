@@ -5,16 +5,15 @@
 {% endif %}
 
 {% comment %}
-    {%- assign selected_variant = product.selected_or_first_available_variant -%}
-    {%- if selected_variant -%}
-    {%- capture options -%}
-    {% for option in selected_variant.options -%}
-    {{ option }}{%- unless forloop.last -%}/{%- endunless -%}
-    {%- endfor %}
-    {%- endcapture -%}
-    {{ options }} | {{ selected_variant.weight }} ml
-    {%- endif -%}
-
+  {%- assign selected_variant = product.selected_or_first_available_variant -%}
+  {%- if selected_variant -%}
+  {%- capture options -%}
+  {% for option in selected_variant.options -%}
+  {{ option }}{%- unless forloop.last -%}/{%- endunless -%}
+  {%- endfor %}
+  {%- endcapture -%}
+  {{ options }} | {{ selected_variant.weight }} ml
+  {%- endif -%}
   <div>
   <div>
   <label>Start Date: </label>

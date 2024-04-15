@@ -16,8 +16,18 @@
           "settings": {
           }
         },
+        "collapsible_tab_CbnVBb": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product Details",
+            "icon": "leaf",
+            "content": "",
+            "page": ""
+          }
+        },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
           }
         },
@@ -75,6 +85,7 @@
       "block_order": [
         "vendor",
         "title",
+        "collapsible_tab_CbnVBb",
         "description",
         "price",
         "variant_picker",

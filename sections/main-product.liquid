@@ -243,17 +243,17 @@
                     {{ product.description }}
                   </div>
                 {%- endif -%}
-                {% if product.selected_or_first_available_variant %}
-                  {% for variant in product.variants -%}
-                    {%- capture metafields -%}
+
+                {% for variant in product.variants -%}
+                  {%- capture metafields -%}
                   {% for metafield in variant.metafields -%}
                   {{ metafield.custom.productvariant }}
+                    {{ metafields.custom.productvariant }}
                   {%- endfor %}
                 {%- endcapture -%}
-                    {{ metafields.custom.productvariant }}
-                    <br>
-                  {%- endfor %}
-                {% endif %}
+                  <br>
+                {%- endfor %}
+
                 {% for variant in product.variants -%}
                   {{ variant.metafields.custom.productvariant }}
                 {% endfor %}

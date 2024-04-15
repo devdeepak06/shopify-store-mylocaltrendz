@@ -239,9 +239,11 @@
                 </p>
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    <!-- {{ product.description }} -->
-                  </div>
+                  {% comment %}
+                     <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                      {{ product.description }}
+                    </div>
+                  {% endcomment %}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                     {% render 'custom_variant' %}
                   </div>

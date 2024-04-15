@@ -24,7 +24,7 @@
         "custom_liquid_8LCGCi": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% if product.selected_variant %}\n{{ product.selected_variant.metafields.custom.productvariant }}\n{% endif %}"
+            "custom_liquid": "{% if product.selected_variant %}\n{{ product.selected_variant.metafields.custom.productvariant | metafield_tag }}\n{% endif %}"
           }
         },
         "price": {

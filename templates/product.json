@@ -5,6 +5,7 @@
       "blocks": {
         "vendor": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
@@ -12,6 +13,11 @@
         },
         "title": {
           "type": "title",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
           "settings": {
           }
         },
@@ -23,8 +29,8 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
+            "picker_type": "dropdown",
+            "swatch_shape": "square"
           }
         },
         "quantity_selector": {
@@ -32,16 +38,19 @@
           "settings": {
           }
         },
+        "inventory_NgViDh": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": false
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
           }
         },
         "share": {
@@ -54,18 +63,27 @@
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
+        },
+        "custom_liquid_8LCGCi": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% if product.selected_variant %}\n{{ product.selected_variant.metafields.custom.productvariant | metafield_tag }}\n{% endif %}"
+          }
         }
       },
       "block_order": [
         "vendor",
         "title",
+        "description",
         "price",
         "variant_picker",
         "quantity_selector",
+        "inventory_NgViDh",
         "buy_buttons",
-        "description",
         "share",
-        "judge_me_reviews_preview_badge_TxkwcC"
+        "judge_me_reviews_preview_badge_TxkwcC",
+        "custom_liquid_8LCGCi"
       ],
       "settings": {
         "enable_sticky_info": true,

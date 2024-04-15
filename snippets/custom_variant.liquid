@@ -1,0 +1,70 @@
+{% if product.selected_or_first_available_variant.metafields.custom.productvariant != blank %}
+  <div class="variant_desc">
+    {{ product.selected_or_first_available_variant.metafields.custom.productvariant | metafield_tag }}
+  </div>
+{% endif %}
+
+{% comment %}
+  {%- assign selected_variant = product.selected_or_first_available_variant -%}
+  {%- if selected_variant -%}
+  {%- capture options -%}
+  {% for option in selected_variant.options -%}
+  {{ option }}{%- unless forloop.last -%}/{%- endunless -%}
+  {%- endfor %}
+  {%- endcapture -%}
+  {{ options }} | {{ selected_variant.weight }} ml
+  {%- endif -%}
+  <div>
+  <div>
+  <label>Start Date: </label>
+  <input type="date" id="startDate" onchange="calculateDays()" min="" required>
+  </div>
+  <div>
+  <label>End Date: </label>
+  <input type="date" id="endDate" onchange="calculateDays()" min="" required>
+  </div>
+  </div>
+  <p>Number of days: <span id="result">0 days</span></p>
+  <script>
+  // Set minimum date to current date
+  var today = new Date().toISOString().split('T')[0];
+  document.getElementById("startDate").setAttribute('min', today);
+  document.getElementById("endDate").setAttribute('min', today);
+  function calculateDays() {
+  var startDate = new Date(document.getElementById("startDate").value);
+  var endDate = new Date(document.getElementById("endDate").value);
+  // Check if both dates are entered
+  if (startDate && endDate) {
+  // Calculate the difference in milliseconds
+  var difference = endDate - startDate;
+  // Convert difference from milliseconds to days
+  var daysDifference = Math.floor(difference / (1000 * 60 * 60 * 24));
+  if (daysDifference >= 0) {
+  document.getElementById("result").innerText = daysDifference + " days";
+  }
+  } else {
+  document.getElementById("result").innerText = "0 days";
+  }
+  }
+  </script>
+  <style>
+  /* Custom styles for input fields */
+  label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  }
+  input[type="date"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  }
+  /* Custom style for container */
+  .input-container {
+  margin-bottom: 15px;
+  }
+  </style>
+{% endcomment %}

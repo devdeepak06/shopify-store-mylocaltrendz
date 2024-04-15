@@ -1465,5 +1465,15 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Pincode Validator",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "pincode_validator",
+        "label": "Pincode Validator"
+      }
+    ]
   }
 ]

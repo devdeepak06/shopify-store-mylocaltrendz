@@ -94,7 +94,13 @@
             {%- render 'loading-spinner' -%}
           </button>
           <div style="display:none;">
-          <button type="button" class="shopify-payment-button__button shopify-payment-button__button--unbranded" onclick="document.querySelector('[data-shopify]').click();">Buy Now</button>
+            <button
+              type="button"
+              class="shopify-payment-button__button shopify-payment-button__button--unbranded"
+              onclick="document.querySelector('[data-shopify]').click();"
+            >
+              Buy Now
+            </button>
           </div>
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}

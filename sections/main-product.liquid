@@ -245,12 +245,9 @@
                 {%- endif -%}
 
                 {% for variant in product.variants -%}
-                  {%- capture metafields -%}
                   {% for metafield in variant.metafields -%}
-                  {{ metafield.custom.productvariant }}
-                    {{ metafields.custom.productvariant }}
+                    {{ metafield.custom.productvariant }}
                   {%- endfor %}
-                {%- endcapture -%}
                   <br>
                 {%- endfor %}
 

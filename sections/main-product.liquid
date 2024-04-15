@@ -244,8 +244,8 @@
                   </div>
                 {%- endif -%}
 
-                {% if product.variant.metafields.custom.productvariant != blank %}
-                  {% for variant in product.variant.metafields.custom.productvariant %}
+                {% if variant.metafields.custom.productvariant != blank %}
+                  {% for variant in variant.metafields.custom.productvariant %}
                     <div>{{ variant.metafields.custom.productvariant.value }}</div>
                   {% endfor %}
                   <div>{{ product.variant.metafields.custom.productvariant.value }}</div>

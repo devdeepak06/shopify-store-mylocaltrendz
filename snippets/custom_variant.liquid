@@ -1,0 +1,8 @@
+{%- if selected_variant -%}
+  {%- capture options -%}
+                {% for option in selected_variant.options -%}
+                  {{ option }}{%- unless forloop.last -%}/{%- endunless -%}
+                {%- endfor %}
+                {%- endcapture -%}
+  {{ options }} | {{ selected_variant.weight }} ml
+{%- endif -%}

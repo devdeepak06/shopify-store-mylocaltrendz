@@ -245,10 +245,7 @@
                 {%- endif -%}
                 {% if product.selected_or_first_available_variant.metafields.custom.productvariant != blank %}
                   <div class="variant_desc" style="color: green">
-                    {{
-                      product.selected_or_first_available_variant.metafields.custom.productvariant.value
-                      | metafield_tag
-                    }}
+                    {{ product.selected_or_first_available_variant.metafields.custom.productvariant | metafield_tag }}
                   </div>
                 {% endif %}
 

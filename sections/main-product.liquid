@@ -244,9 +244,6 @@
                   </div>
                 {%- endif -%}
                 {% if product.selected_or_first_available_variant.metafields.custom.productvariant != blank %}
-                  {% for variant in product.selected_or_first_available_variant.metafields.custom.productvariant %}
-                    <div class="variant_desc" style="color: red">{{ variant.value }}</div>
-                  {% endfor %}
                   <div class="variant_desc" style="color: green">
                     {{ product.selected_or_first_available_variant.metafields.custom.productvariant }}
                   </div>

@@ -70,15 +70,6 @@
           "settings": {
             "custom_liquid": "{% if product.selected_variant %}\n{{ product.selected_variant.metafields.custom.productvariant | metafield_tag }}\n{% endif %}"
           }
-        },
-        "collapsible_tab_xgDFKq": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Details",
-            "icon": "none",
-            "content": "",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -92,8 +83,7 @@
         "buy_buttons",
         "share",
         "judge_me_reviews_preview_badge_TxkwcC",
-        "custom_liquid_8LCGCi",
-        "collapsible_tab_xgDFKq"
+        "custom_liquid_8LCGCi"
       ],
       "settings": {
         "enable_sticky_info": true,

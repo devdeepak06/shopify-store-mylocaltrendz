@@ -255,7 +255,7 @@
                   {%- endfor %}
                 {% endif %}
                 {% for variant in product.variants -%}
-                  {{ variant.metafields }}
+                  {{ variant.metafields.custom.productvariant }}
                 {% endfor %}
                 {% if product.variant.metafields.custom.productvariant != blank %}
                   <div>{{ product.variant.metafields.custom.productvariant }}</div>

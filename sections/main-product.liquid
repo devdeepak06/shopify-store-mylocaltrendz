@@ -243,7 +243,7 @@
                     {{ product.description }}
                   </div>
                 {%- endif -%}
-                {{ product.variants.first.metafields.custom.productvariant }}
+                {{ product.selected_or_first_available_variant.metafields.custom.productvariant }}
                 {% if variant.metafields.custom.productvariant != blank %}
                   {% for variant in variant.metafields.custom.productvariant %}
                     <div>{{ variant.value }}</div>

@@ -63,7 +63,7 @@ fetch(apiUrl)
 var checkPincodeButton = document.getElementById('checkPincodeButton');
   var pincodes = {{settings.pincode_validator | json}};
 checkPincodeButton.addEventListener('click', function() {
-  var zipCode = document.getElementById('checkPin').value;
+  var zipCode = document.querySelector('#checkPin').value;
   if (pincodes.includes(parseInt(zipCode)) && pincodes.length == 6) {
     document.querySelector('.checkStatus').innerHTML = `
     <span class="greenPincode"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 32 32">

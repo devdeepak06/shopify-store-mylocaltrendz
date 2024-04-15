@@ -48,13 +48,13 @@ checkPincodeButton.addEventListener('click', function() {
     document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').textContent = '';
     return true;
   } else {
-    document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').addEventListener('input', function() {
-    var zipCode = this.value;
-    if (zipCode.trim() === '') {
-      document.querySelector('#checkPin').innerHTML = 'Please Enter a Valid Pincode';
-    }
-  });
-    // document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').textContent = 'Invalid Pincode, please enter a valid Pincode';
+  //   document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').addEventListener('input', function() {
+  //   var zipCode = this.value;
+  //   if (zipCode.trim() === '') {
+  //     document.querySelector('#checkPin').innerHTML = 'Please Enter a Valid Pincode';
+  //   }
+  // });
+    document.querySelector('#checkPin').closest('.cstmfield').querySelector('.checkout_error').textContent = 'Invalid Pincode, please enter a valid Pincode';
     return false;
   }
 }

@@ -1,3 +1,4 @@
+{%- assign selected_variant = product.selected_variant -%}
 {%- if selected_variant -%}
   {%- capture options -%}
   {% for option in selected_variant.options -%}

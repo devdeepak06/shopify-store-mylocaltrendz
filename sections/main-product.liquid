@@ -245,10 +245,10 @@
                 {%- endif -%}
 
                 {% if product.variant.metafields.custom.productvariant != blank %}
-                  {% for variant in product.variant.metafields.custom.productvariant %}
-                    <div>{{ variant.metafields.custom.productvariant }}</div>
+                  {% for variant in product.variant.metafields.custom.productvariant.value %}
+                    <div>{{ variant.metafields.custom.productvariant.value }}</div>
                   {% endfor %}
-                  <div>{{ product.variant.metafields.custom.productvariant }}</div>
+                  <div>{{ product.variant.metafields.custom.productvariant.value }}</div>
                 {% endif %}
 
               {%- when 'sku' -%}

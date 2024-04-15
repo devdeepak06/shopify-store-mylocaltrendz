@@ -243,14 +243,13 @@
                     {{ product.description }}
                   </div>
                 {%- endif -%}
-                {% for variant in product.selected_or_first_available_variant %}
-                  {% if variant.metafields.custom.productvariant != blank %}
-                    {% for variant in variant.metafields.custom.productvariant %}
-                      <div>{{ variant.value }}</div>
-                    {% endfor %}
-                    <div>{{ product.variant.metafields.custom.productvariant.value }}</div>
-                  {% endif %}
-                {% endfor %}
+                {% if variant.metafields.custom.productvariant != blank %}
+                  {% for variant in variant.metafields.custom.productvariant %}
+                    <div>{{ variant.value }}</div>
+                  {% endfor %}
+                  <div>{{ product.variant.metafields.custom.productvariant.value }}</div>
+                {% endif %}
+
               {%- when 'sku' -%}
                 <p
                   class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"

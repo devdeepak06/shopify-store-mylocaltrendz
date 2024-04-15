@@ -201,7 +201,7 @@
                 {% endcomment %}
                 <div
                   class="no-js-hidden"
-                  id="variant-details"
+                  id="variant-detais"
                   role="status"
                   {{ block.shopify_attributes }}
                 >
@@ -233,6 +233,7 @@
                       {% render 'icon-caret' %}
                     </summary>
                     <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                      <div id="variant-details"></div>
                       {{ block.settings.content }}
                       {{ block.settings.page.content }}
                     </div>

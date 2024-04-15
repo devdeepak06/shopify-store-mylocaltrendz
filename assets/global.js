@@ -979,7 +979,7 @@ class VariantSelects extends HTMLElement {
       console.log(this.currentVariant);
     //replace content
     const VariantDetailsText = document.querySelector('#variant-details');
-    VariantDetailsText.innerHTML = 'Hello World'
+    VariantDetailsText.innerHTML = this.currentVariant.id;
   }
   updateOptions() {
     this.options = Array.from(this.querySelectorAll('select, fieldset'), (element) => {

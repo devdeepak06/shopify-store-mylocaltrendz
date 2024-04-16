@@ -71,6 +71,7 @@ if (!customElements.get('quick-add-modal')) {
         if (!variantPicker) return;
 
         variantPicker.setAttribute('data-update-url', 'true');
+        console.log('data-update-url')
       }
 
       removeDOMElements() {

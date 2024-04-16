@@ -76,7 +76,8 @@ if (!customElements.get('quick-add-modal')) {
     const VariantDetailsText = document.querySelector('#variant-details');
     console.log(VariantDetailsText);
     // console.log(this.currentVariant.id);
-    
+    console.log(variant.id);
+          
     // Update the HTML content based on the current variant's ID
     VariantDetailsText.innerHTML = allMetafieldData[variant.id];
     // VariantDetailsText.innerHTML = this.currentVariant.id;

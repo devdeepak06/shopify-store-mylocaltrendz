@@ -44,7 +44,6 @@ if (!customElements.get('quick-add-modal')) {
             this.updateImageSizes();
             this.preventVariantURLSwitching();
             super.show(opener);  
-            // this.updateVariantDetails();
           })
           .finally(() => {
             opener.removeAttribute('aria-disabled');
@@ -66,23 +65,6 @@ if (!customElements.get('quick-add-modal')) {
           oldScriptTag.parentNode.replaceChild(newScriptTag, oldScriptTag);
         });
       }
-
-      // updateVariantDetails() {
-    // Parse JSON data from the HTML element
-    // const allMetafieldData = JSON.parse(document.querySelector('#variant_metafield_details').textContent);
-    // console.log(allMetafieldData);
-
-    // Get the HTML element to update
-    // const VariantDetailsText = document.querySelector('#variant-details');
-    // console.log(VariantDetailsText);
-    // console.log(this.currentVariant.id);
-    // console.log(variant.id);
-          
-    // Update the HTML content based on the current variant's ID
-    // VariantDetailsText.innerHTML = allMetafieldData[variant.id];
-    // VariantDetailsText.innerHTML = this.currentVariant.id;
-    
-// }
       preventVariantURLSwitching() {
         const variantPicker = this.modalContent.querySelector('variant-selects');
         if (!variantPicker) return;

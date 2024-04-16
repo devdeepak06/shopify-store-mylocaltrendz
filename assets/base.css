@@ -1,4 +1,153 @@
- @font-face {
+/**
+* @license
+*
+* Font Family: Erode
+* Designed by: Nikhil Ranganathan
+* URL: https://www.fontshare.com/fonts/erode
+* © 2024 Indian Type Foundry
+*
+* Erode Light 
+* Erode LightItalic 
+* Erode Regular 
+* Erode Italic 
+* Erode Medium 
+* Erode MediumItalic 
+* Erode Semibold 
+* Erode SemiboldItalic 
+* Erode Bold 
+* Erode BoldItalic 
+* Erode Variable (Variable font)
+* Erode VariableItalic (Variable font)
+
+*
+*/
+@font-face {
+  font-family: 'Erode-Light';
+  src: url('../assets/Erode-Light.woff2') format('woff2'),
+       url('../assets/Erode-Light.woff') format('woff'),
+       url('../assets/Erode-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Erode-LightItalic';
+  src: url('../assets/Erode-LightItalic.woff2') format('woff2'),
+       url('../assets/Erode-LightItalic.woff') format('woff'),
+       url('../assets/Erode-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Erode-Regular';
+  src: url('../assets/Erode-Regular.woff2') format('woff2'),
+       url('../assets/Erode-Regular.woff') format('woff'),
+       url('../assets/Erode-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Erode-Italic';
+  src: url('../assets/Erode-Italic.woff2') format('woff2'),
+       url('../assets/Erode-Italic.woff') format('woff'),
+       url('../assets/Erode-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Erode-Medium';
+  src: url('../assets/Erode-Medium.woff2') format('woff2'),
+       url('../assets/Erode-Medium.woff') format('woff'),
+       url('../assets/Erode-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Erode-MediumItalic';
+  src: url('../assets/Erode-MediumItalic.woff2') format('woff2'),
+       url('../assets/Erode-MediumItalic.woff') format('woff'),
+       url('../assets/Erode-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Erode-Semibold';
+  src: url('../assets/Erode-Semibold.woff2') format('woff2'),
+       url('../assets/Erode-Semibold.woff') format('woff'),
+       url('../assets/Erode-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Erode-SemiboldItalic';
+  src: url('../assets/Erode-SemiboldItalic.woff2') format('woff2'),
+       url('../assets/Erode-SemiboldItalic.woff') format('woff'),
+       url('../assets/Erode-SemiboldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Erode-Bold';
+  src: url('../assets/Erode-Bold.woff2') format('woff2'),
+       url('../assets/Erode-Bold.woff') format('woff'),
+       url('../assets/Erode-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Erode-BoldItalic';
+  src: url('../assets/Erode-BoldItalic.woff2') format('woff2'),
+       url('../assets/Erode-BoldItalic.woff') format('woff'),
+       url('../assets/Erode-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 300.0;
+*
+* available axes:
+'wght' (range from 300.0 to 700.0
+*/
+@font-face {
+  font-family: 'Erode-Variable';
+  src: url('../assets/Erode-Variable.woff2') format('woff2'),
+       url('../assets/Erode-Variable.woff') format('woff'),
+       url('../assets/Erode-Variable.ttf') format('truetype');
+  font-weight: 300 700;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 300.0;
+*
+* available axes:
+'wght' (range from 300.0 to 700.0
+*/
+@font-face {
+  font-family: 'Erode-VariableItalic';
+  src: url('../assets/Erode-VariableItalic.woff2') format('woff2'),
+       url('../assets/Erode-VariableItalic.woff') format('woff'),
+       url('../assets/Erode-VariableItalic.ttf') format('truetype');
+  font-weight: 300 700;
+  font-display: swap;
+  font-style: italic;
+}
+
+
+@font-face {
         font-family: "Neue Montreal";
      src: url('https://cdn.shopify.com/s/files/1/0571/8471/4863/files/NeueMontreal-Regular.otf?v=1712217763') format('truetype'),         
           url('https://cdn.shopify.com/s/files/1/0571/8471/4863/files/NeueMontreal-Bold.otf?v=1712217763') format('truetype'),

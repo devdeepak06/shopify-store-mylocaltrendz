@@ -44,7 +44,6 @@ if (!customElements.get('quick-add-modal')) {
             this.updateImageSizes();
             this.preventVariantURLSwitching();
             super.show(opener);            
-            // this.updateVariantDetails();
           })
           .finally(() => {
             opener.removeAttribute('aria-disabled');

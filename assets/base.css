@@ -1,8 +1,9 @@
 @font-face {
   font-family: 'Erode-Regular';
-  src: url('Erode-Regular.woff2') format('woff2'),
-       url('Erode-Regular.woff') format('woff'),
-       url('Erode-Regular.ttf') format('truetype');
+    {{ "Erode-Regular.woff2" | asset_url }}
+  src: url('{{ "Erode-Regular.woff2" | asset_url }}') format('woff2'),
+       url('{{ "Erode-Regular.woff" | asset_url }}') format('woff'),
+       url('{{ "Erode-Regular.ttf" | asset_url }}') format('truetype');
   font-weight: 600;
   font-display: swap;
   font-style: normal;

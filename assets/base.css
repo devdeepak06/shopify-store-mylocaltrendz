@@ -3,7 +3,7 @@
   src: url('Erode-Regular.woff2') format('woff2'),
        url('Erode-Regular.woff') format('woff'),
        url('Erode-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-weight: 600;
   font-display: swap;
   font-style: normal;
 }

@@ -976,7 +976,7 @@ class VariantSelects extends HTMLElement {
 
   updateVariantDetails() {
     // Parse JSON data from the HTML element
-    const allMetafieldData = JSON.parse(document.querySelector('#variant_metafield_details').textContent);
+    const allMetafieldData = JSON.parse(document.querySelector('.variant_metafield_details').textContent);
     // console.log(allMetafieldData);
 
     // Get the HTML element to update

@@ -50,7 +50,23 @@ if (!customElements.get('quick-add-modal')) {
             opener.classList.remove('loading');
             opener.querySelector('.loading__spinner').classList.add('hidden');
           });
+         this.updateVariantDetails();
       }
+       updateVariantDetails() {
+    // Parse JSON data from the HTML element
+    const allMetafieldData = JSON.parse(document.querySelector('#variant_metafield_details').textContent);
+    // console.log(allMetafieldData);
+
+    // Get the HTML element to update
+    const VariantDetailsText = document.querySelector('#variant-details');
+    // console.log(VariantDetailsText);
+    // console.log(this.currentVariant.id);
+    
+    // Update the HTML content based on the current variant's ID
+    VariantDetailsText.innerHTML = allMetafieldData[this.currentVariant.id];
+    // VariantDetailsText.innerHTML = this.currentVariant.id;
+    
+}
 
       setInnerHTML(element, html) {
         element.innerHTML = html;

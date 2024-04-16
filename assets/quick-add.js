@@ -70,8 +70,7 @@ if (!customElements.get('quick-add-modal')) {
         const variantPicker = this.modalContent.querySelector('variant-selects');
         if (!variantPicker) return;
 
-        variantPicker.setAttribute('data-update-url', 'true');
-        console.log('data-update-url')
+        variantPicker.setAttribute('data-update-url', 'false');
       }
 
       removeDOMElements() {

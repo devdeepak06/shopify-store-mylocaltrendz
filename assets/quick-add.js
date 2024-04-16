@@ -44,7 +44,7 @@ if (!customElements.get('quick-add-modal')) {
             this.updateImageSizes();
             this.preventVariantURLSwitching();
             super.show(opener);  
-            this.updateVariantDetails();
+            // this.updateVariantDetails();
           })
           .finally(() => {
             opener.removeAttribute('aria-disabled');
@@ -82,7 +82,7 @@ if (!customElements.get('quick-add-modal')) {
     // VariantDetailsText.innerHTML = allMetafieldData[variant.id];
     // VariantDetailsText.innerHTML = this.currentVariant.id;
     
-}
+// }
       preventVariantURLSwitching() {
         const variantPicker = this.modalContent.querySelector('variant-selects');
         if (!variantPicker) return;

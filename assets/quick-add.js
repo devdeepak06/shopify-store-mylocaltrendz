@@ -44,7 +44,7 @@ if (!customElements.get('quick-add-modal')) {
             this.updateImageSizes();
             this.preventVariantURLSwitching();
             super.show(opener);            
-            this.updateVariantDetails();
+            // this.updateVariantDetails();
           })
           .finally(() => {
             opener.removeAttribute('aria-disabled');
@@ -67,10 +67,10 @@ if (!customElements.get('quick-add-modal')) {
         });
       }
 
-      updateVariantDetails() {
+      // updateVariantDetails() {
     // Parse JSON data from the HTML element
-    const allMetafieldData = JSON.parse(document.querySelector('#variant_metafield_details').textContent);
-    console.log(allMetafieldData);
+    // const allMetafieldData = JSON.parse(document.querySelector('#variant_metafield_details').textContent);
+    // console.log(allMetafieldData);
 
     // Get the HTML element to update
     // const VariantDetailsText = document.querySelector('#variant-details');

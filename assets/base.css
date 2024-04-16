@@ -2,7 +2,13 @@
   font-family: "Erode-Regular";
   src: url('{{ "Erode-Regular.ttf" | asset_url }}') format("truetype"),
     url('{{ "Erode-Regular.woff" | asset_url }}') format("woff"),
-    url('{{ "Erode-Regular.woff2" | asset_url }}') format("woff2");
+    url('{{ "Erode-Regular.woff2" | asset_url }}') format("woff2"),
+    url("https://cdn.shopify.com/s/files/1/0571/8471/4863/files/Erode-Bold.ttf?v=1713273465")
+      format("truetype"),
+    url("https://cdn.shopify.com/s/files/1/0571/8471/4863/files/Erode-Bold.woff?v=1713273465")
+      format("woff"),
+    url("https://cdn.shopify.com/s/files/1/0571/8471/4863/files/Erode-Bold.woff2?v=1713273465")
+      format("woff2");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -11,7 +17,13 @@
   font-family: "Erode-Bold";
   src: url('{{ "Erode-Bold.ttf" | asset_url }}') format("truetype"),
     url('{{ "Erode-Bold.woff" | asset_url }}') format("woff"),
-    url('{{ "Erode-Bold.woff2" | asset_url }}') format("woff2");
+    url('{{ "Erode-Bold.woff2" | asset_url }}') format("woff2"),
+    url("https://cdn.shopify.com/s/files/1/0571/8471/4863/files/Erode-Regular.ttf?v=1713273456")
+      format("truetype"),
+    url("https://cdn.shopify.com/s/files/1/0571/8471/4863/files/Erode-Regular.woff?v=1713273456")
+      format("woff"),
+    url("https://cdn.shopify.com/s/files/1/0571/8471/4863/files/Erode-Regular.woff2?v=1713273456")
+      format("woff2");
   font-weight: 600;
   font-display: swap;
   font-style: normal;

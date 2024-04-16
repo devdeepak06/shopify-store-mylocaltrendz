@@ -20,6 +20,7 @@ if (!customElements.get('quick-add-modal')) {
         opener.setAttribute('aria-disabled', true);
         opener.classList.add('loading');
         opener.querySelector('.loading__spinner').classList.remove('hidden');
+        this.updateVariantDetails();
 
         fetch(opener.getAttribute('data-product-url'))
           .then((response) => response.text())
@@ -50,7 +51,7 @@ if (!customElements.get('quick-add-modal')) {
             opener.classList.remove('loading');
             opener.querySelector('.loading__spinner').classList.add('hidden');
           });
-         this.updateVariantDetails();
+         
       }
        updateVariantDetails() {
     // Parse JSON data from the HTML element

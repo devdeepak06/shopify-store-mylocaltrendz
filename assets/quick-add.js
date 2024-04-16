@@ -20,7 +20,6 @@ if (!customElements.get('quick-add-modal')) {
         opener.setAttribute('aria-disabled', true);
         opener.classList.add('loading');
         opener.querySelector('.loading__spinner').classList.remove('hidden');
-        this.updateVariantDetails();
 
         fetch(opener.getAttribute('data-product-url'))
           .then((response) => response.text())
@@ -45,6 +44,8 @@ if (!customElements.get('quick-add-modal')) {
             this.updateImageSizes();
             this.preventVariantURLSwitching();
             super.show(opener);
+        this.updateVariantDetails();
+            
           })
           .finally(() => {
             opener.removeAttribute('aria-disabled');

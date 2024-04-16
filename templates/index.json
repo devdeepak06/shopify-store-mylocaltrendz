@@ -3,44 +3,9 @@
     "slideshow_nqK8rU": {
       "type": "slideshow",
       "blocks": {
-        "slide_Tm6mGn": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Mt-banners-2Artboard-8-copy_1950x_2c5cd0b8-9340-403c-9c07-ee5aacaf9d12.webp",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_j9yz3b": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Mt-bannersdfc-Artboard-1-copy_1.webp",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_TTPbwP": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Mt-bannersjnjkmlArtboard-7.webp",
             "heading": "",
@@ -59,8 +24,6 @@
         }
       },
       "block_order": [
-        "slide_Tm6mGn",
-        "slide_j9yz3b",
         "slide_TTPbwP"
       ],
       "settings": {

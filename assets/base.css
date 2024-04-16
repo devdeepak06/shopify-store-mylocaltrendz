@@ -1,6 +1,5 @@
 @font-face {
   font-family: 'Erode-Regular';
-    {{ "Erode-Regular.woff2" | asset_url }}
   src: url('{{ "Erode-Regular.woff2" | asset_url }}') format('woff2'),
        url('{{ "Erode-Regular.woff" | asset_url }}') format('woff'),
        url('{{ "Erode-Regular.ttf" | asset_url }}') format('truetype');

@@ -89,6 +89,8 @@ if (!customElements.get('quick-add-modal')) {
         if (!variantPicker) return;
 
         variantPicker.setAttribute('data-update-url', 'false');
+        this.updateVariantDetails();
+        
       }
 
       removeDOMElements() {

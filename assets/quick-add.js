@@ -78,7 +78,7 @@ if (!customElements.get('quick-add-modal')) {
     // console.log(this.currentVariant.id);
     
     // Update the HTML content based on the current variant's ID
-    VariantDetailsText.innerHTML = allMetafieldData[this.currentVariant.id];
+    VariantDetailsText.innerHTML = allMetafieldData[variant.id];
     // VariantDetailsText.innerHTML = this.currentVariant.id;
     
 }

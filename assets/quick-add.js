@@ -52,24 +52,6 @@ if (!customElements.get('quick-add-modal')) {
           });
          
       }
-       updateVariantDet() {
-    // Parse JSON data from the HTML element
-    // const allMetafieldData = JSON.parse(document.querySelector('#variant_metafield_deta').textContent);
-    // console.log(allMetafieldData);
-
-    // Get the HTML element to update
-    // const VariantDetai = document.querySelector('#variant-details');
-    // console.log(VariantDetai);
-    console.log('Hello');
-         
-    // console.log(this.currentVariant.id);
-    
-    // Update the HTML content based on the current variant's ID
-    // VariantDetai.innerHTML = allMetafieldData[this.currentVariant.id];
-    // VariantDetai.innerHTML = this.currentVariant.id;
-    
-}
-
       setInnerHTML(element, html) {
         element.innerHTML = html;
 
@@ -89,7 +71,6 @@ if (!customElements.get('quick-add-modal')) {
         if (!variantPicker) return;
 
         variantPicker.setAttribute('data-update-url', 'false');
-        this.updateVariantDet();
       }
 
       removeDOMElements() {

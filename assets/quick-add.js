@@ -58,13 +58,13 @@ if (!customElements.get('quick-add-modal')) {
     // console.log(allMetafieldData);
 
     // Get the HTML element to update
-    const VariantDetailsText = document.querySelector('#variant-details');
-    // console.log(VariantDetailsText);
+    const VariantDetai = document.querySelector('#variant-details');
+    // console.log(VariantDetai);
     console.log(this.currentVariant.id);
     
     // Update the HTML content based on the current variant's ID
-    VariantDetailsText.innerHTML = allMetafieldData[this.currentVariant.id];
-    // VariantDetailsText.innerHTML = this.currentVariant.id;
+    // VariantDetai.innerHTML = allMetafieldData[this.currentVariant.id];
+    // VariantDetai.innerHTML = this.currentVariant.id;
     
 }
 

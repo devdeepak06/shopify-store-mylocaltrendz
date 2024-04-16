@@ -3,7 +3,6 @@
   src: url('{{ "Erode-Regular.ttf" | asset_url }}') format("truetype"),
        url('{{ "Erode-Regular.woff" | asset_url }}') format("woff"),
        url('{{ "Erode-Regular.woff2" | asset_url }}') format("woff2");
-  font-style: normal;
   font-weight: 600;
   font-display: swap;
 }

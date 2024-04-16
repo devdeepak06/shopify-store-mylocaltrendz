@@ -59,8 +59,10 @@ if (!customElements.get('quick-add-modal')) {
     // console.log(allMetafieldData);
 
     // Get the HTML element to update
-    const VariantDetai = document.querySelector('#variant-details');
-    console.log(VariantDetai);
+    // const VariantDetai = document.querySelector('#variant-details');
+    // console.log(VariantDetai);
+    console.log('Hello');
+         
     // console.log(this.currentVariant.id);
     
     // Update the HTML content based on the current variant's ID

@@ -52,7 +52,7 @@ if (!customElements.get('quick-add-modal')) {
           });
          
       }
-       updateVariantDetails() {
+       updateVariantDet() {
     // Parse JSON data from the HTML element
     // const allMetafieldData = JSON.parse(document.querySelector('#variant_metafield_deta').textContent);
     // console.log(allMetafieldData);
@@ -89,8 +89,7 @@ if (!customElements.get('quick-add-modal')) {
         if (!variantPicker) return;
 
         variantPicker.setAttribute('data-update-url', 'false');
-        this.updateVariantDetails();
-        
+        this.updateVariantDet();
       }
 
       removeDOMElements() {

@@ -980,11 +980,11 @@ class VariantSelects extends HTMLElement {
      const variantPicker = document.querySelector('variant-selects[data-section="{{ section.id }}"]');
     var on_rental_pickup = document.getElementById('on_rental_pickup');
     var selectedVariantId = variantSelect.value;
-    if (selectedVariantId == 'Buy') {
-        on_rental_pickup.style.display = 'none';
-    } else {
-        on_rental_pickup.style.display = 'block';
-    }
+    // if (selectedVariantId == 'Buy') {
+    //     on_rental_pickup.style.display = 'none';
+    // } else {
+    //     on_rental_pickup.style.display = 'block';
+    // }
      console.log("1", variantSelect);
      console.log("2", variantPicker);
      console.log("3", on_rental_pickup);

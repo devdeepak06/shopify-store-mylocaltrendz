@@ -978,7 +978,7 @@ class VariantSelects extends HTMLElement {
    toggleDateInput() {
     var variantSelect = this.currentVariant.id;
      const variantPicker = document.querySelector('variant-selects[data-section="{{ section.id }}"]');
-    var on_rental_pickup = JSON.parse(document.getElementById('on_rental_pickup').textContent);
+    // var on_rental_pickup = JSON.parse(document.getElementById('on_rental_pickup').textContent);
     var selectedVariantId = variantSelect.title;
     // if (selectedVariantId == 'Buy') {
     //     on_rental_pickup.style.display = 'none';
@@ -987,7 +987,7 @@ class VariantSelects extends HTMLElement {
     // }
      console.log("1", variantSelect);
      console.log("2", variantPicker);
-     console.log("3", on_rental_pickup);
+     // console.log("3", on_rental_pickup);
      console.log("4", selectedVariantId);
            
 // Initial check on page load

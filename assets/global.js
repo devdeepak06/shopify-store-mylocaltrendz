@@ -975,7 +975,7 @@ class VariantSelects extends HTMLElement {
     }
   }   
 
-   function toggleDateInput() {
+   toggleDateInput() {
     var variantSelect = this.currentVariant;
      const variantPicker = document.querySelector('variant-selects[data-section="{{ section.id }}"]');
     var on_rental_pickup = document.getElementById('on_rental_pickup');
@@ -985,13 +985,11 @@ class VariantSelects extends HTMLElement {
     } else {
         on_rental_pickup.style.display = 'block'; // Show date input
     }
-}
-
 // Initial check on page load
-toggleDateInput.call({ currentVariant: document.querySelector('variant-selects[data-section="{{ section.id }}"]') });
-
+// toggleDateInput.call({ currentVariant: document.querySelector('variant-selects[data-section="{{ section.id }}"]') });
 // Event listener for variant selection change
-document.querySelector('variant-selects[data-section="{{ section.id }}"]').addEventListener('change', toggleDateInput);
+// document.querySelector('variant-selects[data-section="{{ section.id }}"]').addEventListener('change', toggleDateInput);
+}
 
 
   updateVariantDetails() {

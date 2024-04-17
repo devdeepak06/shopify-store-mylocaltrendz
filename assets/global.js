@@ -984,7 +984,6 @@ class VariantSelects extends HTMLElement {
     } else {
         on_rental_pickup.style.display = 'block';
     }
-     // console.log("1", variantSelect);
      console.log("2", on_rental_pickup);
      console.log("4", selectedVariantTitle);
            

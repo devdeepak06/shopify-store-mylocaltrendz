@@ -979,7 +979,7 @@ class VariantSelects extends HTMLElement {
     var variantSelect = this.currentVariant.id;
      const variantPicker = document.querySelector('variant-selects[data-section="{{ section.id }}"]');
     var on_rental_pickup = JSON.parse(document.getElementById('on_rental_pickup').textContent);
-    var selectedVariantId = variantSelect.value;
+    var selectedVariantId = variantSelect.title;
     // if (selectedVariantId == 'Buy') {
     //     on_rental_pickup.style.display = 'none';
     // } else {

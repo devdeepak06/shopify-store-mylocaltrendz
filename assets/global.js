@@ -976,7 +976,7 @@ class VariantSelects extends HTMLElement {
   }   
 
    toggleDateInput() {
-    var variantSelect = this.currentVariant;
+    var variantSelect = this.currentVariant.ID;
      const variantPicker = document.querySelector('variant-selects[data-section="{{ section.id }}"]');
     var on_rental_pickup = document.getElementById('on_rental_pickup');
     var selectedVariantId = variantSelect.value;

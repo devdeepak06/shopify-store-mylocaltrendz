@@ -981,9 +981,9 @@ class VariantSelects extends HTMLElement {
     var on_rental_pickup = document.getElementById('on_rental_pickup');
     var selectedVariantId = variantSelect.value;
     if (selectedVariantId == 'Buy') {
-        on_rental_pickup.style.display = 'none';  // Hide date input
+        on_rental_pickup.style.display = 'none';
     } else {
-        on_rental_pickup.style.display = 'block'; // Show date input
+        on_rental_pickup.style.display = 'block';
     }
      console.log("1", variantSelect);
      console.log("2", variantPicker);

@@ -976,11 +976,10 @@ class VariantSelects extends HTMLElement {
   }   
 
    toggleDateInput() {
-    var variantSelect = this.currentVariant.id;
-     const variantPicker = document.querySelector('variant-selects[data-section="{{ section.id }}"]');
-    // var on_rental_pickup = JSON.parse(document.getElementById('on_rental_pickup').textContent);
-    var selectedVariantId = variantSelect.title;
-    // if (selectedVariantId == 'Buy') {
+    // var variantSelect = this.currentVariant.id;
+     const getVariantTitle = JSON.parse(document.querySelector('#get_variant_title').textContent);
+    var on_rental_pickup = document.querySelector('#on_rental_pickup');
+    // if (getVariantTitle == 'Buy') {
     //     on_rental_pickup.style.display = 'none';
     // } else {
     //     on_rental_pickup.style.display = 'block';

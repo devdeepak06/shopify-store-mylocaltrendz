@@ -971,8 +971,27 @@ class VariantSelects extends HTMLElement {
       this.renderProductInfo();
       this.updateShareUrl();
       this.updateVariantDetails();
+      this.toggleDateInput();
     }
-  }
+  }   
+
+    toggleDateInput() {
+      // var variantSelect = document.getElementById('variant-select');
+      var variantSelect = this.currentVariant;
+    var dateInput = document.getElementById('date-input');
+      var selectedVariantId = variantSelect.value;
+      if (selectedVariantId == 'Buy') {
+        dateInput.style.display = 'none';  // Hide date input
+      } else {
+        dateInput.style.display = 'block'; // Show date input
+      }
+    }
+
+    // Initial check on page load
+    toggleDateInput();
+
+    // Event listener for variant selection change
+    variantSelect.addEventListener('change', toggleDateInput);
 
   updateVariantDetails() {
     // Parse JSON data from the HTML element

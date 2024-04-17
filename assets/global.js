@@ -985,6 +985,11 @@ class VariantSelects extends HTMLElement {
     } else {
         on_rental_pickup.style.display = 'block'; // Show date input
     }
+     console.log(variantSelect);
+     console.log(variantPicker);
+     console.log(on_rental_pickup);
+     console.log(selectedVariantId);
+           
 // Initial check on page load
 // toggleDateInput.call({ currentVariant: document.querySelector('variant-selects[data-section="{{ section.id }}"]') });
 // Event listener for variant selection change
@@ -995,11 +1000,11 @@ class VariantSelects extends HTMLElement {
   updateVariantDetails() {
     // Parse JSON data from the HTML element
     const allMetafieldData = JSON.parse(document.querySelector('#variant_metafield_details').textContent);
-    console.log(allMetafieldData);
+    // console.log(allMetafieldData);
 
     // Get the HTML element to update
     const VariantDetailsText = document.querySelector('#variant-details');
-    console.log(VariantDetailsText);
+    // console.log(VariantDetailsText);
     // console.log(this.currentVariant.id);
     
     // Update the HTML content based on the current variant's ID

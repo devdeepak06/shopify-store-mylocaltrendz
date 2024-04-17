@@ -985,8 +985,8 @@ class VariantSelects extends HTMLElement {
     //     on_rental_pickup.style.display = 'block';
     // }
      console.log("1", variantSelect);
-     console.log("2", on_rental_pickup);]
-     console.log("4", selectedVariantId);
+     console.log("2", on_rental_pickup);
+     // console.log("4", selectedVariantId);
            
 // Initial check on page load
 // toggleDateInput.call({ currentVariant: document.querySelector('variant-selects[data-section="{{ section.id }}"]') });

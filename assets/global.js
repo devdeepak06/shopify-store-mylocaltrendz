@@ -975,23 +975,23 @@ class VariantSelects extends HTMLElement {
     }
   }   
 
-    toggleDateInput() {
-      // var variantSelect = document.getElementById('variant-select');
-      var variantSelect = this.currentVariant;
-    var dateInput = document.getElementById('date-input');
-      var selectedVariantId = variantSelect.value;
-      if (selectedVariantId == 'Buy') {
-        dateInput.style.display = 'none';  // Hide date input
-      } else {
-        dateInput.style.display = 'block'; // Show date input
-      }
+   function toggleDateInput() {
+    var variantSelect = this.currentVariant;
+    var on_rental_pickup = document.getElementById('on_rental_pickup');
+    var selectedVariantId = variantSelect.value;
+    if (selectedVariantId == 'Buy') {
+        on_rental_pickup.style.display = 'none';  // Hide date input
+    } else {
+        on_rental_pickup.style.display = 'block'; // Show date input
     }
+}
 
-    // Initial check on page load
-    toggleDateInput();
+// Initial check on page load
+toggleDateInput.call({ currentVariant: document.getElementById('variant-select') });
 
-    // Event listener for variant selection change
-    variantSelect.addEventListener('change', toggleDateInput);
+// Event listener for variant selection change
+document.getElementById('variant-select').addEventListener('change', toggleDateInput);
+
 
   updateVariantDetails() {
     // Parse JSON data from the HTML element

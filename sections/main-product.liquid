@@ -812,7 +812,7 @@
       {% endfor %}
       }
     </script>
-    <script id="variant_title" type="application/json">
+    <script id="get_variant_title" type="application/json">
       {
       {% for variant in product.variants %}
       "{{ variant.id }}" : "{{ variant.title }}" {% unless forloop.last %},{% endunless %}

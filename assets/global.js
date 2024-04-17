@@ -985,10 +985,10 @@ class VariantSelects extends HTMLElement {
     } else {
         on_rental_pickup.style.display = 'block'; // Show date input
     }
-     console.log(variantSelect);
-     console.log(variantPicker);
-     console.log(on_rental_pickup);
-     console.log(selectedVariantId);
+     console.log("1", variantSelect);
+     console.log("2", variantPicker);
+     console.log("3", on_rental_pickup);
+     console.log("4", selectedVariantId);
            
 // Initial check on page load
 // toggleDateInput.call({ currentVariant: document.querySelector('variant-selects[data-section="{{ section.id }}"]') });

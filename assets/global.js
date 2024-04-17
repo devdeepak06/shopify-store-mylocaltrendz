@@ -977,6 +977,7 @@ class VariantSelects extends HTMLElement {
 
    function toggleDateInput() {
     var variantSelect = this.currentVariant;
+     const variantPicker = document.querySelector('variant-selects[data-section="{{ section.id }}"]');
     var on_rental_pickup = document.getElementById('on_rental_pickup');
     var selectedVariantId = variantSelect.value;
     if (selectedVariantId == 'Buy') {
@@ -987,10 +988,10 @@ class VariantSelects extends HTMLElement {
 }
 
 // Initial check on page load
-toggleDateInput.call({ currentVariant: document.getElementById('variant-select') });
+toggleDateInput.call({ currentVariant: document.querySelector('variant-selects[data-section="{{ section.id }}"]') });
 
 // Event listener for variant selection change
-document.getElementById('variant-select').addEventListener('change', toggleDateInput);
+document.querySelector('variant-selects[data-section="{{ section.id }}"]').addEventListener('change', toggleDateInput);
 
 
   updateVariantDetails() {

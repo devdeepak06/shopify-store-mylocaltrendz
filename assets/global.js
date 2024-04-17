@@ -977,16 +977,18 @@ class VariantSelects extends HTMLElement {
 
    toggleDateInput() {
     // var variantSelect = this.currentVariant.id;
+    var selectedVariantTitle = this.currentVariant.title;
+     
      // const getVariantTitle = JSON.parse(document.querySelector('#get_variant_title').textContent);
-    var on_rental_pickup = document.querySelector('#on_rental_pickup');
+    // var on_rental_pickup = document.querySelector('#on_rental_pickup');
     // if (getVariantTitle == "Buy") {
     //     on_rental_pickup.style.display = 'none';
     // } else {
     //     on_rental_pickup.style.display = 'block';
     // }
      // console.log("1", variantSelect);
-     console.log("2", on_rental_pickup);
-     // console.log("4", selectedVariantId);
+     // console.log("2", on_rental_pickup);
+     console.log("4", selectedVariantTitle);
            
 // Initial check on page load
 // toggleDateInput.call({ currentVariant: document.querySelector('variant-selects[data-section="{{ section.id }}"]') });

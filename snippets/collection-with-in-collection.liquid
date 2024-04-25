@@ -5,35 +5,33 @@
   <ul class="block-grid mobile four-up">
     <div class="inner_main_brands">
       {% for link in sorted_links %}
-        <div class="inner_main_brand">
+        {% assign link_item = link.object %}
+        {% capture link_title %}{{ link.title | escape }}{% endcapture %}
+        {% assign current_alphabet = link_title | slice: 0 %}
+
+        {% if current_alphabet != previous_alphabet %}
+          <div class="new-line clearfix"></div>
+          <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>
+          {% assign previous_alphabet = current_alphabet %}
+        {% endif %}
+        <li class="">
           {% assign link_item = link.object %}
           {% capture link_title %}{{ link.title | escape }}{% endcapture %}
-          {% assign current_alphabet = link_title | slice: 0 %}
 
-          {% if current_alphabet != previous_alphabet %}
-            <div class="new-line clearfix"></div>
-            <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>
-            {% assign previous_alphabet = current_alphabet %}
-          {% endif %}
-          <li class="">
-            {% assign link_item = link.object %}
-            {% capture link_title %}{{ link.title | escape }}{% endcapture %}
-
-            <a href="{{ link_item.url }}" title="{{ link_title }}">
-              <span class="thumbnail">
-                <img
-                  src="{{ link_item.image | image_url }}"
-                  alt="{{- link_title }}"
-                  width="50"
-                  height="50"
-                >
-              </span>
-              <span class="product-title">
-                {{ link_title -}}
-              </span>
-            </a>
-          </li>
-        </div>
+          <a href="{{ link_item.url }}" title="{{ link_title }}">
+            <span class="thumbnail">
+              <img
+                src="{{ link_item.image | image_url }}"
+                alt="{{- link_title }}"
+                width="50"
+                height="50"
+              >
+            </span>
+            <span class="product-title">
+              {{ link_title -}}
+            </span>
+          </a>
+        </li>
       {% endfor %}
     </div>
   </ul>

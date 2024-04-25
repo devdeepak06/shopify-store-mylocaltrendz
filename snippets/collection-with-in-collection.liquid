@@ -1,4 +1,5 @@
 {% assign linklist = linklists.brands %}
+{% assign collections_per_row = section.settings.frontpage_collections_per_row %}
 <ul class="block-grid mobile four-up product-collection">
   {% for link in linklist.links %}
     <li>

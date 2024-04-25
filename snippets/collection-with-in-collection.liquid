@@ -1,40 +1,40 @@
 {% comment %} <div class="anchor-{{ current_alphabet }}"> {% endcomment %}
-<!-- <div class="inner_main_brands"> -->
 {% assign linklist = linklists.brands %}
 {% assign sorted_links = linklist.links | sort: 'title' %}
 {% assign previous_alphabet = '' %}
-<ul class="block-grid mobile four-up">
-  {% for link in sorted_links %}
-    {% assign link_item = link.object %}
-    {% capture link_title %}{{ link.title | escape }}{% endcapture %}
-    {% assign current_alphabet = link_title | slice: 0 %}
-
-    {% if current_alphabet != previous_alphabet %}
-      <div class="new-line clearfix"></div>
-      <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>
-      {% assign previous_alphabet = current_alphabet %}
-    {% endif %}
-    <li class="">
+<div class="inner_main_brands">
+  <ul class="block-grid mobile four-up">
+    {% for link in sorted_links %}
       {% assign link_item = link.object %}
       {% capture link_title %}{{ link.title | escape }}{% endcapture %}
+      {% assign current_alphabet = link_title | slice: 0 %}
 
-      <a href="{{ link_item.url }}" title="{{ link_title }}">
-        <span class="thumbnail">
-          <img
-            src="{{ link_item.image | image_url }}"
-            alt="{{- link_title }}"
-            width="50"
-            height="50"
-          >
-        </span>
-        <span class="product-title">
-          {{ link_title -}}
-        </span>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
-<!-- </div> -->
+      {% if current_alphabet != previous_alphabet %}
+        <div class="new-line clearfix"></div>
+        <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>
+        {% assign previous_alphabet = current_alphabet %}
+      {% endif %}
+      <li class="">
+        {% assign link_item = link.object %}
+        {% capture link_title %}{{ link.title | escape }}{% endcapture %}
+
+        <a href="{{ link_item.url }}" title="{{ link_title }}">
+          <span class="thumbnail">
+            <img
+              src="{{ link_item.image | image_url }}"
+              alt="{{- link_title }}"
+              width="50"
+              height="50"
+            >
+          </span>
+          <span class="product-title">
+            {{ link_title -}}
+          </span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
 <!-- </div> -->
 <style>
   .four-up{

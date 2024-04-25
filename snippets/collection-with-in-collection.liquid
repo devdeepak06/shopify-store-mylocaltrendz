@@ -1,4 +1,4 @@
-{% assign linklist = linklists.brands %}
+{% assign linklist = linklists.brands | sort: 'title' %}
 <ul class="block-grid mobile four-up product-collection">
   {% for link in linklist.links %}
     <li>

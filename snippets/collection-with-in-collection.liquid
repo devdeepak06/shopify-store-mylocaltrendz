@@ -4,19 +4,16 @@
     <li>
       <div class="product">
         {% assign link_item = link.object %}
-        {% assign link_image = '' %}
         {% capture link_title %}{{ link.title | escape }}{% endcapture %}
 
         <a href="{{ link_item.url }}" title="{{ link_title }}">
           <span class="thumbnail">
-            {% if link_image != '' %}
-              <img
-                src="{{ link.object.image }}"
-                alt="{{- link.object.image }}"
-                width=""
-                height=""
-              >
-            {% endif %}
+            <img
+              src="{{ link.object.image | image_url }}"
+              alt="{{- link.object.image }}"
+              width=""
+              height=""
+            >
           </span>
 
           <span class="product-title">

@@ -1,7 +1,7 @@
+{% assign linklist = linklists.brands %}
+{% assign sorted_links = linklist.links | sort: 'title' %}
 {% for link in sorted_links %}
   <div class="anchor-{{ current_alphabet }}">
-    {% assign linklist = linklists.brands %}
-    {% assign sorted_links = linklist.links | sort: 'title' %}
     {% assign previous_alphabet = '' %}
     <div class="inner_main_brands">
       <ul class="block-grid mobile four-up">

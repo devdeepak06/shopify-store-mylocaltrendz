@@ -8,7 +8,7 @@
   {% capture link_title %}{{ link.title | escape }}{% endcapture %}
   {% assign current_alphabet = link_title | slice: 0 %}
 
-  <ul class="block-grid mobile four-up product-collection">
+  <ul class="block-grid mobile four-up">
     {% if current_alphabet != previous_alphabet %}
       <div class="new-line clearfix"></div>
       <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>

@@ -1,7 +1,5 @@
 {% assign linklist = linklists.brands %}
-{% for link in linklists['main-menu'].links -%}
-  {{ link.title | link_to: link.url }}
-{%- endfor %}
+
 {% assign collections_per_row = section.settings.frontpage_collections_per_row %}
 <ul class="block-grid mobile four-up product-collection">
   {% for link in linklist.links %}

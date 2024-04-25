@@ -1,6 +1,16 @@
 {% assign linklist = linklists.brands %}
 <ul class="block-grid mobile four-up product-collection">
+  {% assign previous_alphabet = '' %}
   {% for link in linklist.links %}
+    {% assign link_item = link.object %}
+    {% capture link_title %}{{ link.title | escape }}{% endcapture %}
+    {% assign current_alphabet = link_title | slice: 0 %}
+
+    {% if current_alphabet != previous_alphabet %}
+      <li class="new-alphabet">
+        <span class="new-alphabet-char">{{ current_alphabet }}</span>
+      </li>
+    {% endif %}
     <li class="{{ forloop.index }}">
       <div class="product">
         {% assign link_item = link.object %}

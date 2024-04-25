@@ -15,24 +15,22 @@
       {% assign previous_alphabet = current_alphabet %}
     {% endif %}
     <li class="{{ forloop.index }}" style="transition: all 0s ease 0s;">
-      <span class="product">
-        {% assign link_item = link.object %}
-        {% capture link_title %}{{ link.title | escape }}{% endcapture %}
+      {% assign link_item = link.object %}
+      {% capture link_title %}{{ link.title | escape }}{% endcapture %}
 
-        <a href="{{ link_item.url }}" title="{{ link_title }}">
-          <span class="thumbnail">
-            <img
-              src="{{ link_item.image | image_url }}"
-              alt="{{- link_title }}"
-              width="50"
-              height="50"
-            >
-          </span>
-          <span class="product-title">
-            {{ link_title -}}
-          </span>
-        </a>
-      </span>
+      <a href="{{ link_item.url }}" title="{{ link_title }}">
+        <span class="thumbnail">
+          <img
+            src="{{ link_item.image | image_url }}"
+            alt="{{- link_title }}"
+            width="50"
+            height="50"
+          >
+        </span>
+        <span class="product-title">
+          {{ link_title -}}
+        </span>
+      </a>
     </li>
   </ul>
 {% endfor %}

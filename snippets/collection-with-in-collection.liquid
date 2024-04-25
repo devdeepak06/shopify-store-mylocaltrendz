@@ -12,7 +12,7 @@
     {% endif %}
     <div class="inner_main_brands" style="transition: all 0s ease 0s;">
       <ul class="block-grid mobile four-up product-collection">
-        <li class="{{ forloop.index }}">
+        <li class="{{ forloop.index }}" style="transition: all 0s ease 0s;">
           <div class="product">
             {% assign link_item = link.object %}
             {% capture link_title %}{{ link.title | escape }}{% endcapture %}

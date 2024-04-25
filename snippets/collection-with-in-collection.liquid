@@ -7,7 +7,7 @@
     {% capture link_title %}{{ link.title | escape }}{% endcapture %}
     {% assign current_alphabet = link_title | slice: 0 %}
 
-    {% if current_alphabet != previous_alphabet %}
+    {% if current_alphabet != previous_alphabet and forloop.index != 1 %}
       <li class="new-alphabet">
         <span class="new-alphabet-char">{{ current_alphabet }}</span>
       </li>

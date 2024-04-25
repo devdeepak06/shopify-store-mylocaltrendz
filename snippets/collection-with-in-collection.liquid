@@ -1,10 +1,10 @@
-{% assign linklist = linklists.brands %}
-{% assign sorted_links = linklist.links | sort: 'title' %}
-{% for link in sorted_links %}
-  <div class="anchor-{{ current_alphabet }}">
-    {% assign previous_alphabet = '' %}
-    <div class="inner_main_brands">
-      <ul class="block-grid mobile four-up">
+<div class="anchor-{{ current_alphabet }}">
+  {% assign linklist = linklists.brands %}
+  {% assign sorted_links = linklist.links | sort: 'title' %}
+  {% assign previous_alphabet = '' %}
+  <div class="inner_main_brands">
+    <ul class="block-grid mobile four-up">
+      {% for link in sorted_links %}
         {% assign link_item = link.object %}
         {% capture link_title %}{{ link.title | escape }}{% endcapture %}
         {% assign current_alphabet = link_title | slice: 0 %}
@@ -32,10 +32,10 @@
             </span>
           </a>
         </li>
-      </ul>
-    </div>
+      {% endfor %}
+    </ul>
   </div>
-{% endfor %}
+</div>
 <style>
   .four-up{
   list-style: none;

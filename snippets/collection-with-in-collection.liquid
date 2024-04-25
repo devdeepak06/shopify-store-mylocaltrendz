@@ -1,11 +1,7 @@
 <ul class="block-grid mobile four-up product-collection">    
-{% for link in linklist.links %} //Here we are saying use the links in the linklist we created and assign them to the below code
+{% for link in linklist.links %}
 <li>
   <div class="product">
-  {% comment %}
- You can connect collections, products, pages, & even blogs. By default it will use the first product that appears on a collection or you can pick a featured image.
-  {% endcomment %}
-
   {% assign link_item = link.object %} //Creates a new variable for link_item using link.object which in-turn can access any of the attributes that are available (product, collection, page or blog)
   {% assign link_image = '' %}//creates a new variable for link_image which assigns 
   {% capture link_title %}{{ link.title | escape }}{% endcapture %}//grab the link title and assign it as the link.title 

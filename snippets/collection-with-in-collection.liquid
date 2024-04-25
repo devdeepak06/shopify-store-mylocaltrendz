@@ -9,32 +9,32 @@
     {% if current_alphabet != previous_alphabet %}
       <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>
       {% assign previous_alphabet = current_alphabet %}
+      <div class="inner_main_brands" style="transition: all 0s ease 0s;">
+        <ul class="block-grid mobile four-up product-collection">
+          <li class="{{ forloop.index }}">
+            <div class="product">
+              {% assign link_item = link.object %}
+              {% capture link_title %}{{ link.title | escape }}{% endcapture %}
+
+              <a href="{{ link_item.url }}" title="{{ link_title }}">
+                <span class="thumbnail">
+                  <img
+                    src="{{ link_item.image | image_url }}"
+                    alt="{{- link_title }}"
+                    width="50"
+                    height="50"
+                  >
+                </span>
+
+                <span class="product-title">
+                  {{ link_title -}}
+                </span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
     {% endif %}
-    <div class="inner_main_brands" style="transition: all 0s ease 0s;">
-      <ul class="block-grid mobile four-up product-collection">
-        <li class="{{ forloop.index }}">
-          <div class="product">
-            {% assign link_item = link.object %}
-            {% capture link_title %}{{ link.title | escape }}{% endcapture %}
-
-            <a href="{{ link_item.url }}" title="{{ link_title }}">
-              <span class="thumbnail">
-                <img
-                  src="{{ link_item.image | image_url }}"
-                  alt="{{- link_title }}"
-                  width="50"
-                  height="50"
-                >
-              </span>
-
-              <span class="product-title">
-                {{ link_title -}}
-              </span>
-            </a>
-          </div>
-        </li>
-      </ul>
-    </div>
   </div>
 {% endfor %}
 <style>

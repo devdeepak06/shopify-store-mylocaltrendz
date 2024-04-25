@@ -100,6 +100,32 @@
                     </h2>
                   </a>
                 </div>
+                {% if product.metafields.judgeme.badge != blank and product.metafields.reviews.rating_count != blank %}
+                  <div class="judge-me-collection-section" style="text-align:center;">
+                    <div
+                      style="justify-content: center;"
+                      class="jdgm-widget jdgm-preview-badge"
+                      data-id="{{ product.id }}"
+                      data-auto-install="false"
+                    >
+                      {{ product.metafields.judgeme.badge }}
+                      <span class="gap_new">|</span
+                      ><img
+                        class="verified_icon"
+                        src="https://cdn.shopify.com/s/files/1/0633/3903/6887/files/50x50_e3642149-184f-4469-9907-3763c89d0851.png?v=1707748528"
+                        alt="verified_icon"
+                        width="18px"
+                        height="18px"
+                      >
+                      <span class="reviewFontSize">
+                        {{- product.metafields.reviews.rating_count | append: ' Verified Ratings' }}
+                      </span>
+                    </div>
+                  </div>
+                  <!-- End of Judge.me code -->
+                {% else %}
+                  <div class="non-product-ratings"></div>
+                {% endif %}
                 {% if product.variants.size > 1 %}
                   <div id="on_rental_pickup">
                     <div class="cstm_date">

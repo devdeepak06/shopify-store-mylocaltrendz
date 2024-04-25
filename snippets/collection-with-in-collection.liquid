@@ -1,6 +1,4 @@
 {% assign linklist = linklists.brands %}
-
-{% assign collections_per_row = section.settings.frontpage_collections_per_row %}
 <ul class="block-grid mobile four-up product-collection">
   {% for link in linklist.links %}
     <li>
@@ -54,16 +52,12 @@
                 {% if settings.align_height %}
                   style="max-height:{{ settings.collection_height }}px"
                 {% endif %}
-                src="{{ link_image | asset_img_url }}"
+                src="{{ link_image }}"
                 alt="{{ link_title }}"
                 width=""
                 height=""
               >
             {% endif %}
-          </span>
-
-          <span class="product-title">
-            {{ link_title }}
           </span>
         </a>
       </div>

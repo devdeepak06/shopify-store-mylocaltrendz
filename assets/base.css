@@ -3666,3 +3666,87 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+
+/* Judge.me css */
+.jdgm-rev-widg__summary-average .jdgm-link {
+  pointer-events: none;
+  text-decoration: none;
+}
+.judge-me-collection-section .jdgm-widget.jdgm-widget {
+  display: flex;
+  justify-content: left;
+  text-align: center;
+  gap: 1px;
+  align-items: center;
+}
+.judge-me-collection-section .jdgm-prev-badge {
+  font-size: 12px;
+  /* padding-bottom: 1px; */
+}
+.judge-me-collection-section
+  .jdgm-preview-badge
+  .jdgm-prev-badge__stars
+  .jdgm-star.jdgm-star:first-of-type {
+  display: inline-block !important;
+}
+.jdgm-preview-badge .jdgm-prev-badge__stars .jdgm-star {
+  display: none !important;
+}
+.jdgm-write-rev-link.jdgm-write-rev-link:hover {
+  opacity: 1 !important;
+}
+span.reviewFontSize {
+  padding-right: 2px;
+}
+.writeReview {
+  text-decoration: underline;
+  color: #faad14;
+  margin-left: 2px;
+  font-weight: bold;
+}
+.jdgm-preview-badge .jdgm-star {
+  color: #faad14 !important;
+  padding: 0 !important;
+}
+span.reviewFontSize,
+.judge-me-collection-section .jdgm-prev-badge,
+.reviewFontSize,
+.writeReview {
+  font-size: 12px;
+}
+.product-recommendations--container span .reviewFontSize,
+.product-recommendations--container
+  .judge-me-collection-section
+  .jdgm-prev-badge,
+.product-recommendations--container .reviewFontSize {
+  font-size: 10px;
+}
+@media screen and (max-width: 768px) {
+  .product-recommendations--container span .reviewFontSize,
+  .product-recommendations--container
+    .judge-me-collection-section
+    .jdgm-prev-badge,
+  .product-recommendations--container .reviewFontSize {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 425px) {
+  span.reviewFontSize,
+  .judge-me-collection-section .jdgm-prev-badge,
+  .reviewFontSize,
+  .writeReview {
+    font-size: 10px;
+  }
+  .verified_icon {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media screen and (max-width: 320px) {
+  span.reviewFontSize,
+  .judge-me-collection-section .jdgm-prev-badge,
+  .reviewFontSize,
+  .writeReview {
+    font-size: 9px;
+  }
+}

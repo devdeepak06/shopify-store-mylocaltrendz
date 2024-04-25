@@ -7,12 +7,6 @@
         {% assign link_image = '' %}
         {% capture link_title %}{{ link.title | escape }}{% endcapture %}
 
-        {% if link.type == 'collection_link' %}
-          {% if link_item.image %}
-            {% assign link_image = link_item.image.src | image_url: 'medium' %}
-          {% endif %}
-        {% endif %}
-
         <a href="{{ link_item.url }}" title="{{ link_title }}">
           <span class="thumbnail">
             {% if link_image != '' %}

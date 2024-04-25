@@ -11,9 +11,6 @@
           <span class="thumbnail">
             {% if link_image != '' %}
               <img
-                {% if settings.align_height %}
-                  style="max-height:{{ settings.collection_height }}px"
-                {% endif %}
                 src="{{ link_item.image | image_url }}"
                 alt="{{ link_title }}"
                 width=""

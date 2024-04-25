@@ -19,16 +19,18 @@
           {% capture link_title %}{{ link.title | escape }}{% endcapture %}
 
           <a href="{{ link_item.url }}" title="{{ link_title }}">
-            <span class="thumbnail">
-              <img
-                src="{{ link_item.image | image_url }}"
-                alt="{{- link_title }}"
-                width="50"
-                height="50"
-              >
-            </span>
-            <span class="product-title">
-              {{ link_title -}}
+            <span>
+              <span class="thumbnail">
+                <img
+                  src="{{ link_item.image | image_url }}"
+                  alt="{{- link_title }}"
+                  width="50"
+                  height="50"
+                >
+              </span>
+              <span class="product-title">
+                {{ link_title -}}
+              </span>
             </span>
           </a>
         </li>

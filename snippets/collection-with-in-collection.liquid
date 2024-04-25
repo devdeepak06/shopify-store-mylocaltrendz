@@ -9,7 +9,7 @@
 
         {% if link.type == 'collection_link' %}
           {% if link_item.image %}
-            {% assign link_image = link_item.url.image.src | image_url: 'medium' %}
+            {% assign link_image = link_item.image.src | image_url: 'medium' %}
           {% endif %}
         {% endif %}
 

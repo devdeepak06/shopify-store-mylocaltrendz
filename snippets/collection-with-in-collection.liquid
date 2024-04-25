@@ -1,7 +1,7 @@
-{% assign linklis = linklists.brands %}
-{% assign linklist = linklis %}
+{% assign linklist = linklists.brands %}
 <ul class="block-grid mobile four-up product-collection">
   {% assign previous_alphabet = '' %}
+  {% assign alphabet_items = '' %}
   {% for link in linklist.links %}
     {% assign link_item = link.object %}
     {% capture link_title %}{{ link.title | escape }}{% endcapture %}
@@ -9,41 +9,52 @@
 
     {% if current_alphabet != previous_alphabet and forloop.index != 1 %}
       <li class="new-alphabet">
+        <span class="new-alphabet-char">{{ previous_alphabet }}</span>
+        {{ alphabet_items }}
+      </li>
+      {% assign alphabet_items = '' %}
+    {% endif %}
+
+    {% capture item_html %}
+      <li class="{{ forloop.index }}">
+        <div class="product">
+          <a href="{{ link_item.url }}" title="{{ link_title }}">
+            <span class="thumbnail">
+              <img src="{{ link_item.image | image_url }}" alt="{{- link_title }}" width="50" height="50">
+            </span>
+            <span class="product-title">
+              {{ link_title -}}
+            </span>
+          </a>
+        </div>
+      </li>
+    {% endcapture %}
+
+    {% if current_alphabet == previous_alphabet or forloop.index == 1 %}
+      {% assign alphabet_items = alphabet_items | append: item_html %}
+    {% else %}
+      {{ alphabet_items }}
+      {% assign alphabet_items = item_html %}
+    {% endif %}
+
+    {% assign previous_alphabet = current_alphabet %}
+
+    {% if forloop.last %}
+      <li class="new-alphabet">
         <span class="new-alphabet-char">{{ current_alphabet }}</span>
+        {{ alphabet_items }}
       </li>
     {% endif %}
-    <li class="{{ forloop.index }}">
-      <div class="product">
-        {% assign link_item = link.object %}
-        {% capture link_title %}{{ link.title | escape }}{% endcapture %}
-
-        <a href="{{ link_item.url }}" title="{{ link_title }}">
-          <span class="thumbnail">
-            <img
-              src="{{ link_item.image | image_url }}"
-              alt="{{- link_title }}"
-              width="50"
-              height="50"
-            >
-          </span>
-
-          <span class="product-title">
-            {{ link_title -}}
-          </span>
-        </a>
-      </div>
-    </li>
   {% endfor %}
 </ul>
 <style>
-  .four-up{
-
-  list-style: none;
+  .four-up {
+    list-style: none;
     column-count: 2;
     column-gap: 10px;
     column-width: auto;
   }
-   .new-alphabet {
+  .new-alphabet {
     list-style: none;
     clear: both; /* Adjust based on your layout */
     margin-top: 10px; /* Adjust spacing as needed */

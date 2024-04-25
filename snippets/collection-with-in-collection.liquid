@@ -3,17 +3,17 @@
 {% assign linklist = linklists.brands %}
 {% assign sorted_links = linklist.links | sort: 'title' %}
 {% assign previous_alphabet = '' %}
+{% if current_alphabet != previous_alphabet %}
+  <div class="new-line clearfix"></div>
+  <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>
+  {% assign previous_alphabet = current_alphabet %}
+{% endif %}
 <ul class="block-grid mobile four-up">
   {% for link in sorted_links %}
     {% assign link_item = link.object %}
     {% capture link_title %}{{ link.title | escape }}{% endcapture %}
     {% assign current_alphabet = link_title | slice: 0 %}
 
-    {% if current_alphabet != previous_alphabet %}
-      <div class="new-line clearfix"></div>
-      <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>
-      {% assign previous_alphabet = current_alphabet %}
-    {% endif %}
     <li class="">
       {% assign link_item = link.object %}
       {% capture link_title %}{{ link.title | escape }}{% endcapture %}

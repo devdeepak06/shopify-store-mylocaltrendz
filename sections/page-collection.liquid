@@ -1,20 +1,8 @@
-<div class="twelve columns collection-list">
-  <h1 class="page-title">{{ page.title | escape }}</h1>
-  {{ page.content }}
-  {% render 'collection-with-in-collection' %}
-</div>
-
+{% render 'collection-with-in-collection' %}
 {% schema %}
 {
   "name": "Page Collection",
-  "settings": [
-    {
-      "type": "number",
-      "id": "frontpage_collections_per_row",
-      "label": "Number of Collections Per Row",
-      "default": 3
-    }
-  ],
+  "settings": [],
   "presets": [
     {
       "name": "Page Collection"

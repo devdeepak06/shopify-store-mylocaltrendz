@@ -6,9 +6,15 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "page_collection_RinG3Q": {
+      "type": "page-collection",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "page_collection_RinG3Q"
   ]
 }

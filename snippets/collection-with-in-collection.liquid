@@ -7,6 +7,7 @@
     {% capture link_title %}{{ link.title | escape }}{% endcapture %}
     {% assign current_alphabet = link_title | slice: 0 %}
     {% if current_alphabet != previous_alphabet %}
+      <br>
       <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>
       {% assign previous_alphabet = current_alphabet %}
     {% endif %}

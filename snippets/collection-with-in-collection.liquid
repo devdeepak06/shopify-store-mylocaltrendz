@@ -5,7 +5,7 @@
   {% assign link_item = link.object %}
   {% capture link_title %}{{ link.title | escape }}{% endcapture %}
   {% assign current_alphabet = link_title | slice: 0 %}
-  <div>
+  <div class="anchor-{{ current_alphabet }}">
     {% if current_alphabet != previous_alphabet %}
       <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>
       {% assign previous_alphabet = current_alphabet %}

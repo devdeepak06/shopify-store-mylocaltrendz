@@ -11,7 +11,9 @@
       <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>
       {% assign previous_alphabet = current_alphabet %}
     {% endif %}
+    {% endfor %}
     <div class="inner_main_brands" style="transition: all 0s ease 0s;">
+      {% for link in sorted_links %}
       <ul class="block-grid mobile four-up product-collection">
         <li class="{{ forloop.index }}" style="transition: all 0s ease 0s;">
           <div class="product">

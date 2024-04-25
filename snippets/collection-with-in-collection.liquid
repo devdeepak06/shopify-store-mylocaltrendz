@@ -1,72 +1,55 @@
-{% assign linklist = linklists.brands %}
-{% assign alphabet_groups = '' %}
-{% assign current_group = '' %}
-{% assign previous_alphabet = '' %}
-
-{% for link in linklist.links %}
-  {% assign link_item = link.object %}
-  {% capture link_title %}{{ link.title | escape }}{% endcapture %}
-  {% assign current_alphabet = link_title | slice: 0 %}
-
-  {% if current_alphabet != previous_alphabet and previous_alphabet != '' %}
-    {% assign alphabet_groups = alphabet_groups | append: current_group | append: '|' %}
-    {% assign current_group = '' %}
-  {% endif %}
-
-  {% capture item_html %}
-        <li class="{{ forloop.index }}">
-            <div class="product">
-                <a href="{{ link_item.url }}" title="{{ link_title }}">
-                    <span class="thumbnail">
-                        <img src="{{ link_item.image | image_url }}" alt="{{- link_title }}" width="50" height="50">
-                    </span>
-                    <span class="product-title">
-                        {{ link_title -}}
-                    </span>
-                </a>
-            </div>
-        </li>
-    {% endcapture %}
-
-  {% assign current_group = current_group | append: item_html %}
-
-  {% assign previous_alphabet = current_alphabet %}
-
-  {% if forloop.last %}
-    {% assign alphabet_groups = alphabet_groups | append: current_group %}
-  {% endif %}
-{% endfor %}
-
+{% assign linklis = linklists.brands %}
+{% assign linklist = linklis %}
 <ul class="block-grid mobile four-up product-collection">
-  {% assign group_array = alphabet_groups | split: '|' %}
-  {% for group in group_array %}
-    {% if group != '' %}
-      {% assign first_item = group | split: '<li' | first %}
-      {% assign alphabet = first_item | split: 'product-title">' | last | slice: 0 %}
+  {% assign previous_alphabet = '' %}
+  {% for link in linklist.links %}
+    {% assign link_item = link.object %}
+    {% capture link_title %}{{ link.title | escape }}{% endcapture %}
+    {% assign current_alphabet = link_title | slice: 0 %}
+
+    {% if current_alphabet != previous_alphabet %}
       <li class="new-alphabet">
-        <span class="new-alphabet-char">{{ alphabet }}</span>
-        <ul>
-          {{ group }}
-        </ul>
+        <span class="new-alphabet-char">{{ current_alphabet }}</span>
       </li>
     {% endif %}
+    <li class="{{ forloop.index }}">
+      <div class="product">
+        {% assign link_item = link.object %}
+        {% capture link_title %}{{ link.title | escape }}{% endcapture %}
+
+        <a href="{{ link_item.url }}" title="{{ link_title }}">
+          <span class="thumbnail">
+            <img
+              src="{{ link_item.image | image_url }}"
+              alt="{{- link_title }}"
+              width="50"
+              height="50"
+            >
+          </span>
+
+          <span class="product-title">
+            {{ link_title -}}
+          </span>
+        </a>
+      </div>
+    </li>
   {% endfor %}
 </ul>
-
 <style>
-  .four-up {
-      list-style: none;
-      column-count: 2;
-      column-gap: 10px;
-      column-width: auto;
+  .four-up{
+
+  list-style: none;
+    column-count: 2;
+    column-gap: 10px;
+    column-width: auto;
   }
-  .new-alphabet {
-      list-style: none;
-      clear: both;
-      margin-top: 10px;
+   .new-alphabet {
+    list-style: none;
+    clear: both; /* Adjust based on your layout */
+    margin-top: 10px; /* Adjust spacing as needed */
   }
   .new-alphabet-char {
-      font-weight: bold;
-      font-size: 1.2em;
+    font-weight: bold; /* Style the new alphabet as needed */
+    font-size: 1.2em; /* Adjust size as needed */
   }
 </style>

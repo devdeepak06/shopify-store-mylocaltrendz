@@ -11,8 +11,8 @@
           <span class="thumbnail">
             {% if link_image != '' %}
               <img
-                src="{{ link_item.image | image_url }}"
-                alt="{{ link_title }}"
+                src="{{ link.object.image | image_url }}"
+                alt=" {{- link.object.image }}"
                 width=""
                 height=""
               >
@@ -21,7 +21,6 @@
 
           <span class="product-title">
             {{ link_title -}}
-            {{- link.object.image }}
           </span>
         </a>
       </div>

@@ -1,5 +1,5 @@
-{% comment %} <div class="anchor-{{ current_alphabet }}" style="transition: all 0s ease 0s;"> {% endcomment %}
-<!-- <div class="inner_main_brands" style="transition: all 0s ease 0s;"> -->
+{% comment %} <div class="anchor-{{ current_alphabet }}"> {% endcomment %}
+<!-- <div class="inner_main_brands"> -->
 {% assign linklist = linklists.brands %}
 {% assign sorted_links = linklist.links | sort: 'title' %}
 {% assign previous_alphabet = '' %}
@@ -14,7 +14,7 @@
       <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>
       {% assign previous_alphabet = current_alphabet %}
     {% endif %}
-    <li class="{{ forloop.index }}" style="transition: all 0s ease 0s;">
+    <li class="">
       {% assign link_item = link.object %}
       {% capture link_title %}{{ link.title | escape }}{% endcapture %}
 

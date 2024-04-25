@@ -1,8 +1,9 @@
 {% assign linklis = linklists.brands %}
 {% assign linklist = linklis %}
+{% assign sorted_links = linklist.links | sort: 'title' %}
 <ul class="block-grid mobile four-up product-collection">
   {% assign previous_alphabet = '' %}
-  {% for link in linklist.links %}
+  {% for link in sorted_links %}
     {% assign link_item = link.object %}
     {% capture link_title %}{{ link.title | escape }}{% endcapture %}
     {% assign current_alphabet = link_title | slice: 0 %}

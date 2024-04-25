@@ -9,6 +9,8 @@
     {% if current_alphabet != previous_alphabet %}
       <span class="new-alphabet-char">{{ current_alphabet }}</span>
     {% endif %}
+    {{ previous_alphabet }}
+    {{ current_alphabet }}
     <li class="{{ forloop.index }}">
       <div class="product">
         {% assign link_item = link.object %}

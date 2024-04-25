@@ -13,36 +13,6 @@
           {% else %}
             {% assign link_image = link_item.products.first.featured_image | image_url: 'medium' %}
           {% endif %}
-        {% elsif link.type == 'product_link' %}
-          {% assign link_image = link_item.featured_image | image_url: 'medium' %}
-        {% elsif link.type == 'page_link' %}
-          {% if link_item.content contains '<img' %}
-            {% assign src = link_item.content | split: 'src="' %}
-            {% assign src = src[1]
-              | split: '"'
-              | first
-              | replace: '//cdn', 'http://cdn'
-              | replace: 'http:http://', 'http://'
-              | remove: 'https:'
-            %}
-            {% if src %}
-              {% assign link_image = src %}
-            {% endif %}
-          {% endif %}
-        {% elsif link.type == 'blog_link' %}
-          {% if link_item.articles.first.content contains '<img' %}
-            {% assign src = link_item.articles.first.content | split: 'src="' %}
-            {% assign src = src[1]
-              | split: '"'
-              | first
-              | replace: '//cdn', 'http://cdn'
-              | replace: 'http:http://', 'http://'
-              | remove: 'https:'
-            %}
-            {% if src %}
-              {% assign link_image = src %}
-            {% endif %}
-          {% endif %}
         {% endif %}
 
         <a href="{{ link_item.url }}" title="{{ link_title }}">

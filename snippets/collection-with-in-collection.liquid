@@ -1,7 +1,7 @@
 {% assign linklist = linklists.brands | sort: 'title' %}
 <ul class="block-grid mobile four-up product-collection">
   {% for link in linklist.links %}
-    <li>
+    <li class="{{ forloop.index }}">
       <div class="product">
         {% assign link_item = link.object %}
         {% capture link_title %}{{ link.title | escape }}{% endcapture %}

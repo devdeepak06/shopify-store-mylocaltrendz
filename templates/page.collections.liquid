@@ -2,7 +2,7 @@
   <h1 class="page-title">{{ page.title | escape }}</h1>
   {{ page.content }}
   {% for link in linklists['main-menu'].links -%}
-    {{ link.title | link_to: link.url }}
+    Links {{ link.title | link_to: link.url }}
   {%- endfor %}
   {% render 'collection-with-in-collection' %}
 </div>

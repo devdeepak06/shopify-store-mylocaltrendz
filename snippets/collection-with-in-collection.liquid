@@ -19,7 +19,7 @@
           {% capture link_title %}{{ link.title | escape }}{% endcapture %}
 
           <a href="{{ link_item.url }}" title="{{ link_title }}">
-            <span>
+            <span style="display: inline-flex; align-items: center;">
               <span class="thumbnail">
                 <img
                   src="{{ link_item.image | image_url }}"

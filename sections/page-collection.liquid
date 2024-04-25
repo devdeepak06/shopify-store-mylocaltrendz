@@ -1,12 +1,14 @@
-{% assign linklist = linklists.brands %}
-{% assign collections_per_row = settings.frontpage_collections_per_row %}
+{% comment %}
+  {% assign linklist = linklists.brands %}
+  {% assign collections_per_row = section.settings.frontpage_collections_per_row %}
 
-<div class="twelve columns collection-list">
-  <h1 class="page-title">{{ page.title | escape }}</h1>
-  {{ page.content }}
+  <div class="twelve columns collection-list">
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+    {{ page.content }}
 
-  {% include 'collection-with-in-collection' %}
-</div>
+    {% include 'collection-with-in-collection' %}
+  </div>
+{% endcomment %}
 {% schema %}
 {
   "name": "Page Collection",

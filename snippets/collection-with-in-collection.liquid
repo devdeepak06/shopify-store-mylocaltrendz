@@ -1,100 +1,51 @@
-{% comment %}
-  {% assign linklist = linklists.brands %}
-  {% assign sorted_links = linklist.links | sort: 'title' %}
-  {% assign previous_alphabet = '' %}
-  {% for link in sorted_links %}
-    {% assign link_item = link.object %}
-    {% capture link_title %}{{ link.title | escape }}{% endcapture %}
-    {% assign current_alphabet = link_title | slice: 0 %}
-    <div class="anchor-{{ current_alphabet }}" style="transition: all 0s ease 0s;">
-      {% if current_alphabet != previous_alphabet %}
-        <div class="new-line clearfix"></div>
-        <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>
-        {% assign previous_alphabet = current_alphabet %}
-      {% endif %}
-      <div class="inner_main_brands" style="transition: all 0s ease 0s;">
-        <ul class="block-grid mobile four-up product-collection">
-          <li class="{{ forloop.index }}" style="transition: all 0s ease 0s;">
-            <div class="product">
-              {% assign link_item = link.object %}
-              {% capture link_title %}{{ link.title | escape }}{% endcapture %}
-
-              <a href="{{ link_item.url }}" title="{{ link_title }}">
-                <span class="thumbnail">
-                  <img
-                    src="{{ link_item.image | image_url }}"
-                    alt="{{- link_title }}"
-                    width="50"
-                    height="50"
-                  >
-                </span>
-                <span class="product-title">
-                  {{ link_title -}}
-                </span>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  {% endfor %}
-  <style>
-    .four-up{
-    list-style: none;
-    }
-     .new-alphabet {
-      list-style: none;
-      margin-top: 10px;
-     }
-     .new-line {
-      clear: both;
-    }
-    .new-alphabet-char {
-      padding: 0 20px;
-      text-align: left;
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-  </style>
-{% endcomment %}
-
-<div id="brand-list">
-  {% assign linklist = linklists.brands %}
-  {% assign sorted_links = linklist.links | sort: 'title' %}
-  {% assign previous_alphabet = '' %}
-  {% for link in sorted_links %}
-    {% assign link_item = link.object %}
-    {% capture link_title %}{{ link.title | escape }}{% endcapture %}
-    {% assign current_alphabet = link_title | slice: 0 %}
+{% assign linklist = linklists.brands %}
+{% assign sorted_links = linklist.links | sort: 'title' %}
+{% assign previous_alphabet = '' %}
+{% for link in sorted_links %}
+  {% assign link_item = link.object %}
+  {% capture link_title %}{{ link.title | escape }}{% endcapture %}
+  {% assign current_alphabet = link_title | slice: 0 %}
+  <div class="anchor-{{ current_alphabet }}" style="transition: all 0s ease 0s;">
     {% if current_alphabet != previous_alphabet %}
       <div class="new-line clearfix"></div>
       <h2 class="new-alphabet-char">{{ current_alphabet }}</h2>
       {% assign previous_alphabet = current_alphabet %}
     {% endif %}
-    <div class="brand-container anchor-{{ current_alphabet }}">
-      <div class="inner_main_brands">
-        <ul class="brand-list block-grid mobile four-up product-collection">
-          <li class="{{ forloop.index }}">
-            <div class="product">
-              <a href="{{ link_item.url }}" title="{{ link_title }}">
-                <span class="thumbnail">
-                  <img src="{{ link_item.image | image_url }}" alt="{{ link_title }}" width="50" height="50">
-                </span>
-                <span class="product-title">{{ link_title }}</span>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  {% endfor %}
-</div>
+    <div class="inner_main_brands" style="transition: all 0s ease 0s;">
+      <ul class="block-grid mobile four-up product-collection">
+        <li class="{{ forloop.index }}" style="transition: all 0s ease 0s;">
+          <div class="product">
+            {% assign link_item = link.object %}
+            {% capture link_title %}{{ link.title | escape }}{% endcapture %}
 
+            <a href="{{ link_item.url }}" title="{{ link_title }}">
+              <span class="thumbnail">
+                <img
+                  src="{{ link_item.image | image_url }}"
+                  alt="{{- link_title }}"
+                  width="50"
+                  height="50"
+                >
+              </span>
+              <span class="product-title">
+                {{ link_title -}}
+              </span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endfor %}
 <style>
-  .four-up {
-    list-style: none;
+  .four-up{
+  list-style: none;
   }
-  .new-line {
+   .new-alphabet {
+    list-style: none;
+    margin-top: 10px;
+   }
+   .new-line {
     clear: both;
   }
   .new-alphabet-char {
@@ -104,17 +55,3 @@
     font-size: 1.2em;
   }
 </style>
-
-<script>
-  // Remove duplicate elements from the DOM
-  var brandContainers = document.querySelectorAll('.brand-container');
-  brandContainers.forEach(function(container) {
-    var siblings = container.parentNode.childNodes;
-    var duplicates = Array.from(siblings).filter(function(node) {
-      return (node !== container && node.classList && node.classList.contains(container.classList[1]));
-    });
-    duplicates.forEach(function(duplicate) {
-      duplicate.parentNode.removeChild(duplicate);
-    });
-  });
-</script>

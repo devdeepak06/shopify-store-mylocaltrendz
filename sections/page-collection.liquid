@@ -18,6 +18,8 @@
           {% assign new_previous_alphabet = new_current_alphabet %}
         {% endif %}
   {% endfor %}
+  
+  <input type="text" id="searchInput" onkeyup="filterAlphabets()" placeholder="Search...">
 </div>
 
   <!-- Below section is used to display all available  brand links alphabet besis -->
@@ -148,3 +150,20 @@
   ]
 }
 {% endschema %}
+<script>
+function filterAlphabets() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('searchInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementsByClassName("all_available_alphabets")[0];
+  a = ul.getElementsByTagName('a');
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>

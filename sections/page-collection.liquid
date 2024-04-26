@@ -1,4 +1,142 @@
-{% render 'collection-with-in-collection' %}
+{% comment %} {% render 'collection-with-in-collection' %} {% endcomment %}
+
+
+<div class="page-header">
+  <h1 class="majortitle">{{ page.title }}</h1>
+</div>
+{% assign linklist = linklists.brands %}
+{% assign sorted_links = linklist.links | sort: 'title' %}
+{% assign previous_alphabet = '' %}
+<!-- Below section is used to display all available alphabets -->
+<div class="all_available_alphabets">
+  {% assign new_previous_alphabet = '' %}
+{% for link in sorted_links %}
+        {% capture new_link_title %}{{ link.title | escape }}{% endcapture %}
+        {% assign new_current_alphabet = new_link_title | slice: 0 %}
+       {% if new_current_alphabet != new_previous_alphabet %}
+         <a href="#{{ new_current_alphabet }}"class="new-alphabet-char_link">{{ new_current_alphabet }}</a> 
+          {% assign new_previous_alphabet = new_current_alphabet %}
+        {% endif %}
+  {% endfor %}
+</div>
+
+  <!-- Below section is used to display all available  brand links alphabet besis -->
+  <ul class="block-grid mobile four-up">
+    <div class="inner_main_brands">
+      {% for link in sorted_links %}
+        {% assign link_item = link.object %}
+        {% capture link_title %}{{ link.title | escape }}{% endcapture %}
+        {% assign current_alphabet = link_title | slice: 0 %}
+       {% if current_alphabet != previous_alphabet %}
+          {% if previous_alphabet != '' %}
+            </ul>
+          {% endif %}
+          <ul class="four-up cstm_four-up anchor-{{ current_alphabet }}">
+          <div class="new-line clearfix"></div>
+          <h2 id="{{ current_alphabet }}" class="new-alphabet-char">{{ current_alphabet }}</h2>
+          {% assign previous_alphabet = current_alphabet %}
+        {% endif %}
+        <li>
+          {% assign link_item = link.object %}
+          {% capture link_title %}{{ link.title | escape }}{% endcapture %}
+         <a href="{{ link_item.url }}" title="{{ link_title }}" class="brand_links">
+            <span style="display: inline-flex; align-items: center;">
+              <span class="link-title" style="margin: 0 10px;">
+                {{ link_title -}}
+              </span>
+            </span>
+          </a>
+        </li>
+      {% endfor %}
+      </ul> 
+    </div>
+  </ul>
+
+
+<style>
+/* Below CSS For Brand Collection Page */
+  .four-up{
+    list-style: none;
+    float: left;
+  }
+  .cstm_four-up{
+      margin: 20px;
+  }
+    .cstm_four-up li{
+      font-size:18px;
+    }
+  
+  .inner_main_brands {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: left; */
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    justify-items: start;
+  }
+  .new-alphabet {
+    list-style: none;
+    margin-top: 10px;
+  }
+  .new-line {
+    clear: both;
+  }
+  .new-alphabet-char {
+    padding: 0 6px;
+    text-align: left;
+    font-weight: bold;
+    font-size:36px;
+     font-weight:700;
+    color: #000;
+  }
+  .new-alphabet-char_link{
+     padding: 0 6px;
+    text-align: left;
+    font-weight: bold;
+    font-size:32px;
+     font-weight:700;
+    color: #000;
+  }
+  .new-alphabet-char_link:hover{
+    color: rgb(193 100 82);
+  }
+  .all_available_alphabets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 10px;
+}
+  .link-title, .brand_links{
+    color: #000 !important;
+  }
+  .brands-page .brand_title_hand {
+    text-align: center;
+    padding-top: 10px;
+}
+  @media screen and (max-width: 767px){
+    .cstm_four-up li {
+    font-size: 15px;
+}
+    .inner_main_brands {
+    grid-template-columns: auto;
+    padding: 0 10px;
+  }
+    .four-up {
+    list-style: none;
+    float: none;
+}
+    .new-alphabet-char {
+    padding: 0px 10px;
+    font-size:24px;
+    font-weight:700;
+}
+    .new-alphabet-char_link{
+    font-size:24px;
+    font-weight:700;
+  }
+  }
+</style>
 {% schema %}
 {
   "name": "Page Collection",

@@ -786,6 +786,7 @@ var sticky_cstm = header_cstm.offsetHeight;
 var listItems = document.querySelectorAll('.header__inline-menu .list-menu .list_item_text');
 var spanElements = document.querySelectorAll('.list-menu__item span');
 var listIcon = document.querySelectorAll('.link');
+var headerDrawer = document.querySelector('.menu-drawer__navigation-container');
 var menuAnchorLink = document.querySelectorAll('.header__menu-item .customer a');
   var headerSection = document.querySelector('.pageheader--transparent');
   headerSection.addEventListener("mouseover", mouseOver);
@@ -813,6 +814,7 @@ var menuAnchorLink = document.querySelectorAll('.header__menu-item .customer a')
   
   function mouseOut() {
     headerSection.style.background = "none";
+    headerDrawer.style.background = "#00205C";
     listItems.forEach(function(item) {
       item.style.color = '#fff';
     });

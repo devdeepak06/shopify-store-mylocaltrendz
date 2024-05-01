@@ -786,20 +786,19 @@ items.forEach(item => {
 
   header.addEventListener("mouseover", toggleHeaderColor);
   header.addEventListener("mouseout", toggleHeaderColor);
-  window.onscroll = function () {
-    toggleHeaderColor();
-  };
+  window.addEventListener("scroll", toggleHeaderColor);
 
   function toggleHeaderColor() {
     var isTransparent = window.pageYOffset === 0 || window.pageYOffset <= stickyOffset;
     var color = isTransparent ? '#fff' : '#00205C';
     var background = isTransparent ? 'none' : 'white';
 
-    header.style.background = background;
+    header.style.backgroundColor = background;
     menuItems.forEach(function(item) {
       item.style.color = color;
     });
   }
 </script>
+
 
   {% endif %}

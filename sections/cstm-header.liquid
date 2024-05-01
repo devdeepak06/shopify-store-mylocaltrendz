@@ -801,8 +801,8 @@ items.forEach(item => {
     var headerColor = isTransparent ? '#fff' : '#00205C';
     var backgroundColor = isTransparent ? 'none' : 'white';
     console.table({
-  "Custom console headerColor": "'" + headerColor + "'",
-  "Custom console backgroundColor": "'" + backgroundColor + "'"
+  "Custom console headerColor": ' + headerColor + ',
+  "Custom console backgroundColor": ' + backgroundColor + '
 });
 
     // Applying styles to the header

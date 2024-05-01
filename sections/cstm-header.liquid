@@ -786,31 +786,32 @@ items.forEach(item => {
   // Selecting menu items
   var menuItems = document.querySelectorAll('.header__inline-menu .list-menu .list_item_text, .list-menu__item span, .header__icon, .menu-drawer__account, .header__menu-item, .header__heading-link, .search-modal__close-button, .header__menu-item .customer a');
   // Adding event listeners for mouseover, mouseout, and scroll
-  if (header && menuItems) {
   header.addEventListener("mouseover", toggleHeaderColor);
   header.addEventListener("mouseout", toggleHeaderColor);
   window.addEventListener("scroll", toggleHeaderColor);
-}
 
-function toggleHeaderColor() {
-  // Getting the current offset of the header
-  var stickyOffset = header.offsetTop; // Use offsetTop instead of offsetHeight
+  function toggleHeaderColor() {
+    // Getting the current offset of the header
+    var stickyOffset = header.offsetHeight;
 
-  // Checking if the header should be transparent or not
-  var isTransparent = window.pageYOffset <= stickyOffset;
+    // Checking if the header should be transparent or not
+    var isTransparent = window.pageYOffset === 0 || window.pageYOffset <= stickyOffset;
+    
+    // Setting colors and background accordingly
+    var headerColor = isTransparent ? '#fff' : '#00205C';
+    var backgroundColor = isTransparent ? 'none' : 'white';
 
-  // Setting colors and background accordingly
-  var headerColor = isTransparent ? '#fff' : '#00205C';
-  var backgroundColor = isTransparent ? 'none' : 'white';
+    // Applying styles to the header
+    header.style.background = backgroundColor;
 
-  // Applying styles to the header
-  header.style.backgroundColor = backgroundColor; // Use backgroundColor instead of background
-
-  // Applying styles to the menu items
-  menuItems.forEach(function(item) {
-    item.style.color = headerColor;
-  });
-}
+    // Applying styles to the menu items
+    menuItems.forEach(function(item) {
+      item.style.color = headerColor;
+    });
+    // console.table("Custom console headerColor", headerColor,"Custom console backgroundColor", backgroundColor);
+    // console.log("Custom console backgroundColor", backgroundColor);
+    
+  }
   
 </script>
 

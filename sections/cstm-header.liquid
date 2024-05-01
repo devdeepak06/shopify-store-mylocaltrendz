@@ -779,26 +779,37 @@ items.forEach(item => {
 {% endschema %}
  
  {% if section.settings.enable_transparent and template.name == 'index' %}
- <script>
+<script>
+  // Selecting header element
   var header = document.querySelector(".pageheader--transparent");
+  
+  // Selecting menu items
   var menuItems = document.querySelectorAll('.header__inline-menu .list-menu .list_item_text, .list-menu__item span, .header__icon, .menu-drawer__account, .header__menu-item, .header__heading-link, .search-modal__close-button, .header__menu-item .customer a');
+  
+  // Getting the initial offset of the header
   var stickyOffset = header.offsetHeight;
 
+  // Adding event listeners for mouseover, mouseout, and scroll
   header.addEventListener("mouseover", toggleHeaderColor);
   header.addEventListener("mouseout", toggleHeaderColor);
   window.addEventListener("scroll", toggleHeaderColor);
 
   function toggleHeaderColor() {
+    // Checking if the header should be transparent or not
     var isTransparent = window.pageYOffset === 0 || window.pageYOffset <= stickyOffset;
-    var color = isTransparent ? '#fff' : '#00205C';
-    var background = isTransparent ? 'none' : 'white';
+    
+    // Setting colors and background accordingly
+    var headerColor = isTransparent ? '#fff' : '#00205C';
+    var backgroundColor = isTransparent ? 'none' : 'white';
 
-    header.style.backgroundColor = background;
+    // Applying styles to the header
+    header.style.background = backgroundColor;
+
+    // Applying styles to the menu items
     menuItems.forEach(function(item) {
-      item.style.color = color;
+      item.style.color = headerColor;
     });
   }
 </script>
-
 
   {% endif %}

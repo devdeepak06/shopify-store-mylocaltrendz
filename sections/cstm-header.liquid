@@ -799,6 +799,7 @@ var menuAnchorLink = document.querySelectorAll('.header__menu-item .customer a')
   headerSection.addEventListener("mouseout", mouseOut);
 
   function mouseOver() {
+    if (window.pageYOffset === 0 || window.pageYOffset <= sticky_cstm) {
     headerSection.style.background = "white";    
     listItems.forEach(function(item) {
       item.style.color = '#00205C';
@@ -832,8 +833,10 @@ var menuAnchorLink = document.querySelectorAll('.header__menu-item .customer a')
     });
     // headerSection.classList.add('transparent-header');
   }
+  }
   
   function mouseOut() {
+    if (window.pageYOffset === 0 || window.pageYOffset <= sticky_cstm) {
     headerSection.style.background = "none";
     listItems.forEach(function(item) {
       item.style.color = '#fff';
@@ -866,6 +869,7 @@ var menuAnchorLink = document.querySelectorAll('.header__menu-item .customer a')
       anchorLink.style.color = '#fff';
     });
     // headerSection.classList.remove('transparent-header');
+  }
   }
   
   // Code for change background on scrolling

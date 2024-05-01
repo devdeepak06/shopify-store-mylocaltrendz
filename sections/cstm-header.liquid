@@ -798,8 +798,8 @@ items.forEach(item => {
     var isTransparent = window.pageYOffset === 0 || window.pageYOffset <= stickyOffset;
     
     // Setting colors and background accordingly
-    var headerColor = isTransparent ? "#00205C" : "#fff";
-var backgroundColor = isTransparent ? "white" : "none";
+  var headerColor = isTransparent ? "#fff" : "#00205C";
+var backgroundColor = isTransparent ? "none" : "white";
     // Applying styles to the header
     header.style.background = backgroundColor;
 
@@ -818,8 +818,9 @@ var backgroundColor = isTransparent ? "white" : "none";
     var isTransparent = window.pageYOffset === 0 || window.pageYOffset <= stickyOffset;
     
     // Setting colors and background accordingly
-    var headerColor = isTransparent ? "#fff" : "#00205C";
-var backgroundColor = isTransparent ? "none" : "white";
+    
+       var headerColor = isTransparent ? "#00205C" : "#fff";
+var backgroundColor = isTransparent ? "white" : "none";
     // Applying styles to the header
     header.style.background = backgroundColor;
 

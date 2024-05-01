@@ -780,169 +780,26 @@ items.forEach(item => {
  
  {% if section.settings.enable_transparent and template.name == 'index' %}
  <script>
-  // Code for transparent header onmousehover
-   var header_cstm = document.querySelector(".pageheader--transparent");
-var sticky_cstm = header_cstm.offsetHeight;
-var listItems = document.querySelectorAll('.header__inline-menu .list-menu .list_item_text');
-var spanElements = document.querySelectorAll('.list-menu__item span');
-// var listIcon = document.querySelectorAll('.link');
-   
-var link_1 = document.querySelectorAll('.header__icon');
-var link_2 = document.querySelectorAll('.menu-drawer__account');
-var link_3 = document.querySelectorAll('.header__menu-item');
-var link_4 = document.querySelectorAll('.header__heading-link');
-var link_5 = document.querySelectorAll('.search-modal__close-button');
-   
-var menuAnchorLink = document.querySelectorAll('.header__menu-item .customer a');
-  var headerSection = document.querySelector('.pageheader--transparent');
-  headerSection.addEventListener("mouseover", mouseOver);
-  headerSection.addEventListener("mouseout", mouseOut);
+  var header = document.querySelector(".pageheader--transparent");
+  var menuItems = document.querySelectorAll('.header__inline-menu .list-menu .list_item_text, .list-menu__item span, .header__icon, .menu-drawer__account, .header__menu-item, .header__heading-link, .search-modal__close-button, .header__menu-item .customer a');
+  var stickyOffset = header.offsetHeight;
 
-  function mouseOver() {
-    if (window.pageYOffset === 0 || window.pageYOffset <= sticky_cstm) {
-    headerSection.style.background = "white";    
-    listItems.forEach(function(item) {
-      item.style.color = '#00205C';
-    });
+  header.addEventListener("mouseover", toggleHeaderColor);
+  header.addEventListener("mouseout", toggleHeaderColor);
+  window.onscroll = function () {
+    toggleHeaderColor();
+  };
 
-    spanElements.forEach(function(span) {
-      span.style.color = '#00205C';
-    });
+  function toggleHeaderColor() {
+    var isTransparent = window.pageYOffset === 0 || window.pageYOffset <= stickyOffset;
+    var color = isTransparent ? '#fff' : '#00205C';
+    var background = isTransparent ? 'none' : 'white';
 
-    // listIcon.forEach(function(link) {
-    //   link.style.color = '#00205C';
-    // });
-    link_1.forEach(function(link1) {
-      link1.style.color = '#00205C';
-    });
-    link_2.forEach(function(link2) {
-      link2.style.color = '#00205C';
-    });
-    link_3.forEach(function(link3) {
-      link3.style.color = '#00205C';
-    });
-    link_4.forEach(function(link4) {
-      link4.style.color = '#00205C';
-    });
-    link_5.forEach(function(link5) {
-      link5.style.color = '#00205C';
-    });
-
-    menuAnchorLink.forEach(function(anchorLink) {
-      anchorLink.style.color = '#00205C';
-    });
-    // headerSection.classList.add('transparent-header');
-  }
-  }
-  
-  function mouseOut() {
-    if (window.pageYOffset === 0 || window.pageYOffset <= sticky_cstm) {
-    headerSection.style.background = "none";
-    listItems.forEach(function(item) {
-      item.style.color = '#fff';
-    });
-
-    spanElements.forEach(function(span) {
-      span.style.color = '#fff';
-    });
-
-    // listIcon.forEach(function(link) {
-    //   link.style.color = '#fff';
-    // });
-    link_1.forEach(function(link1) {
-      link1.style.color = '#fff';
-    });
-    link_2.forEach(function(link2) {
-      link2.style.color = '#fff';
-    });
-    link_3.forEach(function(link3) {
-      link3.style.color = '#fff';
-    });
-    link_4.forEach(function(link4) {
-      link4.style.color = '#fff';
-    });
-    link_5.forEach(function(link5) {
-      link5.style.color = '#fff';
-    });
-
-    menuAnchorLink.forEach(function(anchorLink) {
-      anchorLink.style.color = '#fff';
-    });
-    // headerSection.classList.remove('transparent-header');
-  }
-  }
-  
-  // Code for change background on scrolling
- window.onscroll = function () {
-  myFunction();
-};
-function myFunction() {
-  if (window.pageYOffset === 0 || window.pageYOffset <= sticky_cstm) {
-    header_cstm.style.background = "none";
-    listItems.forEach(function(item) {
-      item.style.color = '#fff';
-    });
-
-    spanElements.forEach(function(span) {
-      span.style.color = '#fff';
-    });
-
-    // listIcon.forEach(function(link) {
-    //   link.style.color = '#fff';
-    // });
-    link_1.forEach(function(link1) {
-      link1.style.color = '#fff';
-    });
-    link_2.forEach(function(link2) {
-      link2.style.color = '#fff';
-    });
-    link_3.forEach(function(link3) {
-      link3.style.color = '#fff';
-    });
-    link_4.forEach(function(link4) {
-      link4.style.color = '#fff';
-    });
-    link_5.forEach(function(link5) {
-      link5.style.color = '#fff';
-    });
-
-    menuAnchorLink.forEach(function(anchorLink) {
-      anchorLink.style.color = '#fff';
-    });
-// console.log("pageYOffset " + pageYOffset + " sticky_cstm " + sticky_cstm);
-  } else {
-    header_cstm.style.background = "white";
-    listItems.forEach(function(item) {
-      item.style.color = '#00205C';
-    });
-
-    spanElements.forEach(function(span) {
-      span.style.color = '#00205C';
-    });
-
-    // listIcon.forEach(function(link) {
-    //   link.style.color = '#00205C';
-    // });
-    link_1.forEach(function(link1) {
-      link1.style.color = '#00205C';
-    });
-    link_2.forEach(function(link2) {
-      link2.style.color = '#00205C';
-    });
-    link_3.forEach(function(link3) {
-      link3.style.color = '#00205C';
-    });
-    link_4.forEach(function(link4) {
-      link4.style.color = '#00205C';
-    });
-    link_5.forEach(function(link5) {
-      link5.style.color = '#00205C';
-    });
-
-    menuAnchorLink.forEach(function(anchorLink) {
-      anchorLink.style.color = '#00205C';
+    header.style.background = background;
+    menuItems.forEach(function(item) {
+      item.style.color = color;
     });
   }
-}
 </script>
+
   {% endif %}

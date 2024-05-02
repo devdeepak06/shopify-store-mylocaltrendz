@@ -43,6 +43,7 @@
           "type": "text",
           "settings": {
             "badgeSVG": "shopify:\/\/shop_images\/freeshipping_1.png",
+            "badgeSVG1": "shopify:\/\/shop_images\/Ellipse_37.png",
             "badgeText1": "Free Shipping",
             "badgeText2": "Above ₹750"
           }
@@ -51,6 +52,7 @@
           "type": "text",
           "settings": {
             "badgeSVG": "shopify:\/\/shop_images\/product-return_1.png",
+            "badgeSVG1": "shopify:\/\/shop_images\/Ellipse_37.png",
             "badgeText1": "Easy Return",
             "badgeText2": "15 Days return"
           }
@@ -58,8 +60,10 @@
         "text_MNpUJm": {
           "type": "text",
           "settings": {
-            "badgeText1": "",
-            "badgeText2": ""
+            "badgeSVG": "shopify:\/\/shop_images\/badge_1.png",
+            "badgeSVG1": "shopify:\/\/shop_images\/Ellipse_37.png",
+            "badgeText1": "100% Authentic",
+            "badgeText2": "Product"
           }
         }
       },

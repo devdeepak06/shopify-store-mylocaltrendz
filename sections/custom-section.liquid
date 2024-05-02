@@ -1,7 +1,9 @@
 <div class="mainContainer">
   {% for block in section.blocks %}
     <div class="badgeContainer">
-      <img class="badgeImage" src="{{ block.settings.badgeSVG | image_url }}" height="" width="">
+      <div class="imageContainer">
+        <img class="badgeImage" src="{{ block.settings.badgeSVG | image_url }}" height="" width="">
+      </div>
       <p class="badgeText1">{{ block.settings.badgeText1 }}</p>
       <p class="badgeText2">{{ block.settings.badgeText2 }}</p>
     </div>
@@ -13,6 +15,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+  .imageContainer{
+        border: 3px solid #C7A555;
+    border-radius: 50%;
   }
   .badgeContainer{
         margin: 20px;

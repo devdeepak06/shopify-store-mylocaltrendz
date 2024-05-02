@@ -46,10 +46,27 @@
             "badgeText1": "Free Shipping",
             "badgeText2": "Above ₹750"
           }
+        },
+        "text_qC7fbQ": {
+          "type": "text",
+          "settings": {
+            "badgeSVG": "shopify:\/\/shop_images\/product-return_1.png",
+            "badgeText1": "Easy Return",
+            "badgeText2": "15 Days return"
+          }
+        },
+        "text_MNpUJm": {
+          "type": "text",
+          "settings": {
+            "badgeText1": "",
+            "badgeText2": ""
+          }
         }
       },
       "block_order": [
-        "text_fKmYCC"
+        "text_fKmYCC",
+        "text_qC7fbQ",
+        "text_MNpUJm"
       ],
       "settings": {
       }

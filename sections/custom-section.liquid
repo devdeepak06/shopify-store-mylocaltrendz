@@ -1,9 +1,9 @@
 <div class="mainContainer">
   {% for block in section.blocks %}
     <div class="badgeContainer">
-      <img src="{{ block.settings.badgeSVG | image_url }}" height="" width="">
-      <p>{{ block.settings.badgeText1 }}</p>
-      <p>{{ block.settings.badgeText2 }}</p>
+      <img class="badgeImage" src="{{ block.settings.badgeSVG | image_url }}" height="" width="">
+      <p class="badgeText1">{{ block.settings.badgeText1 }}</p>
+      <p class="badgeText2">{{ block.settings.badgeText2 }}</p>
     </div>
   {% endfor %}
 </div>

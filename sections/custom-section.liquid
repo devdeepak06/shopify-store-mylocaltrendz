@@ -1,3 +1,17 @@
+<div>
+  {% for block in section.blocks %}
+    <div>
+      <img src="{{ block.settings.badgeSVG | image_url }}" height="" width="">
+    </div>
+    <div>
+      <p>{{ block.settings.badgeText1 }}</p>
+    </div>
+    <div>
+      <p>{{ block.settings.badgeText1 }}</p>
+    </div>
+  {% endfor %}
+</div>
+
 {% schema %}
 {
   "name": "Custom Section",

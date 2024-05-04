@@ -2,12 +2,12 @@
   <div>
     <h2>{{ section.settings.title }}</h2>
   </div>
-  {% for block in section.blocks %}
-    <ol class="faqContainer">
+  <ol class="faqContainer">
+    {% for block in section.blocks %}
       <li class="queContainer">{{ block.settings.question }}</li>
       <p class="ansContainer">{{ block.settings.answer }}</p>
-    </ol>
-  {% endfor %}
+    {% endfor %}
+  </ol>
 </div>
 <style>
    .main_Container{

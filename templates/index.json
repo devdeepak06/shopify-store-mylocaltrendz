@@ -59,12 +59,20 @@
             "question": "How does this product work?",
             "answer": "A product is any item or service you sell to serve a customer's need or want."
           }
+        },
+        "text_DUNHCK": {
+          "type": "text",
+          "settings": {
+            "question": "What problem does this product solve?",
+            "answer": "A product's purpose is to solve a problem. Some examples of products that solve problems include."
+          }
         }
       },
       "block_order": [
         "text_nMw6zn",
         "text_f8FK7r",
-        "text_BEccgm"
+        "text_BEccgm",
+        "text_DUNHCK"
       ],
       "settings": {
         "title": "Frequently asked questions"

@@ -25,7 +25,6 @@
      align-items: flex-start;
      justify-content: center;
      margin: 0;
-    list-style-type: decimal;
       /* width: 100%; */
   }
   .queContainer{
@@ -35,13 +34,6 @@
     margin: 0;
   }
 </style>
-<script>
-  const container = document.querySelector(".faqContainer");
-container.addEventListener("change", (event) => {
-  const list = document.querySelector("ol");
-  list.setAttribute("style", `list-style-type: ${event.target.value}`);
-});
-</script>
 {% schema %}
 {
   "name": "Custom FAQs Section",

@@ -45,10 +45,18 @@
             "question": "What problem does this product solve?",
             "answer": "To best answer your question, I need to know what product you're referring to. Could you provide more details or context?"
           }
+        },
+        "text_f8FK7r": {
+          "type": "text",
+          "settings": {
+            "question": "What makes this product better than similar ones on the market?",
+            "answer": "A product can be better than similar products on the market if it has a competitive advantage."
+          }
         }
       },
       "block_order": [
-        "text_nMw6zn"
+        "text_nMw6zn",
+        "text_f8FK7r"
       ],
       "settings": {
         "title": "Frequently asked questions"

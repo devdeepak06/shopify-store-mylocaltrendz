@@ -5,10 +5,10 @@
   {% for block in section.blocks %}
     <div class="faqContainer">
       <div class="queContainer">
-        <p class="queText1">{{ block.settings.question }}</p>
+        <p class="queText">{{ block.settings.question }}</p>
       </div>
       <div class="ansContainer">
-        <p class="ansText2">{{ block.settings.answer }}</p>
+        <p class="ansText">{{ block.settings.answer }}</p>
       </div>
     </div>
   {% endfor %}
@@ -30,7 +30,7 @@
       justify-content: center;
       /* width: 100%; */
   }
-  .ansText2{
+  .ansText, queText{
     margin: 0;
   }
 </style>

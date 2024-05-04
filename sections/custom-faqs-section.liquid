@@ -13,28 +13,44 @@
   </ol>
 </div>
 <style>
-   .main_Container{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      background-color: #fff;
-      justify-content: center;
-      width: 100%;
+     .main_Container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #fff;
+        justify-content: center;
+        width: 100%;
+    }
+    .faqContainer{
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: center;
+       margin: 0;
+        /* width: 100%; */
+    }
+    .queContainer{
+      cursor: pointer;
+    }
+    .ansText, ansContainer{
+      margin: 0;
+    }
+
+    .changeSign::before {
+    content: "+";
   }
-  .faqContainer{
-     display: flex;
-     flex-direction: column;
-     align-items: flex-start;
-     justify-content: center;
-     margin: 0;
-      /* width: 100%; */
+
+  .ansContainer {
+    display: none; /* Initially hide question content */
   }
-  .queContainer{
-    cursor: pointer;
+
+  .queContainer.active .changeSign::before {
+    content: "-";
   }
-  .ansText, ansContainer{
-    margin: 0;
+
+  .queContainer.active .ansContainer {
+    display: block; /* Show question content when active */
   }
 </style>
 {% schema %}

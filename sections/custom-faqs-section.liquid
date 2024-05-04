@@ -29,90 +29,93 @@
 </script>
 
 <style>
-           .main_Container{
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              text-align: center;
-              background-color: #fff;
-              justify-content: center;
-              /* width: 100%; */
-             margin: 0;
-             padding: 60px;
+             .main_Container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                background-color: #fff;
+                justify-content: center;
+                /* width: 100%; */
+               margin: 0;
+               padding: 60px;
+            }
+          .main_Container h2{ font-size: 28px; font-weight: 600;}
+            .faqContainer{
+               display: flex;
+               flex-direction: column;
+               align-items: flex-start;
+               justify-content: center;
+               margin: 0 auto;
+                width: 60%;
+            }
+
+  .faqContainer div{border-bottom: 1px solid;
+    }
+            .queContainer{
+              cursor: pointer;
+              font-size: 24px;
+              font-weight: 600 !important;
+            font-family: sans-serif;
+              color: #817d7d;
+              text-align: left;
+            }
+          .ansContainer{
+              margin: 0;
+            text-align: left;
+             font-size: 24px;
+              font-weight: 400 !important;
+            font-family: sans-serif;
+            /* color: #525252; */
+              color: #817d7d;
+            }
+          .changeSign{
+            margin-left: 4px;
+            font-weight: bold;
           }
-        .main_Container h2{ font-size: 28px; font-weight: 600;}
-          .faqContainer{
-             display: flex;
-             flex-direction: column;
-             align-items: flex-start;
-             justify-content: center;
-             margin: 0 auto;
-              width: 60%;
+
+            .changeSign::before {
+            content: '\002B';
+              /* content: "\12795"; */
+              color: #07cf07;
           }
-          .queContainer{
-            cursor: pointer;
-            font-size: 24px;
-            font-weight: 600 !important;
-          font-family: sans-serif;
-            color: #817d7d;
+
+          .ansContainer {
+            display: none; /* Initially hide question content */
+          }
+        .queContainer.active{
+           color: #525252;
+        }
+          .queContainer.active .changeSign::before {
+            content: "\2212";
+            color: #a37b7b;
+          }
+
+          .queContainer.active + .ansContainer {
+            display: block;
             text-align: left;
           }
-        .ansContainer{
-            margin: 0;
-          text-align: left;
-           font-size: 24px;
-            font-weight: 400 !important;
-          font-family: sans-serif;
-          /* color: #525252; */
-            color: #817d7d;
+        @media (max-width: 768px) { /* Adjust as needed for your design */
+          .faqContainer {
+              width: 90%; /* Change width to 90% for smaller screens */
           }
-        .changeSign{
-          margin-left: 4px;
-          font-weight: bold;
-        }
-
-          .changeSign::before {
-          content: '\002B';
-            /* content: "\12795"; */
-            color: #07cf07;
-        }
-
-        .ansContainer {
-          display: none; /* Initially hide question content */
-        }
-      .queContainer.active{
-         color: #525252;
-      }
-        .queContainer.active .changeSign::before {
-          content: "\2212";
-          color: #a37b7b;
-        }
-
-        .queContainer.active + .ansContainer {
-          display: block;
-          text-align: left;
-        }
-      @media (max-width: 768px) { /* Adjust as needed for your design */
-        .faqContainer {
-            width: 90%; /* Change width to 90% for smaller screens */
-        }
-           .main_Container{
-             margin: 0;
-             padding: 6px;
+             .main_Container{
+               margin: 0;
+               padding: 6px;
+            }
+          .main_Container h2{ font-size: 18px;
           }
-        .main_Container h2{ font-size: 18px;
-        }
-        .queContainer,.ansContainer{
-      font-size: 18px;
-          line-height: 1.3;
-  }
-        .queContainer{
-        margin: 6px 0;
-        }
-        .queContainer.active + .ansContainer{
-        margin: 10px 0;
-      }
+          .queContainer,.ansContainer{
+        font-size: 18px;
+            line-height: 1.3;
     }
+          .queContainer{
+          margin: 6px 0;
+          }
+          .queContainer.active + .ansContainer{
+          margin: 10px 0;
+        }
+      }
 </style>
 {% schema %}
 {

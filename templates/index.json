@@ -52,11 +52,19 @@
             "question": "What makes this product better than similar ones on the market?",
             "answer": "A product can be better than similar products on the market if it has a competitive advantage."
           }
+        },
+        "text_BEccgm": {
+          "type": "text",
+          "settings": {
+            "question": "How does this product work?",
+            "answer": "A product is any item or service you sell to serve a customer's need or want."
+          }
         }
       },
       "block_order": [
         "text_nMw6zn",
-        "text_f8FK7r"
+        "text_f8FK7r",
+        "text_BEccgm"
       ],
       "settings": {
         "title": "Frequently asked questions"

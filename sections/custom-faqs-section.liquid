@@ -27,63 +27,66 @@
 </script>
 
 <style>
-     .main_Container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        background-color: #fff;
-        justify-content: center;
-        /* width: 100%; */
-       margin: 0;
-       padding: 60px;
+       .main_Container{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          background-color: #fff;
+          justify-content: center;
+          /* width: 100%; */
+         margin: 0;
+         padding: 60px;
+      }
+    .main_Container h2{ font-size: 28px; font-weight: 600;}
+      .faqContainer{
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: center;
+         margin: 0;
+          width: 60%;
+      }
+      .queContainer{
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: 600 !important;
+      font-family: sans-serif;
+        color: #817d7d;
+      }
+    .ansContainer{
+        margin: 0;
+       font-size: 24px;
+        font-weight: 400 !important;
+      font-family: sans-serif;
+      color: #525252;
+      }
+    .changeSign{
+      margin-left: 4px;
+      font-weight: bold;
     }
-  .main_Container h2{ font-size: 28px; font-weight: 600;}
-    .faqContainer{
-       display: flex;
-       flex-direction: column;
-       align-items: flex-start;
-       justify-content: center;
-       margin: 0;
-        width: 60%;
+
+      .changeSign::before {
+      /* content: "+"; */
+        content: "\12795";
+        color: #07cf07;
     }
-    .queContainer{
-      cursor: pointer;
-      font-size: 24px;
-      font-weight: 600 !important;
-    font-family: sans-serif;
-    color: #525252;
+
+    .ansContainer {
+      display: none; /* Initially hide question content */
     }
-  .ansContainer{
-      margin: 0;
-     font-size: 24px;
-      font-weight: 400 !important;
-    font-family: sans-serif;
-    color: #525252;
+  .queContainer.active{
+     color: #525252;
+  }
+    .queContainer.active .changeSign::before {
+      content: "-";
+      color: #a37b7b;
     }
-  .changeSign{
-    margin-left: 4px;
-    font-weight: bold;
-  }
 
-    .changeSign::before {
-    content: "+";
-      color: #07cf07;
-  }
-
-  .ansContainer {
-    display: none; /* Initially hide question content */
-  }
-
-  .queContainer.active .changeSign::before {
-    content: "-";
-    color: #a37b7b;
-  }
-
-  .queContainer.active + .ansContainer {
-    display: block;
-    text-align: left;
-  }
+    .queContainer.active + .ansContainer {
+      display: block;
+      text-align: left;
+    }
 </style>
 {% schema %}
 {

@@ -36,6 +36,12 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "custom_faqs_section_7FJdAe": {
+      "type": "custom-faqs-section",
+      "settings": {
+        "title": "Frequently asked questions"
+      }
+    },
     "custom_section_GQEkyr": {
       "type": "custom-section",
       "blocks": {
@@ -43,7 +49,6 @@
           "type": "text",
           "settings": {
             "badgeSVG": "shopify:\/\/shop_images\/freeshipping_1.png",
-            "badgeSVG1": "shopify:\/\/shop_images\/Ellipse_37.png",
             "badgeText1": "Free Shipping",
             "badgeText2": "Above ₹750"
           }
@@ -52,7 +57,6 @@
           "type": "text",
           "settings": {
             "badgeSVG": "shopify:\/\/shop_images\/product-return_1.png",
-            "badgeSVG1": "shopify:\/\/shop_images\/Ellipse_37.png",
             "badgeText1": "Easy Return",
             "badgeText2": "15 Days return"
           }
@@ -61,7 +65,6 @@
           "type": "text",
           "settings": {
             "badgeSVG": "shopify:\/\/shop_images\/badge_1.png",
-            "badgeSVG1": "shopify:\/\/shop_images\/Ellipse_37.png",
             "badgeText1": "100% Authentic",
             "badgeText2": "Product"
           }
@@ -147,6 +150,7 @@
   },
   "order": [
     "slideshow_nqK8rU",
+    "custom_faqs_section_7FJdAe",
     "custom_section_GQEkyr",
     "cstm_featured_collection_bh9QXY",
     "featured_collection_bTfGWL"

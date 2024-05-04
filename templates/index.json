@@ -43,7 +43,7 @@
           "type": "text",
           "settings": {
             "question": "What problem does this product solve?",
-            "answer": "To best answer your question, I need to know what product you're referring to. Could you provide more details or context?"
+            "answer": "A product's purpose is to solve a problem. Some examples of products that solve problems include"
           }
         },
         "text_f8FK7r": {

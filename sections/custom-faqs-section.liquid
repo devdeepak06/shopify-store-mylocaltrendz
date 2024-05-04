@@ -1,6 +1,50 @@
+<div class="mainContainer">
+  <div>
+    <h2>{{ section.settings.title }}</h2>
+  </div>
+  {% for block in section.blocks %}
+    <div class="faqContainer">
+      <div class="queContainer">
+        <p class="queText1">{{ block.settings.question }}</p>
+      </div>
+      <div class="ansContainer">
+        <p class="ansText2">{{ block.settings.answer }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
 {% schema %}
+{
+  "name": "Custom FAQs Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title"
+    }
+  ],
+  "blocks": [
   {
-    "name": "Section name",
-    "settings": []
+    "type": "text",
+    "name": "FAQ",
+    "settings": [
+      {
+        "type": "text",
+        "id": "question",
+        "label": "Question"
+      },
+      {
+        "type": "text",
+        "id": "answer",
+        "label": "Answer"
+      }
+    ]
   }
+],
+  "presets": [
+    {
+      "name": "Custom FAQs Section"
+    }
+  ]
+}
 {% endschema %}

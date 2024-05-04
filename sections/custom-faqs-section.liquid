@@ -11,15 +11,21 @@
   </ol>
 </div>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-    var questions = document.querySelectorAll('.queContainer');
-    questions.forEach(function(question) {
+      document.addEventListener("DOMContentLoaded", function() {
+      var questions = document.querySelectorAll('.queContainer');
+      questions.forEach(function(question) {
       question.addEventListener('click', function() {
+        questions.forEach(function(q) {
+          if (q !== question && q.classList.contains('active')) {
+            q.classList.remove('active');
+          }
+        });
         this.classList.toggle('active');
       });
     });
   });
 </script>
+
 <style>
      .main_Container{
         display: flex;

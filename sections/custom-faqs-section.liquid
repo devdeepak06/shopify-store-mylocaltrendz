@@ -6,8 +6,8 @@
     {% for block in section.blocks %}
       <li class="queContainer">
         {{ block.settings.question -}}
+        <span class="changeSign"></span>
       </li>
-      <span class="changeSign"></span>
       <p class="ansContainer">{{ block.settings.answer }}</p>
     {% endfor %}
   </ol>

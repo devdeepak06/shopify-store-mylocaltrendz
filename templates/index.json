@@ -66,13 +66,61 @@
             "question": "What problem does this product solve?",
             "answer": "A product's purpose is to solve a problem. Some examples of products that solve problems include."
           }
+        },
+        "text_NdJ4Gz": {
+          "type": "text",
+          "settings": {
+            "question": "What problem does this product solve?",
+            "answer": "A product's purpose is to solve a problem. Some examples of products that solve problems include"
+          }
+        },
+        "text_YVdFY9": {
+          "type": "text",
+          "settings": {
+            "question": "What problem does this product solve?",
+            "answer": "A product's purpose is to solve a problem. Some examples of products that solve problems include"
+          }
+        },
+        "text_ehW8x7": {
+          "type": "text",
+          "settings": {
+            "question": "What problem does this product solve?",
+            "answer": "A product's purpose is to solve a problem. Some examples of products that solve problems include."
+          }
+        },
+        "text_7VWcUP": {
+          "type": "text",
+          "settings": {
+            "question": "What makes this product better than similar ones on the market?",
+            "answer": "A product can be better than similar products on the market if it has a competitive advantage."
+          }
+        },
+        "text_q4EEXz": {
+          "type": "text",
+          "settings": {
+            "question": "What problem does this product solve?",
+            "answer": "A product's purpose is to solve a problem. Some examples of products that solve problems include."
+          }
+        },
+        "text_zLyMKG": {
+          "type": "text",
+          "settings": {
+            "question": "What problem does this product solve?",
+            "answer": "A product's purpose is to solve a problem. Some examples of products that solve problems include."
+          }
         }
       },
       "block_order": [
         "text_nMw6zn",
         "text_f8FK7r",
         "text_BEccgm",
-        "text_DUNHCK"
+        "text_DUNHCK",
+        "text_NdJ4Gz",
+        "text_YVdFY9",
+        "text_ehW8x7",
+        "text_7VWcUP",
+        "text_q4EEXz",
+        "text_zLyMKG"
       ],
       "settings": {
         "title": "Frequently asked questions"

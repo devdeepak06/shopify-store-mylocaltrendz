@@ -85,6 +85,7 @@
       "blog": "Blog",
       "all_tags": "All",
       "read_more_title": "Read more: {{ title }}",
+      "read_more": "Read more",
       "comments": {
         "one": "{{ count }} comment",
         "other": "{{ count }} comments"

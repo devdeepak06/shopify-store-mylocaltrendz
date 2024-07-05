@@ -49,7 +49,7 @@
   <link rel="stylesheet" href="{{ 'flatpickr.min.css' | asset_url }}">
   <link rel="stylesheet" href="{{ 'custom-flatpickr.css' | asset_url }}">
   <script src="{{ 'flatpickr.min.js' | asset_url }}" defer></script>
-  <script src="{{ 'custom-date-picker.js' | asset_url }}" defer></script>
+  <script src="{{ 'custom-flatpickr.js' | asset_url }}" defer></script>
   {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
   {%- if first_3d_model -%}
     {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
@@ -104,7 +104,36 @@
                     </h2>
                   </a>
                 </div>
+                <!-- =================== Date Picker Code Snippet Start ==================== -->
 
+                {% for variant in product.options -%}
+                  {% assign productVariant = variant %}
+                {%- endfor %}
+                {% if product.variants.size > 1 and productVariant == 'Buy and Rent' %}
+                  <div id="on_rental_pickup">
+                    <div class="cstm_date">
+                      <div class="datepicker-container">
+                        <div class="picker-header">
+                          <div id="pickupDate">Pickup: <span id="selectedDate">Pickup Date & Time</span></div>
+                        </div>
+                        <input
+                          type="text"
+                          id="pickup"
+                          class="flatpickr flatpickr-input"
+                          placeholder="Select Pickup Date & Time"
+                          data-input=""
+                        >
+                      </div>
+                      <div class="datepicker-container">
+                        <div class="picker-header">
+                          <div id="dropoffDate">Dropoff: <span id="returnedDate">Dropoff Date & Time</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+
+                <!-- ================ Date Picker Code Snippet End ================ -->
                 {% if product.metafields.judgeme.badge != blank and product.metafields.reviews.rating_count != blank %}
                   <div class="judge-me-collection-section" style="text-align:center;">
                     <div

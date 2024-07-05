@@ -45,7 +45,11 @@
   {%- if request.design_mode -%}
     <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
-
+  <!-- Below file for flatpickr date and time picker -->
+  <link rel="stylesheet" href="{{ 'flatpickr.min.css' | asset_url }}">
+  <link rel="stylesheet" href="{{ 'custom-flatpickr.css' | asset_url }}">
+  <script src="{{ 'flatpickr.min.js' | asset_url }}" defer></script>
+  <script src="{{ 'custom-date-picker.js' | asset_url }}" defer></script>
   {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
   {%- if first_3d_model -%}
     {{ 'component-product-model.css' | asset_url | stylesheet_tag }}

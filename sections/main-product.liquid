@@ -109,7 +109,7 @@
                 {% for variant in product.options -%}
                   {% assign productVariant = variant %}
                 {%- endfor %}
-                {% if product.variants.size > 1 and productVariant == 'Buy and Rent' %}
+                {% if product.variants.size > 1 or productVariant == 'Buy and Rent' %}
                   <div id="on_rental_pickup">
                     <div class="cstm_date">
                       <div class="datepicker-container">

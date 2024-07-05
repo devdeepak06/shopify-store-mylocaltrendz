@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "#dropoffDate #returnedDate"
       ).innerText;
       const addToCartBtn = document.querySelector(
-        ".product-form .quantity-submit-row .quantity-submit-row__submit button[type=submit]"
+        ".product-form__submit button[type=submit]"
       );
       if (
         mySelectedDate != "Select Date & Time" &&

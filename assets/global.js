@@ -971,7 +971,7 @@ class VariantSelects extends HTMLElement {
       this.renderProductInfo();
       this.updateShareUrl();
       this.toggleDateInput();
-      this.returnSelectedDate(this);
+      this.returnSelectedDate();
     }
   }   
 

@@ -950,8 +950,8 @@ class VariantSelects extends HTMLElement {
   constructor() {
     super();
     this.addEventListener('change', this.onVariantChange);
-    this.addEventListener("load", this.toggleDateInput(this));
-    this.addEventListener("change", this.returnSelectedDate(this));
+    this.addEventListener("load", this.toggleDateInput());
+    this.addEventListener("change", this.returnSelectedDate());
   }
 
   onVariantChange(event) {

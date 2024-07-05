@@ -1069,7 +1069,7 @@ class VariantSelects extends HTMLElement {
           );
 
           const addToCartBtn = document.querySelector(
-            ".product-form .quantity-submit-row .quantity-submit-row__submit button[type=submit]"
+            ".product-form__submit button[type=submit]"
           );
           addToCartBtn.disabled = false;
           dropOffElement.disabled = true;
@@ -1127,7 +1127,7 @@ class VariantSelects extends HTMLElement {
             "#dropoffDate #returnedDate"
           ).innerText;
           const addToCartBtn = document.querySelector(
-            ".product-form .quantity-submit-row .quantity-submit-row__submit button[type=submit]"
+            ".product-form__submit button[type=submit]"
           );
           if (
             mySelectedDate == "Select Date & Time" &&

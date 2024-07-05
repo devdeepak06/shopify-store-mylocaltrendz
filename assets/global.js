@@ -975,40 +975,191 @@ class VariantSelects extends HTMLElement {
     }
   }   
 
-   toggleDateInput() {
-    // var variantSelect = this.currentVariant.id;
-    var selectedVariantTitle = this.currentVariant.title;
-    var on_rental_pickup = document.querySelector('#on_rental_pickup');
-    if (selectedVariantTitle == "Buy") {
-        on_rental_pickup.style.display = 'none';
-    } else {
-        on_rental_pickup.style.display = 'block';
+    toggleDateInput() {
+      // Below code is used to display late_fee_msg
+      let cstmVariantTitle = document.querySelectorAll(
+        ".option-selector .label"
+      );
+      let late_fee_msg = document.querySelectorAll(
+        ".option-selector .late_fee_mess"
+      );
+      cstmVariantTitle.forEach((ele) => {
+        if (ele.innerText === "Buy and Rent") {
+          late_fee_msg.forEach((msg) => {
+            msg.style.display = "block";
+          });
+        } else {
+          late_fee_msg.forEach((msg) => {
+            msg.style.display = "none";
+          });
+        }
+      });
+
+      // Below code is used to display on_rental_pickup
+      let cstmTitle = this.variant.title;
+      var on_rental_pickup = document.querySelector("#on_rental_pickup");
+      if (cstmTitle == "Buy") {
+        on_rental_pickup.style.display = "none";
+        on_rental_pickup.classList.add("cstmAdd");
+      } else {
+        on_rental_pickup.style.display = "block";
+        on_rental_pickup.classList.remove("cstmAdd");
+      }
     }
-     console.log("2", on_rental_pickup);
-     console.log("4", selectedVariantTitle);
-           
-// Initial check on page load
-// toggleDateInput.call({ currentVariant: document.querySelector('variant-selects[data-section="{{ section.id }}"]') });
-// Event listener for variant selection change
-// document.querySelector('variant-selects[data-section="{{ section.id }}"]').addEventListener('change', toggleDateInput);
-}
 
+    returnSelectedDate() {
+      function formatDate(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+        return `${year}-${month}-${day} ${hours}:${minutes}`;
+      }
 
-  updateVariantDetails() {
-    // Parse JSON data from the HTML element
-    const allMetafieldData = JSON.parse(document.querySelector('#variant_metafield_details').textContent);
-    // console.log(allMetafieldData);
+      let selectedVariantTitle = this.variant.title;
+      function getDaysToAdd() {
+        if (window.selectedPart) {
+          selectedVariantTitle = window.selectedPart;
+        } else {
+          selectedVariantTitle = window.currentVariantTitle;
+        }
+        let daysToAdd = 0;
+        if (selectedVariantTitle === "1 Day Rent") {
+          daysToAdd = 1;
+        } else if (selectedVariantTitle === "2 Day Rent") {
+          daysToAdd = 2;
+        } else if (selectedVariantTitle === "3 Day Rent") {
+          daysToAdd = 3;
+        } else if (selectedVariantTitle === "4 Day Rent") {
+          daysToAdd = 4;
+        } else if (selectedVariantTitle === "5 Day Rent") {
+          daysToAdd = 5;
+        } else if (selectedVariantTitle === "6 Day Rent") {
+          daysToAdd = 6;
+        } else if (selectedVariantTitle === "Weekly Rent") {
+          daysToAdd = 7;
+        } else if (selectedVariantTitle === "Buy") {
+          daysToAdd = 0;
+        } else {
+          console.error("Invalid variant title");
+        }
+        return daysToAdd;
+      }
+      localStorage.setItem("val", selectedVariantTitle);
+      var startDate = document.querySelector(
+        'input[name="properties[Pickup]"]'
+      ).value;
 
-    // Get the HTML element to update
-    const VariantDetailsText = document.querySelector('#variant-details');
-    // console.log(VariantDetailsText);
-    // console.log(this.currentVariant.id);
-    
-    // Update the HTML content based on the current variant's ID
-    VariantDetailsText.innerHTML = allMetafieldData[this.currentVariant.id];
-    // VariantDetailsText.innerHTML = this.currentVariant.id;
-    
-}
+      if (startDate.trim() !== "" && !isNaN(Date.parse(startDate))) {
+        // console.log("Console Rent/Buy variant change");
+        const daysToAdd = getDaysToAdd();
+        if (daysToAdd === 0) {
+          // console.log("Console Ab humne Buy variant select kiya");
+          document.getElementById("selectedDate").textContent =
+            "Select Date & Time";
+          document.querySelector("#dropoffDate #returnedDate").innerText =
+            "Dropoff Date & Time";
+
+          const dropOffElement = document.querySelector(
+            'input[name="properties[Dropoff]"]'
+          );
+          const pickupElement = document.querySelector(
+            'input[name="properties[Pickup]"]'
+          );
+
+          const addToCartBtn = document.querySelector(
+            ".product-form .quantity-submit-row .quantity-submit-row__submit button[type=submit]"
+          );
+          addToCartBtn.disabled = false;
+          dropOffElement.disabled = true;
+          dropOffElement.setAttribute("value", "");
+          pickupElement.disabled = true;
+          pickupElement.setAttribute("value", "");
+        } else {
+          // console.log("Console abhi hum Rent variant ko select kr rhe");
+          const returnDate = new Date(Date.parse(startDate));
+          returnDate.setDate(returnDate.getDate() + daysToAdd);
+          let returnDateFormatted = formatDate(returnDate);
+          window.returnDateFormatted = formatDate(returnDate);
+          document.getElementById("returnedDate").innerText =
+            returnDateFormatted;
+          document
+            .querySelector('input[name="properties[Dropoff]"]')
+            .removeAttribute("disabled");
+          document.querySelector('input[name="properties[Dropoff]"]').value =
+            returnDateFormatted;
+          document
+            .querySelector('input[name="properties[Pickup]"]')
+            .removeAttribute("disabled");
+          document.querySelector('input[name="properties[Pickup]"]').value =
+            startDate;
+        }
+      } else {
+        // The below code is used by default start date is select to current date
+        const daysToAdd = getDaysToAdd();
+        if (
+          document.querySelector("#selectedDate").innerText ==
+          "Select Date & Time"
+        ) {
+          const pickupElement = document.querySelector(
+            'input[name="properties[Pickup]"]'
+          );
+          const dropOffElement = document.querySelector(
+            'input[name="properties[Dropoff]"]'
+          );
+          dropOffElement.disabled = true;
+          setTimeout(() => {
+            document.querySelector("#dropoffDate #returnedDate").innerText =
+              "Dropoff Date & Time";
+          }, 1);
+          setTimeout(() => {
+            dropOffElement.value = "";
+          }, 500);
+
+          pickupElement.disabled = true;
+          pickupElement.setAttribute("value", "");
+
+          // bhai addToCartBtn ko disabled karne k liye code shuru hua..............................
+          const mySelectedDate =
+            document.querySelector("#selectedDate").innerText;
+          const myDropDate = document.querySelector(
+            "#dropoffDate #returnedDate"
+          ).innerText;
+          const addToCartBtn = document.querySelector(
+            ".product-form .quantity-submit-row .quantity-submit-row__submit button[type=submit]"
+          );
+          if (
+            mySelectedDate == "Select Date & Time" &&
+            myDropDate == "Dropoff Date & Time" &&
+            daysToAdd != 0
+          ) {
+            addToCartBtn.disabled = true;
+            // console.log("daysToAdd", daysToAdd);
+            // console.log("Add To Cart Btn is disabled");
+            // console.log("Console jab hum Buy se Rent Variant pe move kre tb");
+          }
+          // bhai addToCartBtn ko disabled karne k liye code khatm hua..............................
+        }
+        const returnDate = new Date();
+        returnDate.setDate(returnDate.getDate() + daysToAdd);
+        let returnDateFormatted = formatDate(returnDate);
+        window.returnDateFormatted = formatDate(returnDate);
+        document.getElementById("returnedDate").innerText = returnDateFormatted;
+        document
+          .querySelector('input[name="properties[Dropoff]"]')
+          .removeAttribute("disabled");
+        document.querySelector('input[name="properties[Dropoff]"]').value =
+          returnDateFormatted;
+        document
+          .querySelector('input[name="properties[Pickup]"]')
+          .removeAttribute("disabled");
+        document.querySelector('input[name="properties[Pickup]"]').value =
+          startDate;
+        // console.log("Console By default it select to the current date & time");
+      }
+    }
+
 
   updateOptions() {
     this.options = Array.from(this.querySelectorAll('select, fieldset'), (element) => {
